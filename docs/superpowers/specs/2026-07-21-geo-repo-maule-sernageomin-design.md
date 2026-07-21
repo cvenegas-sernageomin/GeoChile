@@ -15,12 +15,12 @@ El repo KMZ viejo (`cvenegas-sernageomin/sernageomin-maule`) **queda intacto** c
 ### Dentro
 - Visor web Leaflet de escritorio, un solo `index.html` que lee `capas.json` en vivo.
 - Reprocesamiento de **todos los overlays raster** con leyenda horneada → recorte al neat-line (overlay) + leyenda aparte + warp a plate-carrée:
-  - **Geología oficial (10):** `geo_F19_pichibelco`, `geo_F21`, `geo_F21_raster`, `geo_F22_rio_claro_IR110`, `geo_F28_carta64`, `geo_lagunamaule_LDMField_{NE,NW,SE,SW}`, `geo_tinguiririca_teno`.
+  - **Geología oficial (9):** `geo_F19_pichibelco`, `geo_F21_raster`, `geo_F22_rio_claro_IR110`, `geo_F28_carta64`, `geo_lagunamaule_LDMField_{NE,NW,SE,SW}`, `geo_tinguiririca_teno`. (El `geo_F21` **vectorial** San Clemente queda **fuera de alcance**.)
   - **Aplicada (13):** `geof_bouguer_geof115`, `geof_residual_geof115`, `geoq_IR114_mataquito_sedimentosPEC`, `hidrogeoq_F19_cauquenes`, `lic_curico_2010`, `rem_F09_curico_2010`, `rem_F13_constitucion_2010`, `rem_duao_iloca_2010`, `rme15_yacimientos_rmi_maule`, `tsu_constitucion_2010`, `tsu_duao_iloca_2010`, `vol_peligros_cerro_azul_quizapu_GAMB23`, `vol_peligros_descabezado_quizapu_GAMB39`.
   - **Histórico (2):** `escobar_1977_chile`, `gfv_andes_35_38`.
 - Capas **sin reprocesar**, copiadas/servidas tal cual:
   - **Hillshade Copernicus 30m (23 cartas):** `hs_F07`…`hs_F29`.
-  - **Académicos (8):** `aca_*` KMZ — se dejan con su leyenda tal cual (sin recorte).
+  - **Académicos (8):** `aca_*` KMZ — se dejan **full-sheet con su leyenda horneada** (`recortado:false`, sin extraer leyenda).
 
 ### Fuera (explícito)
 - **Sismos** (USGS/CSN): NO se cargan ni referencian.
@@ -111,7 +111,7 @@ Calcado de [mapas-peligros-overlays] variante A (PDF SERNAGEOMIN con grilla UTM)
 ## 9. Criterios de aceptación
 
 - Visor abre en escritorio, muestra las 5 categorías; cada capa se enciende/apaga, opacidad ajustable, leyenda visible con zoom.
-- Los 25 mapas raster reprocesados caen **alineados** sobre la base satelital (verificación por punto conocido).
+- Los 24 mapas raster reprocesados caen **alineados** sobre la base satelital (verificación por punto conocido).
 - Hillshade (23) y académicos (8) presentes y funcionales.
 - Sin sismos ni fallas.
 - Publicado y accesible en la URL de Pages.
@@ -119,8 +119,8 @@ Calcado de [mapas-peligros-overlays] variante A (PDF SERNAGEOMIN con grilla UTM)
 ## 10. Riesgos / notas
 
 - Algún `georef_*.py` viejo podría no traer recorte de neat-line → adaptarlo (o recortar desde el PNG full-sheet ya warpeado si no hay fuente limpia).
-- `geo_F21` vs `geo_F21_raster`: uno es la versión raster, otro vectorial San Clemente — confirmar cuál se reprocesa como overlay (probablemente el raster; el vectorial podría convertirse a GeoJSON en fase posterior, fuera de alcance ahora).
-- Académicos con leyenda horneada quedan `recortado:false` (full-sheet) — decisión consciente.
+- Se reprocesa `geo_F21_raster`; el `geo_F21` vectorial San Clemente queda fuera de alcance (posible fase futura → GeoJSON).
+- Académicos con leyenda horneada quedan `recortado:false` (full-sheet) — decisión confirmada por el usuario.
 
 ## Referencias
 - Memoria proyecto viejo: `~/.claude/memories/project_sernageomin_maule_sig.md`
