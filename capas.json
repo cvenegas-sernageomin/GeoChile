@@ -658,5 +658,145 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": false
+  },
+  {
+    "id": "geo_F22_rio_claro_IR110",
+    "categoria": "geologia",
+    "titulo": "Geología del área Río Claro (IR-110)",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-110",
+    "bounds": {
+      "n": -35.500014,
+      "s": -35.749973,
+      "e": -70.749825,
+      "w": -71.000171
+    },
+    "overlay": "overlays/geo_F22_rio_claro_IR110.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geo_F28_carta64",
+    "categoria": "geologia",
+    "titulo": "Hoja Laguna del Maule",
+    "fuente": "SERNAGEOMIN — Servicio Nacional de Geología y Minería",
+    "anio": "",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "Carta Geológica N°64",
+    "bounds": {
+      "n": -35.914831,
+      "s": -37.028273,
+      "e": -70.237853,
+      "w": -71.558233
+    },
+    "overlay": "overlays/geo_F28_carta64.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geo_lagunamaule_LDMField_NE",
+    "categoria": "geologia",
+    "titulo": "Geología de campo, Laguna del Maule — cuadrante NE",
+    "fuente": "Hildreth, Godoy, Fierstein & Singer — Boletín 63, SERNAGEOMIN (2010)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "Boletín 63",
+    "bounds": {
+      "n": -35.874454,
+      "s": -36.006875,
+      "e": -70.324677,
+      "w": -70.582538
+    },
+    "overlay": "overlays/geo_lagunamaule_LDMField_NE.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geof_bouguer_geof115",
+    "categoria": "aplicada",
+    "titulo": "Anomalía de Bouguer",
+    "fuente": "SERNAGEOMIN — Hoja Constitución",
+    "anio": "",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "GEOF-115",
+    "bounds": {
+      "n": -34.958327,
+      "s": -36.008115,
+      "e": -71.71699,
+      "w": -73.274445
+    },
+    "overlay": "overlays/geof_bouguer_geof115.webp",
+    "leyenda": "leyendas/geof_bouguer_geof115.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geoq_IR114_mataquito_sedimentosPEC",
+    "categoria": "aplicada",
+    "titulo": "Sedimentos que superan el umbral PEC — cuenca del río Mataquito",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "IR-114",
+    "bounds": {
+      "n": -34.679596,
+      "s": -35.680327,
+      "e": -69.581774,
+      "w": -72.364989
+    },
+    "overlay": "overlays/geoq_IR114_mataquito_sedimentosPEC.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "rme15_yacimientos_rmi_maule",
+    "categoria": "aplicada",
+    "titulo": "Yacimientos de rocas y minerales industriales — Región del Maule",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "1:500.000",
+    "autor": "",
+    "informe": "RME-15",
+    "bounds": {
+      "n": -34.423696,
+      "s": -37.656329,
+      "e": -69.021946,
+      "w": -73.224834
+    },
+    "overlay": "overlays/rme15_yacimientos_rmi_maule.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "gfv_andes_35_38",
+    "categoria": "historico",
+    "titulo": "Reconocimiento geológico de la Alta Cordillera de los Andes entre los paralelos 35° y 38° Sur",
+    "fuente": "González Ferrán & Vergara Martínez — Universidad de Chile, Instituto de Geología",
+    "anio": "1964",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.794377,
+      "s": -38.181606,
+      "e": -70.094232,
+      "w": -71.898829
+    },
+    "overlay": "overlays/gfv_andes_35_38.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
   }
 ]
