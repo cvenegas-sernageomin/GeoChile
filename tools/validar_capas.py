@@ -10,6 +10,9 @@ def validar(capas):
         return ["raiz debe ser una lista"]
     for i, c in enumerate(capas):
         pre = f"[{i}] "
+        if not isinstance(c, dict):
+            errores.append(pre + "capa debe ser un objeto (dict)")
+            continue
         faltan = REQ - set(c)
         if faltan:
             errores.append(pre + "faltan campos: " + ", ".join(sorted(faltan)))
@@ -20,8 +23,8 @@ def validar(capas):
             errores.append(pre + f"id duplicado: {c['id']}")
         ids.add(c["id"])
         b = c["bounds"]
-        if not all(k in b for k in ("n", "s", "e", "w")):
-            errores.append(pre + "bounds requiere n,s,e,w")
+        if not isinstance(b, dict) or not all(k in b for k in ("n", "s", "e", "w")):
+            errores.append(pre + "bounds debe ser objeto con n,s,e,w")
         else:
             if b["n"] <= b["s"]:
                 errores.append(pre + "bounds: north debe ser > south")

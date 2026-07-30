@@ -37,3 +37,15 @@ def test_rechaza_categoria_desconocida():
     code, out = run(bad)
     assert code != 0
     assert "categoria" in out.lower()
+
+def test_rechaza_bounds_no_dict():
+    bad = [{"id": "x", "categoria": "geologia", "titulo": "T",
+            "bounds": None, "overlay": "overlays/x.webp", "leyenda": None,
+            "opacidad": 1.0, "recortado": False}]
+    code, out = run(bad)
+    assert code != 0
+    assert "bounds" in out.lower()
+
+def test_rechaza_capa_no_dict():
+    code, out = run(["no soy un dict"])
+    assert code != 0
