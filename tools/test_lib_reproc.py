@@ -29,3 +29,25 @@ def test_detect_neatline_recuadro():
     x0, y0, x1, y1 = detect_neatline(img)
     assert abs(x0 - 20) <= 3 and abs(x1 - 279) <= 3
     assert abs(y0 - 15) <= 3 and abs(y1 - 185) <= 3
+
+
+def test_detect_neatline_ignora_columnas_internas():
+    # marco del mapa + tablas internas casi tan altas como el marco (caso F19:
+    # la columna cronoestratigrafica). Deben ganar los EXTREMOS, no el interior.
+    img = np.full((400, 600, 3), 255, np.uint8)
+    img[30:371, 40:41] = 0; img[30:371, 559:560] = 0      # marco vertical
+    img[30:31, 40:560] = 0; img[370:371, 40:560] = 0       # marco horizontal
+    img[30:371, 300:301] = 0; img[30:371, 340:341] = 0     # columnas internas
+    x0, y0, x1, y1 = detect_neatline(img)
+    assert abs(x0 - 40) <= 3 and abs(x1 - 559) <= 3        # NO 300/340
+    assert abs(y0 - 30) <= 3 and abs(y1 - 370) <= 3
+
+
+def test_detect_neatline_rechaza_sliver():
+    # rect implausiblemente delgado -> ValueError (guarda anti-sliver)
+    import pytest
+    img = np.full((400, 600, 3), 255, np.uint8)
+    img[10:391, 295:296] = 0; img[10:391, 305:306] = 0     # dos verticales muy juntas
+    img[10:11, 295:306] = 0; img[390:391, 295:306] = 0
+    with pytest.raises(ValueError):
+        detect_neatline(img)

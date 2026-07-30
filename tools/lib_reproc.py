@@ -58,8 +58,16 @@ def _group(idx, gap):
 
 
 def detect_neatline(img):
-    """Detecta el marco negro interior. Devuelve (x0,y0,x1,y1) en pixeles.
-    Si hay marco doble, toma el interior; si es simple, el unico detectado."""
+    """Caja envolvente del neat-line del mapa: los EXTREMOS de las lineas negras
+    casi-completas. Las hojas SERNAGEOMIN tienen neat-line simple + tablas internas
+    (p.ej. la columna cronoestratigrafica pegada al mapa), asi que NO se asume
+    "marco doble / interior" (eso recortaba el mapa a una franja). Devuelve
+    (x0,y0,x1,y1). Lanza ValueError si el rect es implausible (pasar --rect manual).
+
+    Nota: asume que el unico elemento con lineas negras casi-completas es el marco
+    del mapa (la leyenda/marginalia no supera el umbral 0.35). Si una hoja trae un
+    borde que abarca toda la lamina (mapa+leyenda), los extremos daran la lamina
+    completa -> usar --rect manual."""
     H, W = img.shape[:2]
     R, G, B = img[:, :, 0].astype(int), img[:, :, 1].astype(int), img[:, :, 2].astype(int)
     black = (R < 70) & (G < 70) & (B < 70)
@@ -67,10 +75,10 @@ def detect_neatline(img):
     cols = sorted(_group(np.where(black.sum(0) > 0.35 * H)[0], 8))
     if len(cols) < 2 or len(rows) < 2:
         raise ValueError("no se detecto neat-line (marco negro insuficiente)")
-    if len(cols) >= 4 and len(rows) >= 4:
-        x0, x1, y0, y1 = cols[1], cols[-2], rows[1], rows[-2]
-    else:
-        x0, x1, y0, y1 = cols[0], cols[-1], rows[0], rows[-1]
+    x0, y0, x1, y1 = cols[0], rows[0], cols[-1], rows[-1]
+    if (x1 - x0) < 0.15 * W or (y1 - y0) < 0.15 * H:
+        raise ValueError(f"neat-line sospechoso: rect {x1-x0}x{y1-y0} en img {W}x{H}; "
+                         f"revisar la hoja y pasar --rect x0,y0,x1,y1 manual")
     return x0, y0, x1, y1
 
 
