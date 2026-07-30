@@ -1,1 +1,17 @@
-﻿[]
+[
+  {
+    "id": "geo_F19_pichibelco",
+    "categoria": "geologia",
+    "titulo": "Geología del área Pichibelco-Cauquenes",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica N°214",
+    "anio": "2023",
+    "escala": "1:100.000",
+    "autor": "Jorquera R., Domogalla J.P., Villa V., Astudillo N.",
+    "informe": "GB-214",
+    "bounds": { "n": -35.4903, "s": -36.009726, "e": -71.948476, "w": -72.513549 },
+    "overlay": "overlays/geo_F19_pichibelco.webp",
+    "leyenda": "leyendas/geo_F19_pichibelco.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  }
+]
