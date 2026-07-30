@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<title>Geo Repo Maule — SERNAGEOMIN</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+  html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif}
+  #app{display:flex;height:100%}
+  #panel{width:320px;min-width:320px;background:#f4f7fa;border-right:1px solid #d5dee7;
+         overflow-y:auto;padding:12px}
+  #panel h1{font-size:16px;color:#1a5276;margin:4px 0 12px}
+  #map{flex:1}
+  details{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px}
+  summary{cursor:pointer;padding:8px 10px;font-weight:600;color:#1a5276}
+  .capa{padding:6px 10px;border-top:1px solid #eef2f6}
+  .capa label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer}
+  .capa .ctl{display:none;margin-top:6px;gap:8px;align-items:center}
+  .capa.on .ctl{display:flex}
+  .capa input[type=range]{flex:1}
+  .capa button{font-size:12px;border:1px solid #cbd5e1;background:#fff;border-radius:6px;
+               padding:2px 8px;cursor:pointer}
+  #legmodal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;
+            align-items:center;justify-content:center;z-index:2000}
+  #legmodal.open{display:flex}
+  #legwrap{background:#fff;border-radius:8px;max-width:92vw;max-height:92vh;overflow:hidden;
+           position:relative}
+  #legwrap img{display:block;transform-origin:0 0;touch-action:none;user-select:none;max-width:none}
+  #legclose{position:absolute;top:6px;right:8px;z-index:5;background:#fff;border:1px solid #cbd5e1;
+            border-radius:6px;padding:2px 8px;cursor:pointer}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="panel"><h1>Geología Región del Maule</h1><div id="capas"></div></div>
+  <div id="map"></div>
+</div>
+<div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const CATS = [["geologia","🗺️ Geología"],["aplicada","⚠️ Aplicada"],
+  ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
+const map = L.map('map',{center:[-35.7,-71.6],zoom:8});
+const bases = {
+  "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
+  "Topográfico": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
+  "OpenTopoMap": L.tileLayer('https://a.tile.opentopomap.org/{z}/{x}/{y}.png',{maxZoom:17,attribution:'OpenTopoMap'})
+};
+bases["Satelital"].addTo(map);
+L.control.layers(bases,null,{position:'topright'}).addTo(map);
+CATS.forEach(([c],i)=>map.createPane('pane_'+c).style.zIndex = 300 + i*10);
+
+const overlays = {}; // id -> L.imageOverlay
+
+function crearCapa(cont, c){
+  const div=document.createElement('div'); div.className='capa';
+  const b=c.bounds, bounds=[[b.s,b.w],[b.n,b.e]];
+  div.innerHTML =
+    `<label><input type="checkbox"> ${c.titulo}</label>
+     <div class="ctl">
+       <input type="range" min="0" max="1" step="0.05" value="${c.opacidad}">
+       ${c.leyenda?'<button class="leg">ⓘ Leyenda</button>':''}
+     </div>`;
+  const chk=div.querySelector('input[type=checkbox]');
+  const rng=div.querySelector('input[type=range]');
+  chk.addEventListener('change',()=>{
+    if(chk.checked){
+      if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay,bounds,
+        {opacity:+rng.value,pane:'pane_'+c.categoria});
+      overlays[c.id].addTo(map); div.classList.add('on');
+    }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); }
+  });
+  rng.addEventListener('input',()=>{ if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value); });
+  const legBtn=div.querySelector('.leg');
+  if(legBtn) legBtn.addEventListener('click',()=>abrirLeyenda(c.leyenda));
+  cont.appendChild(div);
+}
+
+fetch('capas.json').then(r=>r.json()).then(capas=>{
+  const cont=document.getElementById('capas');
+  CATS.forEach(([cat,label])=>{
+    const grupo=capas.filter(c=>c.categoria===cat);
+    if(!grupo.length) return;
+    const d=document.createElement('details');
+    d.innerHTML=`<summary>${label} (${grupo.length})</summary>`;
+    grupo.forEach(c=>crearCapa(d,c));
+    cont.appendChild(d);
+  });
+});
+</script>
+<script src="viewer_legend.js"></script>
+</body>
+</html>
