@@ -53,16 +53,23 @@ CATS.forEach(([c],i)=>map.createPane('pane_'+c).style.zIndex = 300 + i*10);
 const overlays = {}; // id -> L.imageOverlay
 
 function crearCapa(cont, c){
+  const b=c.bounds;
+  if (!b || !['n','s','e','w'].every(k => typeof b[k] === 'number')) {
+    console.warn('capa con bounds invalidos, omitida:', c.id);
+    return;
+  }
+  const bounds=[[b.s,b.w],[b.n,b.e]];
   const div=document.createElement('div'); div.className='capa';
-  const b=c.bounds, bounds=[[b.s,b.w],[b.n,b.e]];
-  div.innerHTML =
-    `<label><input type="checkbox"> ${c.titulo}</label>
-     <div class="ctl">
-       <input type="range" min="0" max="1" step="0.05" value="${c.opacidad}">
-       ${c.leyenda?'<button class="leg">ⓘ Leyenda</button>':''}
-     </div>`;
-  const chk=div.querySelector('input[type=checkbox]');
-  const rng=div.querySelector('input[type=range]');
+  const label=document.createElement('label');
+  const chk=document.createElement('input'); chk.type='checkbox';
+  label.appendChild(chk);
+  label.appendChild(document.createTextNode(' ' + c.titulo));
+  div.appendChild(label);
+  const ctl=document.createElement('div'); ctl.className='ctl';
+  ctl.innerHTML = `<input type="range" min="0" max="1" step="0.05" value="${c.opacidad ?? 1}">
+       ${c.leyenda?'<button class="leg">ⓘ Leyenda</button>':''}`;
+  div.appendChild(ctl);
+  const rng=ctl.querySelector('input[type=range]');
   chk.addEventListener('change',()=>{
     if(chk.checked){
       if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay,bounds,
@@ -71,7 +78,7 @@ function crearCapa(cont, c){
     }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); }
   });
   rng.addEventListener('input',()=>{ if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value); });
-  const legBtn=div.querySelector('.leg');
+  const legBtn=ctl.querySelector('.leg');
   if(legBtn) legBtn.addEventListener('click',()=>abrirLeyenda(c.leyenda));
   cont.appendChild(div);
 }
@@ -86,7 +93,7 @@ fetch('capas.json').then(r=>r.json()).then(capas=>{
     grupo.forEach(c=>crearCapa(d,c));
     cont.appendChild(d);
   });
-});
+}).catch(e=>console.error('No se pudo cargar capas.json:', e));
 </script>
 <script src="viewer_legend.js"></script>
 </body>
