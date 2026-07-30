@@ -798,5 +798,245 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true
+  },
+  {
+    "id": "geo_tinguiririca_teno",
+    "categoria": "geologia",
+    "titulo": "Geología del área Tinguiririca-Teno",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-89",
+    "bounds": {
+      "n": -34.502134,
+      "s": -35.020205,
+      "e": -70.686963,
+      "w": -71.244025
+    },
+    "overlay": "overlays/geo_tinguiririca_teno.webp",
+    "leyenda": "leyendas/geo_tinguiririca_teno.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geof_residual_geof115",
+    "categoria": "aplicada",
+    "titulo": "Anomalía Residual",
+    "fuente": "SERNAGEOMIN — Hoja Constitución",
+    "anio": "",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "GEOF-115",
+    "bounds": {
+      "n": -34.97849,
+      "s": -36.024135,
+      "e": -71.716872,
+      "w": -73.280014
+    },
+    "overlay": "overlays/geof_residual_geof115.webp",
+    "leyenda": "leyendas/geof_residual_geof115.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "hidrogeoq_F19_cauquenes",
+    "categoria": "aplicada",
+    "titulo": "Hidrogeoquímica del área Cauquenes",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-84",
+    "bounds": {
+      "n": -35.657908,
+      "s": -36.315789,
+      "e": -71.946207,
+      "w": -72.710587
+    },
+    "overlay": "overlays/hidrogeoq_F19_cauquenes.webp",
+    "leyenda": "leyendas/hidrogeoq_F19_cauquenes.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "lic_curico_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de licuefacción — Curicó",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.960059,
+      "s": -35.013131,
+      "e": -71.186182,
+      "w": -71.276904
+    },
+    "overlay": "overlays/lic_curico_2010.webp",
+    "leyenda": "leyendas/lic_curico_2010.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "rem_F09_curico_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de remociones en masa — Curicó",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.958222,
+      "s": -35.031142,
+      "e": -71.163788,
+      "w": -71.27955
+    },
+    "overlay": "overlays/rem_F09_curico_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "rem_F13_constitucion_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de remociones en masa — Constitución",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.311571,
+      "s": -35.375433,
+      "e": -72.369713,
+      "w": -72.453032
+    },
+    "overlay": "overlays/rem_F13_constitucion_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "rem_duao_iloca_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de remociones en masa — Duao-Iloca",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.872391,
+      "s": -34.981395,
+      "e": -72.110138,
+      "w": -72.203974
+    },
+    "overlay": "overlays/rem_duao_iloca_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "tsu_constitucion_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de tsunami — Constitución",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.3116,
+      "s": -35.37543,
+      "e": -72.36963,
+      "w": -72.452397
+    },
+    "overlay": "overlays/tsu_constitucion_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "tsu_duao_iloca_2010",
+    "categoria": "aplicada",
+    "titulo": "Peligro de tsunami — Duao-Iloca",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2010",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.872241,
+      "s": -34.981163,
+      "e": -72.108454,
+      "w": -72.202817
+    },
+    "overlay": "overlays/tsu_duao_iloca_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "vol_peligros_cerro_azul_quizapu_GAMB23",
+    "categoria": "aplicada",
+    "titulo": "Peligros volcánicos — Cerro Azul-Quizapú",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "GAMB-23",
+    "bounds": {
+      "n": -35.511667,
+      "s": -35.851964,
+      "e": -70.591758,
+      "w": -71.02289
+    },
+    "overlay": "overlays/vol_peligros_cerro_azul_quizapu_GAMB23.webp",
+    "leyenda": "leyendas/vol_peligros_cerro_azul_quizapu_GAMB23.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "vol_peligros_descabezado_quizapu_GAMB39",
+    "categoria": "aplicada",
+    "titulo": "Peligros volcánicos — Descabezado Grande-Cerro Azul",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "GAMB-39",
+    "bounds": {
+      "n": -35.259507,
+      "s": -35.839653,
+      "e": -70.572215,
+      "w": -71.227467
+    },
+    "overlay": "overlays/vol_peligros_descabezado_quizapu_GAMB39.webp",
+    "leyenda": "leyendas/vol_peligros_descabezado_quizapu_GAMB39.jpg",
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "escobar_1977_chile",
+    "categoria": "historico",
+    "titulo": "Mapa geológico de Chile (Escobar, 1977)",
+    "fuente": "Escobar",
+    "anio": "1977",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -33.839528,
+      "s": -37.148715,
+      "e": -70.665408,
+      "w": -73.358914
+    },
+    "overlay": "overlays/escobar_1977_chile.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
   }
 ]
