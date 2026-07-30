@@ -8,7 +8,12 @@
     "escala": "1:100.000",
     "autor": "Jorquera R., Domogalla J.P., Villa V., Astudillo N.",
     "informe": "GB-214",
-    "bounds": { "n": -35.4903, "s": -36.009726, "e": -71.948476, "w": -72.513549 },
+    "bounds": {
+      "n": -35.4903,
+      "s": -36.009726,
+      "e": -71.948476,
+      "w": -72.513549
+    },
     "overlay": "overlays/geo_F19_pichibelco.webp",
     "leyenda": "leyendas/geo_F19_pichibelco.jpg",
     "opacidad": 1.0,
@@ -23,10 +28,635 @@
     "escala": "1:100.000",
     "autor": "Contreras J.P., Escribano J., Sepúlveda F., De la Cruz R.",
     "informe": "GB-220",
-    "bounds": { "n": -35.498926, "s": -36.002181, "e": -70.998263, "w": -71.502985 },
+    "bounds": {
+      "n": -35.498926,
+      "s": -36.002181,
+      "e": -70.998263,
+      "w": -71.502985
+    },
     "overlay": "overlays/geo_F21_raster.webp",
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true
+  },
+  {
+    "id": "hs_F07",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F07",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.5,
+      "s": -35.0,
+      "e": -72.0,
+      "w": -72.5
+    },
+    "overlay": "hillshade/hs_F07.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F08",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F08",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.5,
+      "s": -35.0,
+      "e": -71.5,
+      "w": -72.0
+    },
+    "overlay": "hillshade/hs_F08.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F09",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F09",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.5,
+      "s": -35.0,
+      "e": -71.0,
+      "w": -71.5
+    },
+    "overlay": "hillshade/hs_F09.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F10",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F10",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.5,
+      "s": -35.0,
+      "e": -70.5,
+      "w": -71.0
+    },
+    "overlay": "hillshade/hs_F10.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F11",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F11",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.5,
+      "s": -35.0,
+      "e": -70.0,
+      "w": -70.5
+    },
+    "overlay": "hillshade/hs_F11.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F12",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F12",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -72.5,
+      "w": -73.0
+    },
+    "overlay": "hillshade/hs_F12.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F13",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F13",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -72.0,
+      "w": -72.5
+    },
+    "overlay": "hillshade/hs_F13.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F14",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F14",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -71.5,
+      "w": -72.0
+    },
+    "overlay": "hillshade/hs_F14.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F15",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F15",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -71.0,
+      "w": -71.5
+    },
+    "overlay": "hillshade/hs_F15.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F16",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F16",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -70.5,
+      "w": -71.0
+    },
+    "overlay": "hillshade/hs_F16.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F17",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F17",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.0,
+      "s": -35.5,
+      "e": -70.0,
+      "w": -70.5
+    },
+    "overlay": "hillshade/hs_F17.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F18",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F18",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -72.5,
+      "w": -73.0
+    },
+    "overlay": "hillshade/hs_F18.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F19",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F19",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -72.0,
+      "w": -72.5
+    },
+    "overlay": "hillshade/hs_F19.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F20",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F20",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -71.5,
+      "w": -72.0
+    },
+    "overlay": "hillshade/hs_F20.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F21",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F21",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -71.0,
+      "w": -71.5
+    },
+    "overlay": "hillshade/hs_F21.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F22",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F22",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -70.5,
+      "w": -71.0
+    },
+    "overlay": "hillshade/hs_F22.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F23",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F23",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.5,
+      "s": -36.0,
+      "e": -70.0,
+      "w": -70.5
+    },
+    "overlay": "hillshade/hs_F23.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F24",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F24",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -72.5,
+      "w": -73.0
+    },
+    "overlay": "hillshade/hs_F24.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F25",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F25",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -72.0,
+      "w": -72.5
+    },
+    "overlay": "hillshade/hs_F25.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F26",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F26",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -71.5,
+      "w": -72.0
+    },
+    "overlay": "hillshade/hs_F26.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F27",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F27",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -71.0,
+      "w": -71.5
+    },
+    "overlay": "hillshade/hs_F27.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F28",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F28",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -70.5,
+      "w": -71.0
+    },
+    "overlay": "hillshade/hs_F28.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "hs_F29",
+    "categoria": "hillshade",
+    "titulo": "Hillshade Carta F29",
+    "fuente": "Copernicus GLO-30",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -36.0,
+      "s": -36.5,
+      "e": -70.0,
+      "w": -70.5
+    },
+    "overlay": "hillshade/hs_F29.webp",
+    "leyenda": null,
+    "opacidad": 0.6,
+    "recortado": false
+  },
+  {
+    "id": "aca_astaburuaga",
+    "categoria": "academico",
+    "titulo": "Astaburuaga — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.42704431737173,
+      "s": -36.05183751410424,
+      "e": -69.88367277719409,
+      "w": -71.0913051880827
+    },
+    "overlay": "academicos/aca_astaburuaga.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_duhalde_rehnfeldt_1981",
+    "categoria": "academico",
+    "titulo": "Duhalde & Rehnfeldt (1981) — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.6206978633862,
+      "s": -35.923958434058974,
+      "e": -70.75199157748906,
+      "w": -71.2851721570181
+    },
+    "overlay": "academicos/aca_duhalde_rehnfeldt_1981.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_fischer",
+    "categoria": "academico",
+    "titulo": "Fischer — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.611299072616994,
+      "s": -35.77744955077424,
+      "e": -70.7431276130009,
+      "w": -70.87789247117357
+    },
+    "overlay": "academicos/aca_fischer.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_garibaldi",
+    "categoria": "academico",
+    "titulo": "Garibaldi — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.894467958239964,
+      "s": -36.062047958239965,
+      "e": -70.78103678571053,
+      "w": -70.85936678571052
+    },
+    "overlay": "academicos/aca_garibaldi.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_munoz_etal_2018",
+    "categoria": "academico",
+    "titulo": "Muñoz et al. (2018) — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -34.88657742472844,
+      "s": -35.19525761574102,
+      "e": -70.37532267415064,
+      "w": -70.59284019702979
+    },
+    "overlay": "academicos/aca_munoz_etal_2018.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_piquer_2010",
+    "categoria": "academico",
+    "titulo": "Piquer (2010) — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.008131283723245,
+      "s": -35.20246454341179,
+      "e": -70.3277484667237,
+      "w": -70.64481717031344
+    },
+    "overlay": "academicos/aca_piquer_2010.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_singer_1997_tatara",
+    "categoria": "academico",
+    "titulo": "Singer (1997) — Complejo Volcánico Tatara-San Pedro",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -35.886523837267475,
+      "s": -36.100531837267475,
+      "e": -70.63028609223952,
+      "w": -70.97627309223951
+    },
+    "overlay": "academicos/aca_singer_1997_tatara.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
+  },
+  {
+    "id": "aca_tapia_etal",
+    "categoria": "academico",
+    "titulo": "Tapia et al. — trabajo académico Región del Maule",
+    "fuente": "Trabajo académico (ver informe original)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "",
+    "bounds": {
+      "n": -33.373976222757705,
+      "s": -37.2435202227577,
+      "e": -68.4306317560987,
+      "w": -73.4719757560987
+    },
+    "overlay": "academicos/aca_tapia_etal.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": false
   }
 ]
