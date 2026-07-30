@@ -807,7 +807,7 @@
     "anio": "",
     "escala": "1:100.000",
     "autor": "",
-    "informe": "IR-89",
+    "informe": "IR-21-89",
     "bounds": {
       "n": -34.502134,
       "s": -35.020205,
@@ -985,7 +985,7 @@
     "titulo": "Peligros volcánicos — Cerro Azul-Quizapú",
     "fuente": "SERNAGEOMIN",
     "anio": "",
-    "escala": "",
+    "escala": "1:50.000",
     "autor": "",
     "informe": "GAMB-23",
     "bounds": {
