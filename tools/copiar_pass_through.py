@@ -11,8 +11,12 @@ SRC = Path(r"C:\Users\carlos.venegas\Documents\sernageomin_maule\repo\capas")
 ROOT = Path(__file__).resolve().parent.parent
 
 def main():
+    if len(sys.argv) < 3:
+        sys.exit("Uso: python copiar_pass_through.py <categoria> <destino_dir>")
     categoria = sys.argv[1]           # "hillshade" | "academico"
     dest = sys.argv[2]                # "hillshade" | "academicos"
+    if not (SRC / categoria).is_dir():
+        sys.exit(f"Categoria desconocida o directorio inexistente: {SRC / categoria}")
     outdir = ROOT / dest; outdir.mkdir(exist_ok=True)
     entradas = []
     for kmz in sorted((SRC / categoria).glob("*.kmz")):
@@ -26,6 +30,9 @@ def main():
             overlay=f"{dest}/{cid}.webp", leyenda=None,
             opacidad=1.0 if categoria == "academico" else 0.6, recortado=False))
         print(f"{cid} -> {dest}/{cid}.webp  bounds n={box['n']:.4f} s={box['s']:.4f}")
+    print(f"Procesados {len(entradas)} archivos")
+    if not entradas:
+        sys.exit(f"AVISO: 0 archivos KMZ encontrados en {SRC / categoria}")
     print("ENTRIES " + json.dumps(entradas, ensure_ascii=False))
 
 if __name__ == "__main__":
