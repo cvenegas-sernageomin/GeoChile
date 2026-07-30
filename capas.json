@@ -1038,5 +1038,65 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true
+  },
+  {
+    "id": "geo_lagunamaule_LDMField_NW",
+    "categoria": "geologia",
+    "titulo": "Geología de campo, Laguna del Maule — cuadrante NW",
+    "fuente": "Hildreth, Godoy, Fierstein & Singer — Boletín 63, SERNAGEOMIN (2010)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "Boletín 63",
+    "bounds": {
+      "n": -35.848248,
+      "s": -36.008428,
+      "e": -70.534477,
+      "w": -70.769007
+    },
+    "overlay": "overlays/geo_lagunamaule_LDMField_NW.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geo_lagunamaule_LDMField_SE",
+    "categoria": "geologia",
+    "titulo": "Geología de campo, Laguna del Maule — cuadrante SE",
+    "fuente": "Hildreth, Godoy, Fierstein & Singer — Boletín 63, SERNAGEOMIN (2010)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "Boletín 63",
+    "bounds": {
+      "n": -35.962002,
+      "s": -36.228239,
+      "e": -70.354299,
+      "w": -70.627699
+    },
+    "overlay": "overlays/geo_lagunamaule_LDMField_SE.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
+  },
+  {
+    "id": "geo_lagunamaule_LDMField_SW",
+    "categoria": "geologia",
+    "titulo": "Geología de campo, Laguna del Maule — cuadrante SW",
+    "fuente": "Hildreth, Godoy, Fierstein & Singer — Boletín 63, SERNAGEOMIN (2010)",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "Boletín 63",
+    "bounds": {
+      "n": -35.992587,
+      "s": -36.170239,
+      "e": -70.566197,
+      "w": -70.805761
+    },
+    "overlay": "overlays/geo_lagunamaule_LDMField_SW.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
   }
 ]
