@@ -13,5 +13,20 @@
     "leyenda": "leyendas/geo_F19_pichibelco.jpg",
     "opacidad": 1.0,
     "recortado": true
+  },
+  {
+    "id": "geo_F21_raster",
+    "categoria": "geologia",
+    "titulo": "Geología del área San Clemente-Melado, Región del Maule",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica N°220",
+    "anio": "2024",
+    "escala": "1:100.000",
+    "autor": "Contreras J.P., Escribano J., Sepúlveda F., De la Cruz R.",
+    "informe": "GB-220",
+    "bounds": { "n": -35.498926, "s": -36.002181, "e": -70.998263, "w": -71.502985 },
+    "overlay": "overlays/geo_F21_raster.webp",
+    "leyenda": null,
+    "opacidad": 1.0,
+    "recortado": true
   }
 ]
