@@ -18,7 +18,7 @@
     "leyenda": "leyendas/geo_F19_pichibelco.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB214_pichibelco_cauquenes_texto.pdf"
+    "pdf": "informes/CGCH_GB_214_TextoyMapa.pdf"
   },
   {
     "id": "geo_F21_raster",
