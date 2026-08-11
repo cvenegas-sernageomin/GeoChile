@@ -17,7 +17,8 @@
     "overlay": "overlays/geo_F19_pichibelco.webp",
     "leyenda": "leyendas/geo_F19_pichibelco.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB214_pichibelco_cauquenes_texto.pdf"
   },
   {
     "id": "geo_F21_raster",
@@ -37,7 +38,8 @@
     "overlay": "overlays/geo_F21_raster.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB220_san_clemente_texto.pdf"
   },
   {
     "id": "hs_F07",
@@ -57,7 +59,8 @@
     "overlay": "hillshade/hs_F07.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F08",
@@ -77,7 +80,8 @@
     "overlay": "hillshade/hs_F08.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F09",
@@ -97,7 +101,8 @@
     "overlay": "hillshade/hs_F09.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F10",
@@ -117,7 +122,8 @@
     "overlay": "hillshade/hs_F10.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F11",
@@ -137,7 +143,8 @@
     "overlay": "hillshade/hs_F11.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F12",
@@ -157,7 +164,8 @@
     "overlay": "hillshade/hs_F12.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F13",
@@ -177,7 +185,8 @@
     "overlay": "hillshade/hs_F13.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F14",
@@ -197,7 +206,8 @@
     "overlay": "hillshade/hs_F14.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F15",
@@ -217,7 +227,8 @@
     "overlay": "hillshade/hs_F15.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F16",
@@ -237,7 +248,8 @@
     "overlay": "hillshade/hs_F16.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F17",
@@ -257,7 +269,8 @@
     "overlay": "hillshade/hs_F17.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F18",
@@ -277,7 +290,8 @@
     "overlay": "hillshade/hs_F18.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F19",
@@ -297,7 +311,8 @@
     "overlay": "hillshade/hs_F19.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F20",
@@ -317,7 +332,8 @@
     "overlay": "hillshade/hs_F20.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F21",
@@ -337,7 +353,8 @@
     "overlay": "hillshade/hs_F21.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F22",
@@ -357,7 +374,8 @@
     "overlay": "hillshade/hs_F22.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F23",
@@ -377,7 +395,8 @@
     "overlay": "hillshade/hs_F23.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F24",
@@ -397,7 +416,8 @@
     "overlay": "hillshade/hs_F24.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F25",
@@ -417,7 +437,8 @@
     "overlay": "hillshade/hs_F25.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F26",
@@ -437,7 +458,8 @@
     "overlay": "hillshade/hs_F26.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F27",
@@ -457,7 +479,8 @@
     "overlay": "hillshade/hs_F27.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F28",
@@ -477,7 +500,8 @@
     "overlay": "hillshade/hs_F28.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "hs_F29",
@@ -497,7 +521,8 @@
     "overlay": "hillshade/hs_F29.webp",
     "leyenda": null,
     "opacidad": 0.6,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_astaburuaga",
@@ -517,7 +542,8 @@
     "overlay": "academicos/aca_astaburuaga.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_duhalde_rehnfeldt_1981",
@@ -537,7 +563,8 @@
     "overlay": "academicos/aca_duhalde_rehnfeldt_1981.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_fischer",
@@ -557,7 +584,8 @@
     "overlay": "academicos/aca_fischer.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_garibaldi",
@@ -577,7 +605,8 @@
     "overlay": "academicos/aca_garibaldi.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_munoz_etal_2018",
@@ -597,7 +626,8 @@
     "overlay": "academicos/aca_munoz_etal_2018.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_piquer_2010",
@@ -617,7 +647,8 @@
     "overlay": "academicos/aca_piquer_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_singer_1997_tatara",
@@ -637,7 +668,8 @@
     "overlay": "academicos/aca_singer_1997_tatara.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "aca_tapia_etal",
@@ -657,7 +689,8 @@
     "overlay": "academicos/aca_tapia_etal.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": false
+    "recortado": false,
+    "pdf": null
   },
   {
     "id": "geo_F22_rio_claro_IR110",
@@ -677,7 +710,8 @@
     "overlay": "overlays/geo_F22_rio_claro_IR110.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR110_rio_claro_texto.pdf"
   },
   {
     "id": "geo_F28_carta64",
@@ -697,7 +731,8 @@
     "overlay": "overlays/geo_F28_carta64.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": null
   },
   {
     "id": "geo_lagunamaule_LDMField_NE",
@@ -717,7 +752,8 @@
     "overlay": "overlays/geo_lagunamaule_LDMField_NE.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
   },
   {
     "id": "geof_bouguer_geof115",
@@ -737,7 +773,8 @@
     "overlay": "overlays/geof_bouguer_geof115.webp",
     "leyenda": "leyendas/geof_bouguer_geof115.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf"
   },
   {
     "id": "geoq_IR114_mataquito_sedimentosPEC",
@@ -757,7 +794,8 @@
     "overlay": "overlays/geoq_IR114_mataquito_sedimentosPEC.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR114_mataquito_geoquimica_texto.pdf"
   },
   {
     "id": "rme15_yacimientos_rmi_maule",
@@ -777,7 +815,8 @@
     "overlay": "overlays/rme15_yacimientos_rmi_maule.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/RME15_yacimientos_rmi_maule_texto.pdf"
   },
   {
     "id": "gfv_andes_35_38",
@@ -797,7 +836,8 @@
     "overlay": "overlays/gfv_andes_35_38.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": null
   },
   {
     "id": "geo_tinguiririca_teno",
@@ -817,7 +857,8 @@
     "overlay": "overlays/geo_tinguiririca_teno.webp",
     "leyenda": "leyendas/geo_tinguiririca_teno.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR89_tinguiririca_teno_texto.pdf"
   },
   {
     "id": "geof_residual_geof115",
@@ -837,7 +878,8 @@
     "overlay": "overlays/geof_residual_geof115.webp",
     "leyenda": "leyendas/geof_residual_geof115.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf"
   },
   {
     "id": "hidrogeoq_F19_cauquenes",
@@ -857,7 +899,8 @@
     "overlay": "overlays/hidrogeoq_F19_cauquenes.webp",
     "leyenda": "leyendas/hidrogeoq_F19_cauquenes.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR84_cauquenes_hidrogeologia_texto.pdf"
   },
   {
     "id": "lic_curico_2010",
@@ -877,7 +920,8 @@
     "overlay": "overlays/lic_curico_2010.webp",
     "leyenda": "leyendas/lic_curico_2010.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/lic_curico_2010_texto.pdf"
   },
   {
     "id": "rem_F09_curico_2010",
@@ -897,7 +941,8 @@
     "overlay": "overlays/rem_F09_curico_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F09_curico_2010_texto.pdf"
   },
   {
     "id": "rem_F13_constitucion_2010",
@@ -917,7 +962,8 @@
     "overlay": "overlays/rem_F13_constitucion_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F13_constitucion_2010_texto.pdf"
   },
   {
     "id": "rem_duao_iloca_2010",
@@ -937,7 +983,8 @@
     "overlay": "overlays/rem_duao_iloca_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_duao_iloca_2010_texto.pdf"
   },
   {
     "id": "tsu_constitucion_2010",
@@ -957,7 +1004,8 @@
     "overlay": "overlays/tsu_constitucion_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_constitucion_2010_texto.pdf"
   },
   {
     "id": "tsu_duao_iloca_2010",
@@ -977,7 +1025,8 @@
     "overlay": "overlays/tsu_duao_iloca_2010.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_duao_iloca_2010_texto.pdf"
   },
   {
     "id": "vol_peligros_cerro_azul_quizapu_GAMB23",
@@ -997,7 +1046,8 @@
     "overlay": "overlays/vol_peligros_cerro_azul_quizapu_GAMB23.webp",
     "leyenda": "leyendas/vol_peligros_cerro_azul_quizapu_GAMB23.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB23_cerro_azul_quizapu_texto.pdf"
   },
   {
     "id": "vol_peligros_descabezado_quizapu_GAMB39",
@@ -1017,7 +1067,8 @@
     "overlay": "overlays/vol_peligros_descabezado_quizapu_GAMB39.webp",
     "leyenda": "leyendas/vol_peligros_descabezado_quizapu_GAMB39.jpg",
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB39_descabezado_quizapu_texto.pdf"
   },
   {
     "id": "escobar_1977_chile",
@@ -1037,7 +1088,8 @@
     "overlay": "overlays/escobar_1977_chile.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": null
   },
   {
     "id": "geo_lagunamaule_LDMField_NW",
@@ -1057,7 +1109,8 @@
     "overlay": "overlays/geo_lagunamaule_LDMField_NW.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
   },
   {
     "id": "geo_lagunamaule_LDMField_SE",
@@ -1077,7 +1130,8 @@
     "overlay": "overlays/geo_lagunamaule_LDMField_SE.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
   },
   {
     "id": "geo_lagunamaule_LDMField_SW",
@@ -1097,6 +1151,7 @@
     "overlay": "overlays/geo_lagunamaule_LDMField_SW.webp",
     "leyenda": null,
     "opacidad": 1.0,
-    "recortado": true
+    "recortado": true,
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
   }
 ]

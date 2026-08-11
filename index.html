@@ -46,6 +46,10 @@
   .capa input[type=range]{flex:1}
   .capa button{font-size:12px;border:1px solid #cbd5e1;background:#fff;border-radius:6px;
                padding:2px 8px;cursor:pointer}
+  .capa .pdf{font-size:12px;border:1px solid #e0a878;background:#fff5ec;color:#a2531a;
+             border-radius:6px;padding:2px 8px;cursor:pointer;text-decoration:none;
+             white-space:nowrap;flex:none}
+  .capa .pdf:hover{background:#fde8d4}
   #legmodal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;
             align-items:center;justify-content:center;z-index:2000}
   #legmodal.open{display:flex}
@@ -175,6 +179,14 @@ function crearCapa(cont, c){
   const ctl=document.createElement('div'); ctl.className='ctl';
   ctl.innerHTML = `<input type="range" min="0" max="1" step="0.05" value="${c.opacidad ?? 1}">
        ${c.leyenda?'<button class="leg">ⓘ Leyenda</button>':''}`;
+  // Informe PDF (servido desde el repo KMZ): enlace construido por DOM, sin innerHTML.
+  if(c.pdf && /^https:\/\//.test(c.pdf)){
+    const a=document.createElement('a');
+    a.className='pdf'; a.href=c.pdf; a.target='_blank'; a.rel='noopener noreferrer';
+    a.textContent='⬇ PDF';
+    a.title='Abrir informe'+(c.informe?' '+c.informe:'')+' (PDF)';
+    ctl.appendChild(a);
+  }
   div.appendChild(ctl);
   const rng=ctl.querySelector('input[type=range]');
   chk.addEventListener('change',()=>{
@@ -190,7 +202,9 @@ function crearCapa(cont, c){
   cont.appendChild(div);
 }
 
-fetch('capas.json').then(r=>r.json()).then(capas=>{
+// cache:'no-cache' revalida siempre contra el servidor (304 si no cambio): sin esto el
+// navegador sirve un capas.json viejo de su cache y el visor no ve las capas nuevas.
+fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
   const cont=document.getElementById('capas');
   CATS.forEach(([cat,label])=>{
     const grupo=capas.filter(c=>c.categoria===cat);
