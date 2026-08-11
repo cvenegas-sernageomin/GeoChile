@@ -732,7 +732,7 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": "informes/Carta_64TextoyMapa.pdf"
   },
   {
     "id": "geo_lagunamaule_LDMField_NE",

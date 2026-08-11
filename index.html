@@ -232,8 +232,10 @@ function crearCapa(cont, c){
   const ctl=document.createElement('div'); ctl.className='ctl';
   ctl.innerHTML = `<input type="range" min="0" max="1" step="0.05" value="${c.opacidad ?? 1}">
        ${c.leyenda?'<button class="leg">ⓘ Leyenda</button>':''}`;
-  // Informe PDF (servido desde el repo KMZ): enlace construido por DOM, sin innerHTML.
-  if(c.pdf && /^https:\/\//.test(c.pdf)){
+  // Informe PDF: enlace construido por DOM, sin innerHTML. Se acepta https absoluto
+  // (informes servidos desde el repo KMZ) o ruta relativa del propio repo; el patron
+  // relativo no admite ':' y por eso descarta esquemas peligrosos tipo javascript:.
+  if(c.pdf && (/^https:\/\//i.test(c.pdf) || /^[\w][\w./-]*$/.test(c.pdf))){
     const a=document.createElement('a');
     a.className='pdf'; a.href=c.pdf; a.target='_blank'; a.rel='noopener noreferrer';
     a.textContent='⬇ PDF';
