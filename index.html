@@ -2,71 +2,103 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="theme-color" content="#1a5276"/>
 <title>Geo Repo Maule — SERNAGEOMIN</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
-  html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif}
-  #app{display:flex;height:100%}
-  #panel{width:320px;min-width:320px;background:#f4f7fa;border-right:1px solid #d5dee7;
-         overflow-y:auto;padding:12px;position:relative}
-  #panel h1{font-size:15px;color:#1a5276;margin:0;line-height:1.25}
-  #map{flex:1;min-width:0}
+  html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif;
+            -webkit-text-size-adjust:100%}
+  /* Panel ABAJO: mapa arriba ocupando todo, panel acoplado al pie */
+  #app{display:flex;flex-direction:column;height:100vh;height:100dvh}
+  #map{flex:1;min-height:0}
+  #panel{flex:none;display:flex;flex-direction:column;background:#f4f7fa;
+         border-top:2px solid #1a5276;box-shadow:0 -3px 10px rgba(0,0,0,.13);
+         max-height:46vh;max-height:46dvh;z-index:1100}
+  #panel h1{font-size:14px;color:#1a5276;margin:0;line-height:1.2;font-weight:700}
 
-  /* Header con logo + boton de contraer */
-  #phead{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-  #plogo{width:42px;height:42px;object-fit:contain;border-radius:6px;flex:none;
+  /* Barra del panel: siempre visible, toda clickeable para plegar/desplegar */
+  #phead{flex:none;display:flex;align-items:center;gap:10px;padding:8px 12px;
+         background:#fff;border-bottom:1px solid #dbe4ec;cursor:pointer;user-select:none;
+         min-height:48px}
+  #phead:hover{background:#f7fafc}
+  #plogo{width:36px;height:36px;object-fit:contain;border-radius:6px;flex:none;
          background:#fff;border:1px solid #d5dee7}
-  #ptoggle{margin-left:auto;flex:none;width:26px;height:26px;line-height:1;cursor:pointer;
-           border:1px solid #cbd5e1;background:#fff;border-radius:6px;color:#1a5276;
-           font-size:15px;font-weight:700;padding:0}
-  #ptoggle:hover{background:#e8eef4}
+  #ptoggle{margin-left:auto;flex:none;min-width:52px;height:36px;line-height:1;cursor:pointer;
+           border:1px solid #b7c6d4;background:#eef4f9;border-radius:8px;color:#1a5276;
+           font-size:19px;font-weight:700;padding:0;display:flex;align-items:center;
+           justify-content:center}
+  #ptoggle:hover{background:#dbe8f3}
+  #ptoggle:active{background:#c9dced}
 
-  /* Panel contraido: solo el boton visible */
-  #panel.collapsed{width:34px;min-width:34px;padding:8px 4px;overflow:hidden}
-  #panel.collapsed #plogo,#panel.collapsed h1,#panel.collapsed #pbody{display:none}
-  #panel.collapsed #phead{margin:0}
-  #panel.collapsed #ptoggle{margin:0}
+  /* Cuerpo desplazable; al contraer solo queda la barra */
+  #pbody{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 12px 14px;
+         padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+  #panel.collapsed #pbody{display:none}
 
   /* Bloque de grilla IGM */
   #grilla{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;
-          padding:8px 10px}
-  #grilla label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;
+          padding:9px 10px}
+  #grilla label{display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;
                 font-weight:600;color:#1a5276}
-  #grilla select{width:100%;margin-top:6px;font-size:12px;padding:3px;border-radius:6px;
+  #grilla select{width:100%;margin-top:8px;font-size:15px;padding:8px;border-radius:8px;
                  border:1px solid #cbd5e1;background:#fff}
   .grid-lbl{background:rgba(255,255,255,.82);border:1px solid #b06a1f;color:#8a4b12;
             font-size:11px;font-weight:700;padding:0 3px;border-radius:3px;box-shadow:none}
   .grid-lbl::before{display:none}
-  details{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px}
-  summary{cursor:pointer;padding:8px 10px;font-weight:600;color:#1a5276}
-  .capa{padding:6px 10px;border-top:1px solid #eef2f6}
-  .capa label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer}
-  .capa .ctl{display:none;margin-top:6px;gap:8px;align-items:center}
+  details{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;
+          break-inside:avoid}
+  summary{cursor:pointer;padding:11px 10px;font-weight:600;color:#1a5276;font-size:14px}
+  .capa{padding:9px 10px;border-top:1px solid #eef2f6}
+  .capa label{display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;
+              line-height:1.3}
+  .capa input[type=checkbox],#grilla input[type=checkbox]{width:19px;height:19px;flex:none;
+              accent-color:#1a5276;margin:0}
+  .capa .ctl{display:none;margin-top:8px;gap:8px;align-items:center;flex-wrap:wrap}
   .capa.on .ctl{display:flex}
-  .capa input[type=range]{flex:1}
-  .capa button{font-size:12px;border:1px solid #cbd5e1;background:#fff;border-radius:6px;
-               padding:2px 8px;cursor:pointer}
-  .capa .pdf{font-size:12px;border:1px solid #e0a878;background:#fff5ec;color:#a2531a;
-             border-radius:6px;padding:2px 8px;cursor:pointer;text-decoration:none;
+  .capa input[type=range]{flex:1;min-width:110px;height:24px;accent-color:#1a5276}
+  .capa button{font-size:13px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;
+               padding:7px 11px;cursor:pointer;white-space:nowrap}
+  .capa .pdf{font-size:13px;border:1px solid #e0a878;background:#fff5ec;color:#a2531a;
+             border-radius:8px;padding:7px 11px;cursor:pointer;text-decoration:none;
              white-space:nowrap;flex:none}
   .capa .pdf:hover{background:#fde8d4}
+
+  /* PC ancho: el panel de abajo reparte las categorias en columnas */
+  @media (min-width:900px){
+    #panel{max-height:40vh}
+    #pbody{columns:3;column-gap:12px}
+    #grilla{column-span:all}
+  }
+  @media (min-width:1400px){ #pbody{columns:4} }
+
+  /* Telefono: panel mas alto y tipografia comoda */
+  @media (max-width:640px){
+    #panel{max-height:52vh;max-height:52dvh}
+    #panel h1{font-size:13px}
+    #plogo{width:32px;height:32px}
+    .leaflet-control-layers,.leaflet-control-zoom{font-size:15px}
+  }
   #legmodal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;
             align-items:center;justify-content:center;z-index:2000}
   #legmodal.open{display:flex}
   #legwrap{background:#fff;border-radius:8px;max-width:92vw;max-height:92vh;overflow:hidden;
            position:relative}
   #legwrap img{display:block;transform-origin:0 0;touch-action:none;user-select:none;max-width:none}
-  #legclose{position:absolute;top:6px;right:8px;z-index:5;background:#fff;border:1px solid #cbd5e1;
-            border-radius:6px;padding:2px 8px;cursor:pointer}
+  #legclose{position:absolute;top:8px;right:10px;z-index:5;background:#fff;border:1px solid #cbd5e1;
+            border-radius:8px;padding:9px 14px;cursor:pointer;font-size:14px;
+            box-shadow:0 1px 4px rgba(0,0,0,.25)}
 </style>
 </head>
 <body>
 <div id="app">
+  <div id="map"></div>
   <div id="panel">
-    <div id="phead">
+    <div id="phead" role="button" tabindex="0" aria-expanded="true" aria-controls="pbody"
+         title="Mostrar u ocultar el panel">
       <img id="plogo" src="assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
-      <h1>Geología<br/>Región del Maule</h1>
-      <button id="ptoggle" title="Contraer panel" aria-label="Contraer panel">&lsaquo;</button>
+      <h1>Geología · Región del Maule</h1>
+      <button id="ptoggle" aria-label="Ocultar panel" title="Ocultar panel">&#9660;</button>
     </div>
     <div id="pbody">
       <div id="grilla">
@@ -78,7 +110,6 @@
       <div id="capas"></div>
     </div>
   </div>
-  <div id="map"></div>
 </div>
 <div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -153,15 +184,37 @@ function irACarta(cod){
 }
 gridSel.addEventListener('change',()=>{ if(gridSel.value) irACarta(gridSel.value); });
 
-/* ---- Panel colapsable ---- */
+/* ---- Panel inferior plegable (toda la barra es el control) ---- */
 const panel = document.getElementById('panel');
+const phead = document.getElementById('phead');
 const ptoggle = document.getElementById('ptoggle');
-ptoggle.addEventListener('click',()=>{
+function togglePanel(){
   const col = panel.classList.toggle('collapsed');
-  ptoggle.innerHTML = col ? '&rsaquo;' : '&lsaquo;';
-  ptoggle.title = ptoggle.ariaLabel = col ? 'Desplegar panel' : 'Contraer panel';
-  setTimeout(()=>map.invalidateSize(), 60);
+  ptoggle.innerHTML = col ? '&#9650;' : '&#9660;';      // ▲ desplegar / ▼ ocultar
+  ptoggle.title = ptoggle.ariaLabel = col ? 'Mostrar panel' : 'Ocultar panel';
+  phead.setAttribute('aria-expanded', String(!col));
+  setTimeout(()=>map.invalidateSize(), 220);
+}
+phead.addEventListener('click', togglePanel);
+phead.addEventListener('keydown', e=>{
+  if(e.key==='Enter' || e.key===' '){ e.preventDefault(); togglePanel(); }
 });
+// el boton vive dentro de la barra: evita contar el click dos veces
+ptoggle.addEventListener('click', e=>e.stopPropagation());
+ptoggle.addEventListener('click', togglePanel);
+
+// En telefono conviene partir con el mapa a la vista
+if(window.matchMedia('(max-width:640px)').matches) togglePanel();
+
+// El panel cambia de alto al llenarse y al rotar el telefono: Leaflet debe re-medirse,
+// si no queda con un tamano interno viejo y las capas se dibujan corridas.
+let rzT=null;
+const remedir=()=>{ clearTimeout(rzT); rzT=setTimeout(()=>map.invalidateSize(),150); };
+window.addEventListener('resize',remedir);
+window.addEventListener('orientationchange',()=>setTimeout(()=>map.invalidateSize(),300));
+// En movil la barra del navegador aparece/desaparece cambiando el alto SIN emitir 'resize':
+// observar el contenedor cubre esos casos.
+if(window.ResizeObserver) new ResizeObserver(remedir).observe(document.getElementById('map'));
 
 function crearCapa(cont, c){
   const b=c.bounds;
@@ -214,6 +267,7 @@ fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
     grupo.forEach(c=>crearCapa(d,c));
     cont.appendChild(d);
   });
+  map.invalidateSize();   // el panel ya tiene su alto final: re-medir el mapa
 }).catch(e=>console.error('No se pudo cargar capas.json:', e));
 </script>
 <script src="viewer_legend.js"></script>
