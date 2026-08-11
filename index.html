@@ -8,9 +8,35 @@
   html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif}
   #app{display:flex;height:100%}
   #panel{width:320px;min-width:320px;background:#f4f7fa;border-right:1px solid #d5dee7;
-         overflow-y:auto;padding:12px}
-  #panel h1{font-size:16px;color:#1a5276;margin:4px 0 12px}
-  #map{flex:1}
+         overflow-y:auto;padding:12px;position:relative}
+  #panel h1{font-size:15px;color:#1a5276;margin:0;line-height:1.25}
+  #map{flex:1;min-width:0}
+
+  /* Header con logo + boton de contraer */
+  #phead{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  #plogo{width:42px;height:42px;object-fit:contain;border-radius:6px;flex:none;
+         background:#fff;border:1px solid #d5dee7}
+  #ptoggle{margin-left:auto;flex:none;width:26px;height:26px;line-height:1;cursor:pointer;
+           border:1px solid #cbd5e1;background:#fff;border-radius:6px;color:#1a5276;
+           font-size:15px;font-weight:700;padding:0}
+  #ptoggle:hover{background:#e8eef4}
+
+  /* Panel contraido: solo el boton visible */
+  #panel.collapsed{width:34px;min-width:34px;padding:8px 4px;overflow:hidden}
+  #panel.collapsed #plogo,#panel.collapsed h1,#panel.collapsed #pbody{display:none}
+  #panel.collapsed #phead{margin:0}
+  #panel.collapsed #ptoggle{margin:0}
+
+  /* Bloque de grilla IGM */
+  #grilla{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;
+          padding:8px 10px}
+  #grilla label{display:flex;align-items:center;gap:6px;font-size:13px;cursor:pointer;
+                font-weight:600;color:#1a5276}
+  #grilla select{width:100%;margin-top:6px;font-size:12px;padding:3px;border-radius:6px;
+                 border:1px solid #cbd5e1;background:#fff}
+  .grid-lbl{background:rgba(255,255,255,.82);border:1px solid #b06a1f;color:#8a4b12;
+            font-size:11px;font-weight:700;padding:0 3px;border-radius:3px;box-shadow:none}
+  .grid-lbl::before{display:none}
   details{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px}
   summary{cursor:pointer;padding:8px 10px;font-weight:600;color:#1a5276}
   .capa{padding:6px 10px;border-top:1px solid #eef2f6}
@@ -32,7 +58,22 @@
 </head>
 <body>
 <div id="app">
-  <div id="panel"><h1>Geología Región del Maule</h1><div id="capas"></div></div>
+  <div id="panel">
+    <div id="phead">
+      <img id="plogo" src="assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
+      <h1>Geología<br/>Región del Maule</h1>
+      <button id="ptoggle" title="Contraer panel" aria-label="Contraer panel">&lsaquo;</button>
+    </div>
+    <div id="pbody">
+      <div id="grilla">
+        <label><input type="checkbox" id="grilla-chk"/> 🔲 Grilla IGM 1:100.000</label>
+        <select id="grilla-sel" aria-label="Ir a carta">
+          <option value="">Ir a una carta…</option>
+        </select>
+      </div>
+      <div id="capas"></div>
+    </div>
+  </div>
   <div id="map"></div>
 </div>
 <div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
@@ -49,8 +90,74 @@ const bases = {
 bases["Satelital"].addTo(map);
 L.control.layers(bases,null,{position:'topright'}).addTo(map);
 CATS.forEach(([c],i)=>map.createPane('pane_'+c).style.zIndex = 300 + i*10);
+map.createPane('pane_grilla').style.zIndex = 400;   // grilla sobre los overlays
 
 const overlays = {}; // id -> L.imageOverlay
+
+/* ---- Grilla de cartas IGM 1:100.000 (F07-F29) ----
+   Coordenadas extraidas del maule_indice.kmz publicado (grilla regular 0.5°). */
+const GRID_IGM = [
+  {c:"F07",n:-34.5,s:-35.0,e:-72.0,w:-72.5}, {c:"F08",n:-34.5,s:-35.0,e:-71.5,w:-72.0},
+  {c:"F09",n:-34.5,s:-35.0,e:-71.0,w:-71.5}, {c:"F10",n:-34.5,s:-35.0,e:-70.5,w:-71.0},
+  {c:"F11",n:-34.5,s:-35.0,e:-70.0,w:-70.5}, {c:"F12",n:-35.0,s:-35.5,e:-72.5,w:-73.0},
+  {c:"F13",n:-35.0,s:-35.5,e:-72.0,w:-72.5}, {c:"F14",n:-35.0,s:-35.5,e:-71.5,w:-72.0},
+  {c:"F15",n:-35.0,s:-35.5,e:-71.0,w:-71.5}, {c:"F16",n:-35.0,s:-35.5,e:-70.5,w:-71.0},
+  {c:"F17",n:-35.0,s:-35.5,e:-70.0,w:-70.5}, {c:"F18",n:-35.5,s:-36.0,e:-72.5,w:-73.0},
+  {c:"F19",n:-35.5,s:-36.0,e:-72.0,w:-72.5}, {c:"F20",n:-35.5,s:-36.0,e:-71.5,w:-72.0},
+  {c:"F21",n:-35.5,s:-36.0,e:-71.0,w:-71.5}, {c:"F22",n:-35.5,s:-36.0,e:-70.5,w:-71.0},
+  {c:"F23",n:-35.5,s:-36.0,e:-70.0,w:-70.5}, {c:"F24",n:-36.0,s:-36.5,e:-72.5,w:-73.0},
+  {c:"F25",n:-36.0,s:-36.5,e:-72.0,w:-72.5}, {c:"F26",n:-36.0,s:-36.5,e:-71.5,w:-72.0},
+  {c:"F27",n:-36.0,s:-36.5,e:-71.0,w:-71.5}, {c:"F28",n:-36.0,s:-36.5,e:-70.5,w:-71.0},
+  {c:"F29",n:-36.0,s:-36.5,e:-70.0,w:-70.5}
+];
+const ESTILO_GRID = {color:'#b06a1f',weight:1.5,fillColor:'#ffffff',fillOpacity:.05};
+const ESTILO_GRID_HL = {color:'#d84315',weight:3,fillColor:'#ff7043',fillOpacity:.25};
+
+const gridLayer = L.layerGroup([], {pane:'pane_grilla'});
+const gridRects = {};   // codigo -> L.rectangle
+GRID_IGM.forEach(g=>{
+  const r = L.rectangle([[g.s,g.w],[g.n,g.e]], Object.assign({pane:'pane_grilla'}, ESTILO_GRID));
+  r.bindTooltip(g.c, {permanent:true, direction:'center', className:'grid-lbl'});
+  r.on('click', ()=>irACarta(g.c));
+  gridRects[g.c] = r;
+  gridLayer.addLayer(r);
+});
+
+const gridChk = document.getElementById('grilla-chk');
+const gridSel = document.getElementById('grilla-sel');
+GRID_IGM.forEach(g=>{
+  const o=document.createElement('option'); o.value=g.c; o.textContent='Carta '+g.c;
+  gridSel.appendChild(o);
+});
+
+gridChk.addEventListener('change',()=>{
+  if(gridChk.checked) gridLayer.addTo(map); else gridLayer.remove();
+});
+
+let hlTimer = null;
+function irACarta(cod){
+  const g = GRID_IGM.find(x=>x.c===cod);
+  if(!g) return;
+  if(!gridChk.checked){ gridChk.checked = true; gridLayer.addTo(map); }
+  map.fitBounds([[g.s,g.w],[g.n,g.e]]);
+  const r = gridRects[cod];
+  if(!r) return;
+  clearTimeout(hlTimer);
+  Object.values(gridRects).forEach(x=>x.setStyle(ESTILO_GRID));
+  r.setStyle(ESTILO_GRID_HL);
+  hlTimer = setTimeout(()=>r.setStyle(ESTILO_GRID), 1800);
+}
+gridSel.addEventListener('change',()=>{ if(gridSel.value) irACarta(gridSel.value); });
+
+/* ---- Panel colapsable ---- */
+const panel = document.getElementById('panel');
+const ptoggle = document.getElementById('ptoggle');
+ptoggle.addEventListener('click',()=>{
+  const col = panel.classList.toggle('collapsed');
+  ptoggle.innerHTML = col ? '&rsaquo;' : '&lsaquo;';
+  ptoggle.title = ptoggle.ariaLabel = col ? 'Desplegar panel' : 'Contraer panel';
+  setTimeout(()=>map.invalidateSize(), 60);
+});
 
 function crearCapa(cont, c){
   const b=c.bounds;
