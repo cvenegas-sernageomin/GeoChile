@@ -116,7 +116,7 @@
 <script>
 const CATS = [["geologia","🗺️ Geología Básica"],["aplicada","⚠️ Geología Aplicada"],
   ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
-const ASSET_V = '?v=20260827c';   // cache-bust de overlays/leyendas (subir al cambiar assets)
+const ASSET_V = '?v=20260827d';   // cache-bust de overlays/leyendas (subir al cambiar assets)
 const map = L.map('map',{center:[-33.9,-71.2],zoom:5});
 const bases = {
   "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
@@ -273,6 +273,6 @@ fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
   map.invalidateSize();   // el panel ya tiene su alto final: re-medir el mapa
 }).catch(e=>console.error('No se pudo cargar capas.json:', e));
 </script>
-<script src="viewer_legend.js"></script>
+<script src="viewer_legend.js?v=20260827"></script>
 </body>
 </html>

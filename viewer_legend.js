@@ -11,7 +11,17 @@
   function clamp(s){ return Math.min(MAX, Math.max(MIN, s)); }
 
   window.abrirLeyenda=function(src){
-    img.src=src; scale=1; tx=0; ty=0; apply(); modal.classList.add('open');
+    scale=1; tx=0; ty=0;
+    img.onload=function(){
+      const iw=img.naturalWidth, ih=img.naturalHeight;
+      if(iw&&ih){
+        // auto-ajustar la leyenda a la pantalla (92vw/92vh) sin ampliar mas de 1
+        const s=Math.min((window.innerWidth*0.92)/iw,(window.innerHeight*0.92)/ih,1);
+        scale=Math.max(s,MIN);
+        apply();
+      }
+    };
+    img.src=src; apply(); modal.classList.add('open');
   };
   function cerrar(){ modal.classList.remove('open'); img.src=''; pts.clear(); pinchIni=0; }
   close.addEventListener('click',e=>{ e.stopPropagation(); cerrar(); });
