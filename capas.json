@@ -1164,10 +1164,10 @@
     "autor": "Naranjo, J.A.",
     "informe": "GB-123",
     "bounds": {
-      "n": -25.066667,
-      "s": -25.233333,
-      "e": -68.433333,
-      "w": -68.583333
+      "n": -25.070369,
+      "s": -25.237039,
+      "e": -68.435126,
+      "w": -68.585138
     },
     "overlay": "overlays/CGCH_GB_123_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_123_TextoyMapa_leyenda.jpg",
