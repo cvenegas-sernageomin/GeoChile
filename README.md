@@ -4,7 +4,7 @@ Visor web de cartografía geológica de Chile (SERNAGEOMIN) — antes "Geo_Repo_
 Overlays raster recortados (mapa) + leyendas aparte, hillshade y trabajos académicos,
 sobre base satelital/topográfica. Visor de escritorio, sin instalación.
 
-**Publicado:** https://cvenegas-sernageomin.github.io/Geo_Repo_Maule_Sernageomin/
+**Publicado:** https://cvenegas-sernageomin.github.io/GeoChile/
 
 Reemplaza al antiguo atlas KMZ para Google Earth (`sernageomin-maule`), que se mantiene
 como respaldo.
