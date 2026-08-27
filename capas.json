@@ -1153,5 +1153,68 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
+  },
+  {
+    "id": "CGCH_GB_123_TextoyMapa",
+    "categoria": "geologia",
+    "titulo": "Carta Geológica de Chile — Serie Geología Básica N°123 (texto y mapa)",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "GB-123",
+    "bounds": {
+      "n": -25.064454,
+      "s": -25.235737,
+      "e": -72.146518,
+      "w": -72.463401
+    },
+    "overlay": "overlays/CGCH_GB_123_TextoyMapa.webp",
+    "leyenda": "leyendas/CGCH_GB_123_TextoyMapa_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": null
+  },
+  {
+    "id": "CGCH_GB_135_136_TextoyMapa",
+    "categoria": "geologia",
+    "titulo": "Carta Geológica de Chile — Serie Geología Básica N°135-136 (texto y mapa)",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica",
+    "anio": "",
+    "escala": "",
+    "autor": "",
+    "informe": "GB-135/136",
+    "bounds": {
+      "n": -17.527361,
+      "s": -18.106016,
+      "e": -69.231979,
+      "w": -69.846637
+    },
+    "overlay": "overlays/CGCH_GB_135_136_TextoyMapa.webp",
+    "leyenda": "leyendas/CGCH_GB_135_136_TextoyMapa_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": null
+  },
+  {
+    "id": "M204_Iquique_Pozo_Almonte",
+    "categoria": "geologia",
+    "titulo": "Carta Iquique-Pozo Almonte",
+    "fuente": "SERNAGEOMIN",
+    "anio": "",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "M204",
+    "bounds": {
+      "n": -19.991409,
+      "s": -20.509719,
+      "e": -69.455798,
+      "w": -70.264376
+    },
+    "overlay": "overlays/M204_Iquique_Pozo_Almonte.webp",
+    "leyenda": "leyendas/M204_Iquique_Pozo_Almonte_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": null
   }
 ]

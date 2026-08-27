@@ -1,6 +1,6 @@
-# Geo_Repo_Maule_Sernageomin
+# Visor GeoChile
 
-Visor web de la cartografía geológica de la Región del Maule (SERNAGEOMIN).
+Visor web de cartografía geológica de Chile (SERNAGEOMIN) — antes "Geo_Repo_Maule_Sernageomin".
 Overlays raster recortados (mapa) + leyendas aparte, hillshade y trabajos académicos,
 sobre base satelital/topográfica. Visor de escritorio, sin instalación.
 
@@ -11,7 +11,7 @@ como respaldo.
 
 ## Contenido
 
-- **Geología (9)** — cartas oficiales, Laguna del Maule, Tinguiririca-Teno.
+- **Geología (12)** — cartas oficiales (incl. GB-123, GB-135/136, M204 a nivel nacional), Laguna del Maule, Tinguiririca-Teno.
 - **Aplicada (13)** — geofísica, geoquímica, remociones, tsunami, licuefacción, volcanes, recursos minerales.
 - **Histórico (2)** — mapas académicos/históricos de referencia regional.
 - **Académicos (8)** — trabajos universitarios, hoja completa con su leyenda original.
