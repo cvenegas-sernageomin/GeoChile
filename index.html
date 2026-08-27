@@ -116,6 +116,7 @@
 <script>
 const CATS = [["geologia","🗺️ Geología Básica"],["aplicada","⚠️ Geología Aplicada"],
   ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
+const ASSET_V = '?v=20260827b';   // cache-bust de overlays/leyendas (subir al cambiar assets)
 const map = L.map('map',{center:[-33.9,-71.2],zoom:5});
 const bases = {
   "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
@@ -246,14 +247,14 @@ function crearCapa(cont, c){
   const rng=ctl.querySelector('input[type=range]');
   chk.addEventListener('change',()=>{
     if(chk.checked){
-      if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay,bounds,
+      if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay+ASSET_V,bounds,
         {opacity:+rng.value,pane:'pane_'+c.categoria});
       overlays[c.id].addTo(map); div.classList.add('on');
     }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); }
   });
   rng.addEventListener('input',()=>{ if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value); });
   const legBtn=ctl.querySelector('.leg');
-  if(legBtn) legBtn.addEventListener('click',()=>abrirLeyenda(c.leyenda));
+  if(legBtn) legBtn.addEventListener('click',()=>abrirLeyenda(c.leyenda+ASSET_V));
   cont.appendChild(div);
 }
 
