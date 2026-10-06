@@ -48,3 +48,15 @@ Para capas de paso directo sin recorte (como hillshade/académicos), usar
 Python 3.12 con `cv2`, `numpy`, `pyproj`, `Pillow`, `pymupdf`. En este equipo:
 `C:\Users\carlos.venegas\AppData\Local\Programs\Python\Python312\python.exe -X utf8`
 (el `python` por defecto no tiene estas dependencias).
+
+## Licencia y cómo citar
+
+© 2026 SERNAGEOMIN / Carlos Venegas Benavides. El trabajo original de este repositorio se distribuye bajo
+**[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.es)**: se puede compartir y adaptar
+**citando la fuente** y **sin fines comerciales**. Ver [`LICENSE`](LICENSE).
+
+Las cartas y mapas oficiales mostrados conservan las condiciones de uso de SERNAGEOMIN y de sus autores. Las bases cartográficas (Esri, OpenStreetMap u otras) conservan sus propias licencias. Las librerías de terceros incluidas (por ejemplo en `vendor/`) conservan sus propias licencias.
+
+Cita sugerida:
+
+> SERNAGEOMIN / Venegas Benavides, C. (2026). Visor GeoChile: cartografía geológica de Chile [aplicación web]. https://cvenegas-sernageomin.github.io/GeoChile/

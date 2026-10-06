@@ -1,0 +1,30 @@
+{
+  "upload_type": "software",
+  "title": "Visor GeoChile: cartografía geológica de Chile",
+  "description": "<p>Visor web de cartografía geológica de Chile: overlays raster de cartas, leyendas, hillshade y trabajos académicos sobre base satelital y topográfica.</p><p>Publicado en https://cvenegas-sernageomin.github.io/GeoChile/</p><p>La licencia CC BY-NC 4.0 cubre el trabajo original de los autores. No cubre el material de terceros:</p><ul><li>Las cartas y mapas oficiales mostrados conservan las condiciones de uso de SERNAGEOMIN y de sus autores.</li><li>Las bases cartográficas (Esri, OpenStreetMap u otras) conservan sus propias licencias.</li><li>Las librerías de terceros incluidas (por ejemplo en vendor/) conservan sus propias licencias.</li></ul>",
+  "creators": [
+    {
+      "name": "Servicio Nacional de Geología y Minería (SERNAGEOMIN)"
+    },
+    {
+      "name": "Venegas Benavides, Carlos",
+      "affiliation": "Servicio Nacional de Geología y Minería (SERNAGEOMIN)"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "language": "spa",
+  "keywords": [
+    "cartografía geológica",
+    "visor web",
+    "Chile",
+    "SERNAGEOMIN"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://cvenegas-sernageomin.github.io/GeoChile/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ]
+}
