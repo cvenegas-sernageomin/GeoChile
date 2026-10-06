@@ -1,5 +1,7 @@
 # Visor GeoChile
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23196774.svg)](https://doi.org/10.5281/zenodo.23196774)
+
 Visor web de cartografía geológica de Chile (SERNAGEOMIN) — antes "Geo_Repo_Maule_Sernageomin".
 Overlays raster recortados (mapa) + leyendas aparte, hillshade y trabajos académicos,
 sobre base satelital/topográfica. Visor de escritorio, sin instalación.
@@ -59,4 +61,4 @@ Las cartas y mapas oficiales mostrados conservan las condiciones de uso de SERNA
 
 Cita sugerida:
 
-> SERNAGEOMIN / Venegas Benavides, C. (2026). Visor GeoChile: cartografía geológica de Chile [aplicación web]. https://cvenegas-sernageomin.github.io/GeoChile/
+> SERNAGEOMIN / Venegas Benavides, C. (2026). Visor GeoChile: cartografía geológica de Chile [aplicación web]. https://cvenegas-sernageomin.github.io/GeoChile/ · DOI: https://doi.org/10.5281/zenodo.23196774
