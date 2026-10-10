@@ -13,7 +13,7 @@ como respaldo.
 
 ## Contenido
 
-- **Geología (81)** — cartas oficiales de las series Geología Básica y Carta Geológica de Chile (antigua CGCH), Laguna del Maule, Tinguiririca-Teno. 31 con georreferencia auditada y corregida contra los SIG oficiales de SERNAGEOMIN (2026-10-10).
+- **Geología (91)** — cartas oficiales de las series Geología Básica y Carta Geológica de Chile (antigua CGCH), Laguna del Maule, Tinguiririca-Teno. Georreferencia auditada contra los SIG oficiales de SERNAGEOMIN y el relieve SRTM; 42 cartas corregidas (2026-10-10). La serie antigua CGCH se mantiene tal como fue georreferenciada.
 - **Aplicada (13)** — geofísica, geoquímica, remociones, tsunami, licuefacción, volcanes, recursos minerales.
 - **Histórico (2)** — mapas académicos/históricos de referencia regional.
 - **Académicos (8)** — trabajos universitarios, hoja completa con su leyenda original.
