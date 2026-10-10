@@ -2592,10 +2592,10 @@
     "autor": "Rita De la Cruz S., Joaquín Cortés C.",
     "informe": "GB-127",
     "bounds": {
-      "n": -43.97698,
-      "s": -45.022312,
-      "e": -70.88307,
-      "w": -72.366114
+      "n": -43.974244,
+      "s": -45.02277,
+      "e": -70.879544,
+      "w": -72.369095
     },
     "overlay": "overlays/CGCH_GB_127_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_127_TextoyMapa_leyenda.jpg",
@@ -2613,10 +2613,10 @@
     "autor": "Jorge Skármeta M.",
     "informe": "CGCH-29",
     "bounds": {
-      "n": -46.0,
-      "s": -46.994589,
-      "e": -71.608641,
-      "w": -73.0
+      "n": -45.976275,
+      "s": -47.022155,
+      "e": -71.594312,
+      "w": -73.048994
     },
     "overlay": "overlays/CGCH_29_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_29_TextoyMapa_leyenda.jpg",
