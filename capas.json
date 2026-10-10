@@ -1206,10 +1206,10 @@
     "autor": "Jorge Clavero R., R. Steve J. Sparks, Edmundo Polanco V.",
     "informe": "GB-132",
     "bounds": {
-      "n": -18.065644,
-      "s": -18.257842,
-      "e": -69.047357,
-      "w": -69.390036
+      "n": -18.0702,
+      "s": -18.2535,
+      "e": -69.051808,
+      "w": -69.385244
     },
     "overlay": "overlays/CGCH_GB_132_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_132_TextoyMapa_leyenda.jpg",
@@ -1290,10 +1290,10 @@
     "autor": "Daniel Sellés M., Moyra Gardeweg P., Nicolás Garibaldi M.",
     "informe": "GB-182",
     "bounds": {
-      "n": -19.500681,
-      "s": -20.000173,
-      "e": -68.48282,
-      "w": -68.999734
+      "n": -19.500353,
+      "s": -19.99999,
+      "e": -68.484976,
+      "w": -69.0
     },
     "overlay": "overlays/CGCH_GB_182_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_182_TextoyMapa_leyenda.jpg",
@@ -1522,9 +1522,9 @@
     "informe": "GB-141-142",
     "bounds": {
       "n": -22.0,
-      "s": -22.5,
-      "e": -69.999277,
-      "w": -70.28261
+      "s": -22.499996,
+      "e": -69.500033,
+      "w": -70.293389
     },
     "overlay": "overlays/CGCH_GB_141_142_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_141_142_TextoyMapa_leyenda.jpg",
@@ -1542,10 +1542,10 @@
     "autor": "Andrew J. Tomlinson, Nicolás Blanco P., John H. Dilles, Víctor Maksaev J., Marco Ladino U.",
     "informe": "GB-199",
     "bounds": {
-      "n": -22.000316,
-      "s": -22.499514,
-      "e": -68.49967,
-      "w": -68.998991
+      "n": -22.000399,
+      "s": -22.499567,
+      "e": -68.500398,
+      "w": -68.999719
     },
     "overlay": "overlays/CGCH_GB_199_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_199_TextoyMapa_leyenda.jpg",
@@ -1563,10 +1563,10 @@
     "autor": "Pamela Álvarez, Maisa Tunik, Laura Giambiagi, Carolina Rodríguez S.",
     "informe": "GB-215-216",
     "bounds": {
-      "n": -22.000625,
-      "s": -22.499309,
-      "e": -67.828455,
-      "w": -68.498074
+      "n": -22.000494,
+      "s": -22.499596,
+      "e": -67.866759,
+      "w": -68.499586
     },
     "overlay": "overlays/CGCH_GB_215_216_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_215_216_TextoyMapa_leyenda.jpg",
@@ -1689,10 +1689,10 @@
     "autor": "Joaquín Cortés C.",
     "informe": "GB-144",
     "bounds": {
-      "n": -23.500697,
-      "s": -23.999791,
-      "e": -68.498042,
-      "w": -68.995509
+      "n": -23.500471,
+      "s": -23.999518,
+      "e": -68.500686,
+      "w": -68.99933
     },
     "overlay": "overlays/CGCH_GB_144_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_144_TextoyMapa_leyenda.jpg",
@@ -1731,10 +1731,10 @@
     "autor": "",
     "informe": "GB-187-188",
     "bounds": {
-      "n": -24.000528,
-      "s": -24.49944,
-      "e": -69.999841,
-      "w": -70.666641
+      "n": -24.000472,
+      "s": -24.499518,
+      "e": -70.000243,
+      "w": -70.5637
     },
     "overlay": "overlays/CGCH_GB_187_188_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_187_188_TextoyMapa_leyenda.jpg",
@@ -1773,10 +1773,10 @@
     "autor": "",
     "informe": "GB-183-184",
     "bounds": {
-      "n": -24.500367,
-      "s": -24.99942,
-      "e": -70.000252,
-      "w": -70.666348
+      "n": -24.500421,
+      "s": -24.999586,
+      "e": -70.000498,
+      "w": -70.579421
     },
     "overlay": "overlays/CGCH_GB_183_184_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_183_184_TextoyMapa_leyenda.jpg",
@@ -1794,10 +1794,10 @@
     "autor": "Víctor Villa C., Cristián Ramírez S., Rodolfo Ferrando U., Diego Montecino J., Marcos Lienlaf L.",
     "informe": "GB-202-203",
     "bounds": {
-      "n": -24.500846,
-      "s": -24.999908,
-      "e": -68.383766,
-      "w": -68.999126
+      "n": -24.500481,
+      "s": -24.999597,
+      "e": -68.384071,
+      "w": -68.999788
     },
     "overlay": "overlays/CGCH_GB_202_203_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_202_203_TextoyMapa_leyenda.jpg",
@@ -1815,10 +1815,10 @@
     "autor": "Felipe Espinoza G., Stephen J. Matthews, Paula Cornejo P.",
     "informe": "GB-138",
     "bounds": {
-      "n": -24.50114,
-      "s": -24.999704,
-      "e": -69.50052,
-      "w": -69.998893
+      "n": -24.500406,
+      "s": -24.999508,
+      "e": -69.500675,
+      "w": -69.999304
     },
     "overlay": "overlays/CGCH_GB_138_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_138_TextoyMapa_leyenda.jpg",
@@ -1836,10 +1836,10 @@
     "autor": "Felipe Espinoza G., Stephen J. Matthews, Paula Cornejo P., Carlos Venegas B.",
     "informe": "GB-129",
     "bounds": {
-      "n": -24.993687,
-      "s": -25.515941,
-      "e": -69.486713,
-      "w": -70.010729
+      "n": -25.003687,
+      "s": -25.503761,
+      "e": -69.501878,
+      "w": -70.001894
     },
     "overlay": "overlays/CGCH_GB_129_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_129_TextoyMapa_leyenda.jpg",
@@ -1857,10 +1857,10 @@
     "autor": "José Escribano A., Paola Martínez E., Jan Domagala, Maxime Padel, Mauricio Espinoza V., Rodrigo Jorquera B., Juan Pablo Contreras F., Rita De La Cruz S., Mauricio Calderón N.",
     "informe": "GB-164-165",
     "bounds": {
-      "n": -25.000433,
-      "s": -25.499238,
-      "e": -70.000548,
-      "w": -70.583054
+      "n": -25.000583,
+      "s": -25.499478,
+      "e": -70.000769,
+      "w": -70.573271
     },
     "overlay": "overlays/CGCH_GB_164_165_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_164_165_TextoyMapa_leyenda.jpg",
@@ -1878,10 +1878,10 @@
     "autor": "Stephen J. Matthews, Felipe Espinoza G., Paula Cornejo P., Carlos Venegas B.",
     "informe": "GB-121",
     "bounds": {
-      "n": -25.488278,
-      "s": -26.010236,
-      "e": -69.456265,
-      "w": -70.014893
+      "n": -25.503691,
+      "s": -26.00374,
+      "e": -69.501879,
+      "w": -70.001901
     },
     "overlay": "overlays/CGCH_GB_121_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_121_TextoyMapa_leyenda.jpg",
@@ -1899,10 +1899,10 @@
     "autor": "",
     "informe": "GB-161",
     "bounds": {
-      "n": -25.499767,
-      "s": -26.012055,
-      "e": -70.487904,
-      "w": -70.75197
+      "n": -25.5,
+      "s": -25.99993,
+      "e": -70.499925,
+      "w": -70.743068
     },
     "overlay": "overlays/CGCH_GB_161_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_161_TextoyMapa_leyenda.jpg",
@@ -1983,10 +1983,10 @@
     "autor": "José Antonio Naranjo S., Cristián Ramírez S., Víctor Villa C.",
     "informe": "GB-185-186",
     "bounds": {
-      "n": -26.000542,
-      "s": -26.499264,
-      "e": -68.348905,
-      "w": -68.998287
+      "n": -26.000475,
+      "s": -26.499411,
+      "e": -68.380796,
+      "w": -68.999535
     },
     "overlay": "overlays/CGCH_GB_185_186_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_185_186_TextoyMapa_leyenda.jpg",
@@ -2004,10 +2004,10 @@
     "autor": "Jorge Clavero R., Constantino Mpodozis M., Moyra Gardeweg P., Millarca Valenzuela P.",
     "informe": "GB-139-140",
     "bounds": {
-      "n": -26.501007,
-      "s": -26.999417,
-      "e": -68.249004,
-      "w": -68.998161
+      "n": -26.500649,
+      "s": -26.9994,
+      "e": -68.262901,
+      "w": -68.999614
     },
     "overlay": "overlays/CGCH_GB_139_140_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_139_140_TextoyMapa_leyenda.jpg",
@@ -2068,9 +2068,9 @@
     "informe": "GB-145",
     "bounds": {
       "n": -27.000511,
-      "s": -27.499216,
-      "e": -69.000087,
-      "w": -69.498736
+      "s": -27.499521,
+      "e": -69.000431,
+      "w": -69.499337
     },
     "overlay": "overlays/CGCH_GB_145_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_145_TextoyMapa_leyenda.jpg",
@@ -2088,10 +2088,10 @@
     "autor": "José Antonio Naranjo S., Francisco Hevia C., Rodrigo Arcos R., Edmundo Polanco V.",
     "informe": "GB-204-205",
     "bounds": {
-      "n": -27.000569,
-      "s": -27.499699,
-      "e": -68.249243,
-      "w": -68.999723
+      "n": -27.000427,
+      "s": -27.499545,
+      "e": -68.250124,
+      "w": -69.0
     },
     "overlay": "overlays/CGCH_GB_204_205_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_204_205_TextoyMapa_leyenda.jpg",
@@ -2172,10 +2172,10 @@
     "autor": "Constantino Mpodozis M., Jorge Clavero R., Rodrigo Quiroga C., Bárbara Droguett V., Rodrigo Arcos R.",
     "informe": "GB-200",
     "bounds": {
-      "n": -27.500286,
-      "s": -27.99943,
-      "e": -68.937143,
-      "w": -69.498493
+      "n": -27.500391,
+      "s": -27.999728,
+      "e": -68.937786,
+      "w": -69.499465
     },
     "overlay": "overlays/CGCH_GB_200_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_200_TextoyMapa_leyenda.jpg",
@@ -2235,10 +2235,10 @@
     "autor": "Esteban Salazar P., Felipe Coloma B.",
     "informe": "GB-181",
     "bounds": {
-      "n": -28.500163,
-      "s": -28.999614,
-      "e": -69.5833,
-      "w": -69.998701
+      "n": -28.500194,
+      "s": -28.99963,
+      "e": -69.650626,
+      "w": -69.999519
     },
     "overlay": "overlays/Cerros_de_Cantaritos_Laguna_Chica.webp",
     "leyenda": "leyendas/Cerros_de_Cantaritos_Laguna_Chica_leyenda.jpg",
@@ -2256,10 +2256,10 @@
     "autor": "Esteban Salazar P., Felipe Coloma B., Christian Creixell T.",
     "informe": "GB-149",
     "bounds": {
-      "n": -28.500546,
-      "s": -28.999854,
-      "e": -70.000343,
-      "w": -70.498828
+      "n": -28.500379,
+      "s": -28.999586,
+      "e": -70.000799,
+      "w": -70.499326
     },
     "overlay": "overlays/El_Transito_Lagunillas.webp",
     "leyenda": "leyendas/El_Transito_Lagunillas_leyenda.jpg",
@@ -2277,10 +2277,10 @@
     "autor": "Miguel Ortiz L., Roberto N. Merino G.",
     "informe": "GB-175-176",
     "bounds": {
-      "n": -29.000547,
-      "s": -29.499242,
-      "e": -69.748533,
-      "w": -70.497968
+      "n": -29.000517,
+      "s": -29.499721,
+      "e": -69.750178,
+      "w": -70.498866
     },
     "overlay": "overlays/CGCH_GB_175_176_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_175_176_TextoyMapa_leyenda.jpg",
@@ -2298,10 +2298,10 @@
     "autor": "Christian Creixell T., Miguel Ortiz L., Carlos Arévalo V.",
     "informe": "GB-133-134",
     "bounds": {
-      "n": -29.000697,
-      "s": -29.501174,
-      "e": -70.995666,
-      "w": -71.665454
+      "n": -29.0,
+      "s": -29.500011,
+      "e": -71.000195,
+      "w": -71.59211
     },
     "overlay": "overlays/CGCH_GB_133_134_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_133_134_TextoyMapa_leyenda.jpg",
@@ -2319,10 +2319,10 @@
     "autor": "Ismael Murillo R., Ricardo Velásquez H., Christian Creixell T.",
     "informe": "GB-192-193",
     "bounds": {
-      "n": -29.500539,
-      "s": -29.99924,
-      "e": -69.833662,
-      "w": -70.498502
+      "n": -29.500583,
+      "s": -29.999495,
+      "e": -69.876682,
+      "w": -70.499231
     },
     "overlay": "overlays/CGCH_GB_192_193_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_192_193_TextoyMapa_leyenda.jpg",
@@ -2445,10 +2445,10 @@
     "autor": "Felipe Coloma B., Javier Álvarez A., Christian Creixell T., Carlos Emparán C., Esteban Salazar P., Mauricio Calderón N.",
     "informe": "GB-208-209",
     "bounds": {
-      "n": -30.500468,
-      "s": -30.999026,
-      "e": -70.999636,
-      "w": -71.749311
+      "n": -30.500586,
+      "s": -30.999398,
+      "e": -71.000836,
+      "w": -71.712042
     },
     "overlay": "overlays/Ovalle_y_Peña_Blanca.webp",
     "leyenda": "leyendas/Ovalle_y_Peña_Blanca_leyenda.jpg",
@@ -2487,10 +2487,10 @@
     "autor": "Mauricio Mella B., David Quiroz P.",
     "informe": "GB-122",
     "bounds": {
-      "n": -38.504203,
-      "s": -39.003823,
-      "e": -72.502034,
-      "w": -73.000797
+      "n": -38.504027,
+      "s": -39.003842,
+      "e": -72.502503,
+      "w": -73.001976
     },
     "overlay": "overlays/CGCH_GB_122_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_122_TextoyMapa_leyenda.jpg",
@@ -2508,9 +2508,9 @@
     "autor": "Carolina Jara I., Hugo Moreno R., Mauricio Mella B., Paul Duhart O.",
     "informe": "GB-128",
     "bounds": {
-      "n": -38.99562,
-      "s": -39.49562,
-      "e": -72.0,
+      "n": -39.0,
+      "s": -39.500001,
+      "e": -72.000004,
       "w": -72.5
     },
     "overlay": "overlays/CGCH_GB_128_TextoyMapa.webp",
@@ -2550,10 +2550,10 @@
     "autor": "David Quiroz P., Mauricio Mella B., Hugo Moreno R., Paul Duhart O., Felipe Carrasco R., Carolina Miralles G.",
     "informe": "GB-210",
     "bounds": {
-      "n": -40.000751,
-      "s": -40.499958,
-      "e": -72.501359,
-      "w": -72.999368
+      "n": -40.000364,
+      "s": -40.499593,
+      "e": -72.500843,
+      "w": -72.999158
     },
     "overlay": "overlays/CGCH_GB_210_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_210_TextoyMapa_leyenda.jpg",
@@ -2571,10 +2571,10 @@
     "autor": "Hugo Moreno R., Luis Lara P., Gabriel Orozco L.",
     "informe": "GB-126",
     "bounds": {
-      "n": -41.023005,
-      "s": -41.223016,
-      "e": -72.385872,
-      "w": -72.68591
+      "n": -41.020659,
+      "s": -41.220759,
+      "e": -72.385825,
+      "w": -72.685894
     },
     "overlay": "overlays/CGCH_GB_126_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_126_TextoyMapa_leyenda.jpg",
@@ -2613,10 +2613,10 @@
     "autor": "Jorge Skármeta M.",
     "informe": "CGCH-29",
     "bounds": {
-      "n": -45.976275,
-      "s": -47.022155,
-      "e": -71.594312,
-      "w": -73.048994
+      "n": -46.0,
+      "s": -46.994589,
+      "e": -71.608641,
+      "w": -73.0
     },
     "overlay": "overlays/CGCH_29_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_29_TextoyMapa_leyenda.jpg",
@@ -2634,9 +2634,9 @@
     "autor": "David Quiroz P., Mauricio Belmar U.",
     "informe": "GB-125",
     "bounds": {
-      "n": -46.0,
-      "s": -46.5,
-      "e": -72.333333,
+      "n": -46.000405,
+      "s": -46.499899,
+      "e": -72.333422,
       "w": -73.0
     },
     "overlay": "overlays/CGCH_GB_125_TextoyMapa.webp",

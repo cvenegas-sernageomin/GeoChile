@@ -1,4 +1,4 @@
-# Visor GeoChile
+﻿# Visor GeoChile
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23196774.svg)](https://doi.org/10.5281/zenodo.23196774)
 
@@ -13,7 +13,7 @@ como respaldo.
 
 ## Contenido
 
-- **Geología (12)** — cartas oficiales (incl. GB-123, GB-135/136, M204 a nivel nacional), Laguna del Maule, Tinguiririca-Teno.
+- **Geología (81)** — cartas oficiales de las series Geología Básica y Carta Geológica de Chile (antigua CGCH), Laguna del Maule, Tinguiririca-Teno. 31 con georreferencia auditada y corregida contra los SIG oficiales de SERNAGEOMIN (2026-10-10).
 - **Aplicada (13)** — geofísica, geoquímica, remociones, tsunami, licuefacción, volcanes, recursos minerales.
 - **Histórico (2)** — mapas académicos/históricos de referencia regional.
 - **Académicos (8)** — trabajos universitarios, hoja completa con su leyenda original.
