@@ -708,7 +708,7 @@
       "w": -71.000171
     },
     "overlay": "overlays/geo_F22_rio_claro_IR110.webp",
-    "leyenda": "leyendas/geo_F22_rio_claro_IR110_leyenda.jpg",
+    "leyenda": "",
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR110_rio_claro_texto.pdf"
