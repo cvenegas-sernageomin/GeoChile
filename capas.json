@@ -1500,10 +1500,10 @@
     "autor": "Daniel Bertin U., Álvaro Amigo R.",
     "informe": "GB-201",
     "bounds": {
-      "n": -21.750337,
-      "s": -21.999727,
-      "e": -68.266045,
-      "w": -68.631799
+      "n": -21.750202,
+      "s": -22.000201,
+      "e": -68.266353,
+      "w": -68.633126
     },
     "overlay": "overlays/CGCH_GB_201_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_201_TextoyMapa_leyenda.jpg",
@@ -2592,10 +2592,10 @@
     "autor": "Rita De la Cruz S., Joaquín Cortés C.",
     "informe": "GB-127",
     "bounds": {
-      "n": -43.974244,
+      "n": -43.998745,
       "s": -45.02277,
       "e": -70.879544,
-      "w": -72.369095
+      "w": -72.334963
     },
     "overlay": "overlays/CGCH_GB_127_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_127_TextoyMapa_leyenda.jpg",
