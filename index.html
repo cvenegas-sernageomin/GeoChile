@@ -80,6 +80,9 @@
   details details summary{padding:8px 10px;font-size:13px;color:#2c5f7c}
   details details details summary{font-weight:500;color:#475569}
   .vacio{padding:9px 12px;font-size:13px;color:#64748b;border-top:1px solid #eef2f6}
+  .invita{margin:0 10px 10px;padding:10px 12px;font-size:13px;line-height:1.4;color:#1e3a52;background:#eaf2f8;
+          border:1px solid #c5d9ea;border-radius:8px}
+  .invita a{color:#1a5276;font-weight:700;word-break:break-all}
   .capa label{display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;
               line-height:1.3}
   .capa input[type=checkbox],#grilla input[type=checkbox]{width:19px;height:19px;flex:none;
@@ -458,7 +461,9 @@ fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
     if(!grupo.length){
       // Académicos: se mantiene la categoría, pero sin capas hasta tener permiso de los autores
       if(cat!=='academico') return;
-      d.insertAdjacentHTML('beforeend','<div class="vacio">Próximamente: estos mapas se publicarán cuando contemos con la autorización de sus autores.</div>');
+      d.insertAdjacentHTML('beforeend','<div class="vacio">Próximamente: estos mapas se publicarán cuando contemos con la autorización de sus autores.</div>'
+        +'<div class="invita">📬 <b>¿Hiciste un mapa geológico en tu tesis o investigación?</b> Compártelo con la comunidad: envía tu mapa georreferenciado (GeoTIFF, KMZ o shapefile) con su leyenda y la referencia de la publicación a '
+        +'<a href="mailto:carlos.venegas@sernageomin.cl?subject=Mapa%20acad%C3%A9mico%20para%20el%20Visor%20GeoChile">carlos.venegas@sernageomin.cl</a>. Lo revisaremos para publicarlo aquí, con tu autoría.</div>');
     }else if(cat==='peligros') llenarGrupos(d,grupo,['tema','region']);
     else if(grupo.length>8 && cat!=='hillshade') llenarGrupos(d,grupo,['region']);
     else grupo.forEach(c=>crearCapa(d,c));
