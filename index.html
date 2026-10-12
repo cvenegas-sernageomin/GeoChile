@@ -39,6 +39,18 @@
          padding-bottom:calc(14px + env(safe-area-inset-bottom))}
   #panel.collapsed #pbody{display:none}
 
+  /* Mapa activo: transparencia y leyenda FUERA del cuerpo plegable (como Geonotas). Al
+     elegir un mapa el panel se contrae solo y estos controles quedan a mano sobre el mapa. */
+  #activa{flex:none;display:none;align-items:center;gap:8px;flex-wrap:wrap;padding:7px 12px;
+          background:#eaf2f8;border-bottom:1px solid #dbe4ec}
+  #activa.on{display:flex}
+  #activa .tit{flex:1 1 100%;font-size:13px;font-weight:600;color:#1a5276;white-space:nowrap;
+               overflow:hidden;text-overflow:ellipsis}
+  #activa label{display:flex;align-items:center;gap:6px;flex:1;min-width:150px;font-size:13px;color:#334155}
+  #activa input[type=range]{flex:1;height:24px;accent-color:#1a5276}
+  #activa button{font-size:13px;border:none;background:#1a5276;color:#fff;border-radius:8px;
+                 padding:7px 12px;cursor:pointer;white-space:nowrap;font-weight:600}
+
   /* Bloque de grilla IGM */
   #grilla{background:#fff;border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;
           padding:9px 10px}
@@ -106,6 +118,11 @@
       <img id="plogo" src="assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
       <h1>Visor GeoChile</h1>
       <button id="ptoggle" aria-label="Ocultar panel" title="Ocultar panel">&#9660;</button>
+    </div>
+    <div id="activa">
+      <div class="tit"></div>
+      <label>Transparencia <input type="range" min="0" max="1" step="0.05"/></label>
+      <button type="button">ⓘ Leyenda</button>
     </div>
     <div id="pbody">
       <div id="grilla">
@@ -224,6 +241,32 @@ window.addEventListener('orientationchange',()=>setTimeout(()=>map.invalidateSiz
 // observar el contenedor cubre esos casos.
 if(window.ResizeObserver) new ResizeObserver(remedir).observe(document.getElementById('map'));
 
+/* ---- Barra del mapa activo (el último que se activó) ---- */
+const activa=document.getElementById('activa');
+const actTit=activa.querySelector('.tit'), actRng=activa.querySelector('input'), actLeg=activa.querySelector('button');
+let actual=null;   // {c, rng}: capa mostrada en la barra y el deslizador de su fila
+function mostrarActiva(c,rng){
+  actual={c,rng};
+  actTit.textContent='🗺️ '+c.titulo;
+  actRng.value=rng.value;
+  actLeg.style.display=c.leyenda?'':'none';
+  activa.classList.add('on');
+}
+function quitarActiva(id){
+  if(!actual || actual.c.id!==id) return;
+  // pasa al último mapa que siga encendido, o se oculta
+  const on=[...document.querySelectorAll('.capa.on')].pop();
+  if(on && on._capa) mostrarActiva(on._capa.c,on._capa.rng);
+  else { actual=null; activa.classList.remove('on'); }
+  remedir();
+}
+actRng.addEventListener('input',()=>{
+  if(!actual) return;
+  actual.rng.value=actRng.value;
+  if(overlays[actual.c.id]) overlays[actual.c.id].setOpacity(+actRng.value);
+});
+actLeg.addEventListener('click',()=>{ if(actual && actual.c.leyenda) abrirLeyenda(actual.c.leyenda+ASSET_V); });
+
 function crearCapa(cont, c){
   const b=c.bounds;
   if (!b || !['n','s','e','w'].every(k => typeof b[k] === 'number')) {
@@ -257,11 +300,18 @@ function crearCapa(cont, c){
       if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay+ASSET_V,bounds,
         {opacity:+rng.value,pane:'pane_'+c.categoria});
       overlays[c.id].addTo(map); div.classList.add('on');
-      // Al activar un mapa se encuadra en él (el hillshade cubre todo Chile: no se mueve la vista)
-      if(c.categoria!=='hillshade') map.fitBounds(bounds);
-    }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); }
+      mostrarActiva(c,rng);
+      // Al elegir un mapa el panel se contrae solo y la vista se encuadra en él cuando el mapa
+      // ya tiene su tamaño nuevo (el hillshade cubre todo Chile: no se mueve la vista).
+      if(!panel.classList.contains('collapsed')) togglePanel();
+      setTimeout(()=>{ map.invalidateSize(); if(c.categoria!=='hillshade') map.fitBounds(bounds); },240);
+    }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); quitarActiva(c.id); }
   });
-  rng.addEventListener('input',()=>{ if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value); });
+  div._capa={c,rng};
+  rng.addEventListener('input',()=>{
+    if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value);
+    if(actual && actual.c.id===c.id) actRng.value=rng.value;
+  });
   const legBtn=ctl.querySelector('.leg');
   if(legBtn) legBtn.addEventListener('click',()=>abrirLeyenda(c.leyenda+ASSET_V));
   cont.appendChild(div);
