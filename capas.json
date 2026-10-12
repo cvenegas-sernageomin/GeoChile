@@ -1059,7 +1059,7 @@
     "leyenda": "leyendas/CGCH_GB_135_136_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-135-136.pdf",
     "region": "Arica y Parinacota"
   },
   {
@@ -1081,7 +1081,7 @@
     "leyenda": "leyendas/CGCH_GB_132_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-132.pdf",
     "region": "Arica y Parinacota"
   },
   {
@@ -1169,7 +1169,7 @@
     "leyenda": "leyendas/CGCH_GB_182_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-182.pdf",
     "region": "Tarapacá"
   },
   {
@@ -1345,7 +1345,7 @@
     "leyenda": "leyendas/CGCH_GB_207_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-207.pdf",
     "region": "Tarapacá"
   },
   {
@@ -1411,7 +1411,7 @@
     "leyenda": "leyendas/CGCH_GB_141_142_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-141-142.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1433,7 +1433,7 @@
     "leyenda": "leyendas/CGCH_GB_199_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-199.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1455,7 +1455,7 @@
     "leyenda": "leyendas/CGCH_GB_215_216_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-215-216.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1587,7 +1587,7 @@
     "leyenda": "leyendas/CGCH_GB_144_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-144.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1631,7 +1631,7 @@
     "leyenda": "leyendas/CGCH_GB_187_188_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-187-188.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1675,7 +1675,7 @@
     "leyenda": "leyendas/CGCH_GB_183_184_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-183-184.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1697,7 +1697,7 @@
     "leyenda": "leyendas/CGCH_GB_202_203_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-202-203.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1719,7 +1719,7 @@
     "leyenda": "leyendas/CGCH_GB_138_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-138.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1741,7 +1741,7 @@
     "leyenda": "leyendas/CGCH_GB_129_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-129.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1763,7 +1763,7 @@
     "leyenda": "leyendas/CGCH_GB_164_165_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-164-165.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1785,7 +1785,7 @@
     "leyenda": "leyendas/CGCH_GB_121_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-121.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1807,7 +1807,7 @@
     "leyenda": "leyendas/CGCH_GB_161_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-161.pdf",
     "region": "Antofagasta"
   },
   {
@@ -1895,7 +1895,7 @@
     "leyenda": "leyendas/CGCH_GB_185_186_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-185-186.pdf",
     "region": "Atacama"
   },
   {
@@ -1917,7 +1917,7 @@
     "leyenda": "leyendas/CGCH_GB_139_140_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-139-140.pdf",
     "region": "Atacama"
   },
   {
@@ -1983,7 +1983,7 @@
     "leyenda": "leyendas/CGCH_GB_145_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-145.pdf",
     "region": "Atacama"
   },
   {
@@ -2005,7 +2005,7 @@
     "leyenda": "leyendas/CGCH_GB_204_205_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-204-205.pdf",
     "region": "Atacama"
   },
   {
@@ -2093,7 +2093,7 @@
     "leyenda": "leyendas/CGCH_GB_200_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-200.pdf",
     "region": "Atacama"
   },
   {
@@ -2159,7 +2159,7 @@
     "leyenda": "leyendas/Cerros_de_Cantaritos_Laguna_Chica_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-181.pdf",
     "region": "Atacama"
   },
   {
@@ -2181,7 +2181,7 @@
     "leyenda": "leyendas/El_Transito_Lagunillas_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-149.pdf",
     "region": "Atacama"
   },
   {
@@ -2203,7 +2203,7 @@
     "leyenda": "leyendas/CGCH_GB_175_176_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-175-176.pdf",
     "region": "Atacama"
   },
   {
@@ -2225,7 +2225,7 @@
     "leyenda": "leyendas/CGCH_GB_133_134_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-133-134.pdf",
     "region": "Atacama"
   },
   {
@@ -2247,7 +2247,7 @@
     "leyenda": "leyendas/CGCH_GB_192_193_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-192-193.pdf",
     "region": "Coquimbo"
   },
   {
@@ -2423,7 +2423,7 @@
     "leyenda": "leyendas/CGCH_GB_122_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-122.pdf",
     "region": "Araucanía"
   },
   {
@@ -2445,7 +2445,7 @@
     "leyenda": "leyendas/CGCH_GB_128_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-128.pdf",
     "region": "Araucanía"
   },
   {
@@ -2489,7 +2489,7 @@
     "leyenda": "leyendas/CGCH_GB_210_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-210.pdf",
     "region": "Los Ríos"
   },
   {
@@ -2511,7 +2511,7 @@
     "leyenda": "leyendas/CGCH_GB_126_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-126.pdf",
     "region": "Los Lagos"
   },
   {
@@ -2555,7 +2555,7 @@
     "leyenda": "leyendas/CGCH_29_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/CGCH-29.pdf",
     "region": "Aysén"
   },
   {
@@ -2577,7 +2577,7 @@
     "leyenda": "leyendas/CGCH_GB_125_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-125.pdf",
     "region": "Aysén"
   },
   {
@@ -2621,7 +2621,7 @@
     "leyenda": "leyendas/CGCH_GB_146_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-146.pdf",
     "region": "Tarapacá"
   },
   {
@@ -2643,7 +2643,7 @@
     "leyenda": "leyendas/CGCH_GB_150_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-150.pdf",
     "region": "Atacama"
   },
   {
@@ -2687,7 +2687,7 @@
     "leyenda": "leyendas/CGCH_GB_190_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-190.pdf",
     "region": "Antofagasta"
   },
   {
@@ -2709,7 +2709,7 @@
     "leyenda": "leyendas/CGCH_GB_191_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-191.pdf",
     "region": "Antofagasta"
   },
   {
@@ -2731,7 +2731,7 @@
     "leyenda": "leyendas/CGCH_GB_194_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-194.pdf",
     "region": "Arica y Parinacota"
   },
   {
@@ -2753,7 +2753,7 @@
     "leyenda": "leyendas/CGCH_GB_197_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "",
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-197.pdf",
     "region": "Arica y Parinacota"
   },
   {
@@ -3301,7 +3301,7 @@
     "leyenda": "peligros/flujos_biobio_tirua_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3324,7 +3324,7 @@
     "leyenda": "peligros/flujos_biobio_curanilahue_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3347,7 +3347,7 @@
     "leyenda": "peligros/flujos_biobio_arauco_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3370,7 +3370,7 @@
     "leyenda": "peligros/flujos_biobio_tubul_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3393,7 +3393,7 @@
     "leyenda": "peligros/flujos_biobio_puntalavapie_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3416,7 +3416,7 @@
     "leyenda": "peligros/flujos_biobio_penco_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3439,7 +3439,7 @@
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   },
@@ -3462,7 +3462,7 @@
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null,
+    "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
     "tema": "Remociones en masa"
   }
