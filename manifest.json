@@ -1,0 +1,16 @@
+{
+  "name": "Visor GeoChile — SERNAGEOMIN",
+  "short_name": "GeoChile",
+  "description": "Cartas geológicas y mapas de peligros geológicos oficiales de SERNAGEOMIN sobre el satélite.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fa",
+  "theme_color": "#1a5276",
+  "lang": "es",
+  "icons": [
+    { "src": "icons/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

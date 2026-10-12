@@ -8,6 +8,7 @@
 <link rel="icon" href="icons/icono.svg" type="image/svg+xml"/>
 <link rel="icon" href="icons/icono-32.png" sizes="32x32" type="image/png"/>
 <link rel="apple-touch-icon" href="icons/icono-180.png"/>
+<link rel="manifest" href="manifest.json"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
   html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif;
@@ -107,6 +108,73 @@
   #legclose{position:absolute;top:8px;right:10px;z-index:5;background:#fff;border:1px solid #cbd5e1;
             border-radius:8px;padding:9px 14px;cursor:pointer;font-size:14px;
             box-shadow:0 1px 4px rgba(0,0,0,.25)}
+
+  /* Botones chicos de la barra del panel: ayuda e instalar */
+  .pbtn{flex:none;height:36px;min-width:36px;border:1px solid #b7c6d4;background:#eef4f9;border-radius:8px;
+        color:#1a5276;font-size:15px;font-weight:700;cursor:pointer;padding:0 9px;white-space:nowrap}
+  .pbtn:hover{background:#dbe8f3}
+  #pinstalar{background:#1a5276;color:#fff;border-color:#1a5276}
+  #phead h1{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #ptoggle{margin-left:0}
+
+  /* Instalar como app (mismo patrón que Patagonia Verde / GeoLente / Sendereando) */
+  .aviso-instalar{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a5276,#2e86c1);color:#fff;
+    border-radius:14px;padding:10px 12px;cursor:pointer;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,.4);
+    position:fixed;z-index:1500;left:60px;right:60px;top:calc(10px + env(safe-area-inset-top));max-width:560px;margin:0 auto;
+    animation:bajar .4s ease-out}
+  .aviso-instalar .ai-ico{font-size:26px;animation:latido 1.6s ease-in-out infinite}
+  .aviso-instalar .ai-txt{flex:1;line-height:1.25;display:flex;flex-direction:column;min-width:0}
+  .aviso-instalar .ai-txt b{font-size:15px}
+  .aviso-instalar .ai-txt small{font-size:12px;opacity:.92}
+  .aviso-instalar .ai-btn{background:#fff;color:#1a5276;font-weight:700;border-radius:999px;padding:7px 13px;font-size:14px}
+  .aviso-instalar .ai-x{border:0;background:rgba(255,255,255,.22);color:#fff;width:32px;height:32px;border-radius:50%;
+    font-weight:800;cursor:pointer;flex:none}
+  @media (max-width:480px){ .aviso-instalar{left:52px;right:56px;padding:8px 9px;gap:7px}
+    .aviso-instalar .ai-btn{display:none} }
+  @keyframes latido{50%{transform:scale(1.12)}}
+  @keyframes bajar{from{transform:translateY(-30px);opacity:0}}
+  dialog.hoja{border:0;border-radius:14px;padding:18px;max-width:430px;width:calc(100% - 32px);color:#1e293b;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);font-size:15px;line-height:1.4;box-sizing:border-box}
+  dialog.hoja::backdrop{background:rgba(0,0,0,.5)}
+  dialog.hoja h2{font-size:18px;color:#1a5276;margin:0 0 6px}
+  dialog.hoja p{margin:0 0 8px;color:#475569;font-size:14px}
+  dialog.hoja .btn{display:block;width:100%;margin-top:8px;padding:11px;font-size:15px;font-weight:600;border-radius:10px;
+    border:1px solid #cbd5e1;background:#fff;color:#1a5276;cursor:pointer}
+  dialog.hoja .btn.primario{background:#1a5276;color:#fff;border-color:#1a5276}
+  .pasos-inst{padding-left:0;list-style:none;counter-reset:p;margin:6px 0 12px}
+  .pasos-inst li{counter-increment:p;display:flex;gap:10px;margin:10px 0;align-items:center;font-size:14.5px}
+  .pasos-inst li::before{content:counter(p);flex:none;width:26px;height:26px;border-radius:50%;background:#1a5276;color:#fff;
+    font-weight:800;display:grid;place-items:center;font-size:13px}
+  .ico-compartir{width:22px;height:22px;vertical-align:-5px;color:#2F7DE1}
+  .flecha-instalar{position:fixed;z-index:3000;font-size:38px;color:#f5b041;text-shadow:0 0 3px #000,0 2px 10px rgba(0,0,0,.6);
+    line-height:1;pointer-events:none;animation:rebote 1s ease-in-out infinite}
+  .flecha-instalar.abajo{left:50%;bottom:calc(6px + env(safe-area-inset-bottom));margin-left:-16px}
+  .flecha-instalar.arriba{right:70px;top:calc(4px + env(safe-area-inset-top));animation-name:rebote-arriba}
+  .flecha-instalar.arriba.derecha{right:8px}
+  .flecha-instalar.abajo.derecha{left:auto;right:14px;margin-left:0}
+  @keyframes rebote{50%{transform:translateY(8px)}}
+  @keyframes rebote-arriba{50%{transform:translateY(-8px)}}
+
+  /* Presentación "¿Cómo se usa?": tarjetas que se deslizan */
+  #intro{padding:0;overflow:hidden}
+  #intro-pistas{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  #intro-pistas::-webkit-scrollbar{display:none}
+  .intro-p{flex:0 0 100%;scroll-snap-align:start;padding:22px 20px 6px;box-sizing:border-box}
+  .intro-p .ico{font-size:42px;line-height:1;margin-bottom:10px}
+  .intro-p ul{margin:6px 0 0;padding-left:18px;color:#334155;font-size:14px}
+  .intro-p li{margin:4px 0}
+  #intro-pie{display:flex;align-items:center;gap:8px;padding:10px 20px 18px}
+  #intro-puntos{display:flex;gap:6px;flex:1}
+  #intro-puntos i{width:8px;height:8px;border-radius:50%;background:#cbd5e1}
+  #intro-puntos i.on{background:#1a5276}
+  #intro-pie .btn{width:auto;margin:0;padding:9px 16px}
+
+  /* Aviso breve sobre el mapa (primera vez que se activa un mapa) */
+  #tip{position:fixed;z-index:1400;left:50%;transform:translateX(-50%);width:max-content;max-width:min(440px,calc(100% - 32px));
+       box-sizing:border-box;background:rgba(20,30,45,.92);color:#fff;border-radius:12px;padding:10px 14px;font-size:14px;
+       line-height:1.35;box-shadow:0 2px 12px rgba(0,0,0,.4);display:none;cursor:pointer}
+  #tip.on{display:block}
+  @media (prefers-reduced-motion:reduce){.aviso-instalar,.aviso-instalar .ai-ico,.flecha-instalar{animation:none}}
 </style>
 </head>
 <body>
@@ -117,6 +185,8 @@
          title="Mostrar u ocultar el panel">
       <img id="plogo" src="assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
       <h1>Visor GeoChile</h1>
+      <button id="pinstalar" class="pbtn" hidden title="Instalar GeoChile como app" aria-label="Instalar GeoChile como app">📲</button>
+      <button id="payuda" class="pbtn" title="¿Cómo se usa?" aria-label="¿Cómo se usa?">?</button>
       <button id="ptoggle" aria-label="Ocultar panel" title="Ocultar panel">&#9660;</button>
     </div>
     <div id="activa">
@@ -135,6 +205,32 @@
     </div>
   </div>
 </div>
+<div id="tip" role="status"></div>
+<dialog id="intro" class="hoja" aria-label="Cómo se usa el Visor GeoChile">
+  <div id="intro-pistas">
+    <section class="intro-p"><div class="ico">🗺️</div><h2>Bienvenido al Visor GeoChile</h2>
+      <p>Las cartas geológicas y los mapas de peligros geológicos publicados por SERNAGEOMIN, georreferenciados sobre la imagen satelital.</p>
+      <p>Funciona en el teléfono y en el computador.</p></section>
+    <section class="intro-p"><div class="ico">☑️</div><h2>Elige un mapa</h2>
+      <ul><li>Abre el panel de abajo tocando la barra <b>Visor GeoChile</b>.</li>
+        <li>Entra en una categoría y una región, y marca el mapa.</li>
+        <li>El panel se cierra solo y la vista se acerca al mapa.</li></ul></section>
+    <section class="intro-p"><div class="ico">🎚️</div><h2>Transparencia y leyenda</h2>
+      <ul><li>Bajo la barra queda el mapa activo con su deslizador de <b>Transparencia</b>: bájalo para ver el satélite debajo.</li>
+        <li><b>ⓘ Leyenda</b> abre la leyenda; se amplía con dos dedos o con la rueda del mouse.</li>
+        <li>Puedes encender varios mapas a la vez; la barra muestra el último que elegiste.</li></ul></section>
+    <section class="intro-p"><div class="ico">📲</div><h2>Más herramientas</h2>
+      <ul><li>Arriba a la derecha cambias el fondo: satelital, topográfico u OpenTopoMap.</li>
+        <li><b>Grilla IGM 1:100.000</b> muestra las hojas y te lleva a cada una.</li>
+        <li>Instala GeoChile como app con el botón <b>📲</b>: los mapas que abras quedan guardados para verlos sin señal.</li>
+        <li>Esta ayuda vuelve con el botón <b>?</b>.</li></ul></section>
+  </div>
+  <div id="intro-pie">
+    <div id="intro-puntos" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <button class="btn" id="intro-saltar" type="button">Saltar</button>
+    <button class="btn primario" id="intro-sig" type="button">Siguiente</button>
+  </div>
+</dialog>
 <div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -227,6 +323,7 @@ phead.addEventListener('keydown', e=>{
 // el boton vive dentro de la barra: evita contar el click dos veces
 ptoggle.addEventListener('click', e=>e.stopPropagation());
 ptoggle.addEventListener('click', togglePanel);
+['pinstalar','payuda'].forEach(id=>document.getElementById(id).addEventListener('click', e=>e.stopPropagation()));
 
 // En telefono conviene partir con el mapa a la vista
 if(window.matchMedia('(max-width:640px)').matches) togglePanel();
@@ -300,7 +397,7 @@ function crearCapa(cont, c){
       if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay+ASSET_V,bounds,
         {opacity:+rng.value,pane:'pane_'+c.categoria});
       overlays[c.id].addTo(map); div.classList.add('on');
-      mostrarActiva(c,rng);
+      mostrarActiva(c,rng); avisoPrimerMapa();
       // Al elegir un mapa el panel se contrae solo y la vista se encuadra en él cuando el mapa
       // ya tiene su tamaño nuevo (el hillshade cubre todo Chile: no se mueve la vista).
       if(!panel.classList.contains('collapsed')) togglePanel();
@@ -353,6 +450,104 @@ fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
   });
   map.invalidateSize();   // el panel ya tiene su alto final: re-medir el mapa
 }).catch(e=>console.error('No se pudo cargar capas.json:', e));
+</script>
+<script>
+/* ---- Avisos que explican (primera vez) ---- */
+const LS={get:k=>{try{return localStorage.getItem('geochile:'+k)}catch(e){return null}},
+          set:(k,v)=>{try{localStorage.setItem('geochile:'+k,v)}catch(e){}}};
+const tip=document.getElementById('tip'); let tipT=null;
+function aviso(html,ms=7000){
+  tip.innerHTML=html; tip.classList.add('on');
+  // sobre el panel y la barra del mapa activo, para no tapar el centro del mapa
+  tip.style.bottom=(document.getElementById('panel').offsetHeight+12)+'px';
+  clearTimeout(tipT); tipT=setTimeout(()=>tip.classList.remove('on'),ms);
+}
+tip.addEventListener('click',()=>tip.classList.remove('on'));
+function avisoPrimerMapa(){
+  if(LS.get('tip-mapa')) return; LS.set('tip-mapa','1');
+  setTimeout(()=>aviso('🎚️ Baja la <b>Transparencia</b> para ver el satélite debajo del mapa, y toca <b>ⓘ Leyenda</b> para abrir su leyenda.',9000),400);
+}
+
+/* ---- Presentación ¿Cómo se usa? (se muestra sola la primera visita) ---- */
+const intro=document.getElementById('intro'), pistas=document.getElementById('intro-pistas');
+const puntos=[...document.querySelectorAll('#intro-puntos i')], sig=document.getElementById('intro-sig');
+const pag=()=>Math.round(pistas.scrollLeft/Math.max(1,pistas.clientWidth));
+function pintarIntro(){ const p=pag(); puntos.forEach((x,i)=>x.classList.toggle('on',i===p)); sig.textContent=p>=puntos.length-1?'¡Empezar!':'Siguiente'; }
+function abrirIntro(){ if(!intro.open) intro.showModal(); pistas.scrollLeft=0; pintarIntro(); }
+function cerrarIntro(){ LS.set('intro-vista','1'); if(intro.open) intro.close(); ofrecerInstalar(); }
+pistas.addEventListener('scroll',()=>requestAnimationFrame(pintarIntro),{passive:true});
+sig.addEventListener('click',()=>pag()>=puntos.length-1?cerrarIntro():pistas.scrollTo({left:(pag()+1)*pistas.clientWidth,behavior:'smooth'}));
+document.getElementById('intro-saltar').addEventListener('click',cerrarIntro);
+intro.addEventListener('close',()=>{ LS.set('intro-vista','1'); ofrecerInstalar(); });
+document.getElementById('payuda').addEventListener('click',abrirIntro);
+
+/* ---- Instalar como app (mismo patrón que Patagonia Verde / GeoLente / Sendereando) ----
+   Banner flotante arriba al abrir (✕ lo cierra por esta visita) y botón 📲 fijo en la barra.
+   Si el navegador no ofrece su diálogo (iPhone, Samsung, Firefox) se muestran los pasos con una flecha al menú. */
+const INSTALADA=['standalone','fullscreen'].some(m=>matchMedia(`(display-mode: ${m})`).matches)||navigator.standalone===true;
+const ES_IOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+let pedidoInstalar=null, instaladaAhora=false;
+addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); pedidoInstalar=e; mostrarInstalar(); });
+addEventListener('appinstalled',()=>{ pedidoInstalar=null; instaladaAhora=true; mostrarInstalar();
+  aviso('✅ ¡Listo! Abre GeoChile desde el nuevo ícono de tu teléfono o computador.',8000); });
+const verInstalar=()=>!INSTALADA&&!instaladaAhora;
+function mostrarInstalar(){
+  document.getElementById('pinstalar').hidden=!verInstalar();
+  if(!verInstalar()) document.querySelectorAll('.aviso-instalar').forEach(b=>b.remove());
+}
+document.getElementById('pinstalar').addEventListener('click',instalar);
+const ICO_COMPARTIR='<svg class="ico-compartir" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7.5 7.5 12 3l4.5 4.5M8 10H6v11h12V10h-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function hojaInstalar(pasos,flecha){
+  const dlg=document.createElement('dialog'); dlg.className='hoja';
+  dlg.innerHTML='<h2>📲 Instala GeoChile</h2><p>Queda como una app: se abre en pantalla completa, sin la barra del navegador, y los mapas y leyendas que abras quedan guardados para verlos sin señal.</p>'
+    +(pasos?'<ol class="pasos-inst">'+pasos.map(x=>`<li><span>${x}</span></li>`).join('')+'</ol><button class="btn primario" data-a="ok">Entendido</button>'
+           :'<button class="btn primario" data-a="inst">📲 Instalar ahora</button><button class="btn" data-a="ok">Ahora no</button>')
+    +(flecha?`<div class="flecha-instalar ${flecha}" aria-hidden="true">${flecha.startsWith('arriba')?'⬆':'⬇'}</div>`:'');
+  dlg.addEventListener('click',e=>{ const a=e.target.dataset.a; if(!a) return; dlg.close(); if(a==='inst') instalar(); });
+  dlg.addEventListener('close',()=>dlg.remove());
+  document.body.appendChild(dlg); dlg.showModal();
+}
+function instalar(){
+  if(pedidoInstalar){
+    pedidoInstalar.prompt();
+    pedidoInstalar.userChoice.then(r=>{ if(r.outcome==='accepted') instaladaAhora=true; }).finally(()=>{ pedidoInstalar=null; mostrarInstalar(); });
+    return;
+  }
+  const ua=navigator.userAgent, ab='Abre <b>GeoChile</b> desde el nuevo ícono';
+  if(ES_IOS){
+    const chrome=/CriOS/.test(ua), ipad=/ipad/i.test(ua)||navigator.platform==='MacIntel';
+    return hojaInstalar([chrome?`Toca el botón <b>Compartir</b> ${ICO_COMPARTIR} junto a la barra de direcciones`:`Toca el botón <b>Compartir</b> ${ICO_COMPARTIR} de Safari`,
+      'Desliza y elige <b>«Agregar a pantalla de inicio»</b> ➕', ab], ipad||chrome?'arriba':'abajo');
+  }
+  const samsung=/SamsungBrowser/.test(ua), firefox=/Firefox/.test(ua), movil=/Android/.test(ua), brave=!!navigator.brave;
+  const l=samsung?['Toca el menú <b>≡</b> abajo a la derecha','Elige <b>«Agregar página a»</b> y luego <b>«Pantalla de inicio»</b>',ab]
+    :firefox?['Toca el menú <b>⋮</b> del navegador','Elige <b>«Instalar»</b> o <b>«Agregar a pantalla de inicio»</b>',ab]
+    :movil?[brave?'Toca el menú <b>⋮</b> de Brave':'Toca el menú <b>⋮</b> arriba a la derecha de Chrome','Elige <b>«Instalar aplicación»</b> o <b>«Agregar a la pantalla principal»</b>','Confirma con <b>Instalar</b> y abre <b>GeoChile</b> desde el nuevo ícono']
+    :['En la barra de direcciones toca el ícono <b>Instalar</b> 🖥️⬇ (a la derecha)','O abre el menú <b>⋮</b> → <b>«Transmitir, guardar y compartir»</b> → <b>«Instalar página como app»</b>','Confirma con <b>Instalar</b>'];
+  hojaInstalar(l, samsung?'abajo derecha':movil&&!brave?'arriba derecha':'');
+}
+function ofrecerInstalar(){
+  if(!verInstalar() || document.querySelector('.aviso-instalar')) return;
+  try{ if(sessionStorage.getItem('geochile:banner-cerrado')) return; }catch(e){}
+  const b=document.createElement('div'); b.className='aviso-instalar'; b.setAttribute('role','button'); b.tabIndex=0;
+  b.innerHTML='<span class="ai-ico" aria-hidden="true">📲</span><span class="ai-txt"><b>Instala GeoChile</b><small>Pantalla completa y mapas guardados sin señal</small></span><span class="ai-btn">Instalar</span><button class="ai-x" aria-label="Cerrar">✕</button>';
+  b.addEventListener('click',e=>{
+    if(e.target.closest('.ai-x')){ b.remove(); try{ sessionStorage.setItem('geochile:banner-cerrado','1'); }catch(err){} return; }
+    instalar();
+  });
+  b.addEventListener('keydown',e=>{ if(e.key==='Enter') instalar(); });
+  document.body.appendChild(b);
+}
+mostrarInstalar();
+// primera visita: la presentación (al cerrarla aparece el banner de instalar); después, solo el banner
+if(!LS.get('intro-vista')) setTimeout(abrirIntro,600); else setTimeout(ofrecerInstalar,1200);
+
+// Service worker: los mapas abiertos quedan para usarlos sin señal; al volver a la app se buscan versiones nuevas
+if('serviceWorker' in navigator && location.protocol==='https:'){
+  navigator.serviceWorker.register('sw.js').then(reg=>{
+    document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible') reg.update().catch(()=>{}); });
+  }).catch(()=>{});
+}
 </script>
 <script src="viewer_legend.js?v=20260827"></script>
 </body>
