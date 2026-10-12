@@ -188,6 +188,29 @@
        line-height:1.35;box-shadow:0 2px 12px rgba(0,0,0,.4);display:none;cursor:pointer}
   #tip.on{display:block}
   @media (prefers-reduced-motion:reduce){.aviso-instalar,.aviso-instalar .ai-ico,.flecha-instalar{animation:none}}
+
+  /* Botones GPS y orientación (controles Leaflet) */
+  .ctl-btn a{display:grid!important;place-items:center;width:40px!important;height:40px!important;line-height:1!important;
+             padding:0;position:relative;cursor:pointer}
+  .ctl-btn svg{width:24px;height:24px;transition:transform .15s linear}
+  .ctl-norte small{position:absolute;top:1px;left:0;right:0;text-align:center;font-size:8px;font-weight:800;color:#e0362c;
+                   line-height:10px;pointer-events:none}
+  .ctl-norte a.rumbo{background:#1a5276}
+  .ctl-norte a.rumbo small{color:#fff}
+  .ctl-gps a{color:#475569}
+  .ctl-gps a.on{color:#1a73e8}
+  .ctl-gps a.sigue{background:#1a73e8;color:#fff}
+  .ctl-gps a.buscando svg{animation:latido 1s ease-in-out infinite}
+  .gps-yo{position:relative}
+  .gps-yo .punto{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;
+                 background:#1a73e8;border:3px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.25),0 1px 4px rgba(0,0,0,.4);box-sizing:border-box}
+  .gps-yo .cono{position:absolute;left:50%;top:50%;width:0;height:0;margin-left:-9px;margin-top:-26px;
+                border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:16px solid #1a73e8;
+                transform-origin:9px 26px;display:none}
+  .gps-yo.con-rumbo .cono{display:block}
+  .gps-vel{background:rgba(26,115,232,.95);color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:4px 10px;
+           box-shadow:0 1px 4px rgba(0,0,0,.35);display:none}
+  .gps-vel.on{display:block}
 </style>
 </head>
 <body>
@@ -236,6 +259,7 @@
     <section class="intro-p"><div class="ico">📲</div><h2>Más herramientas</h2>
       <ul><li>Arriba a la derecha cambias el fondo: satelital, topográfico u OpenTopoMap.</li>
         <li><b>Grilla IGM 1:100.000</b> muestra las hojas y te lleva a cada una.</li>
+        <li><b>◎</b> te ubica con el GPS y te sigue, también en auto; la <b>N</b> hace que el mapa gire según tu rumbo. Con dos dedos lo giras a mano.</li>
         <li>Instala GeoChile como app con el botón <b>📲</b>: los mapas que abras quedan guardados para verlos sin señal.</li>
         <li>Esta ayuda vuelve con el botón <b>?</b>.</li></ul></section>
   </div>
@@ -247,11 +271,14 @@
 </dialog>
 <div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="vendor/leaflet-rotate.js"></script>
+<script src="vendor/wmm.js"></script>
 <script>
 const CATS = [["geologia","🗺️ Geología Básica"],["peligros","⚠️ Peligros Geológicos"],["aplicada","🧪 Geología Aplicada"],
   ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
 const ASSET_V = '?v=20261012f';   // cache-bust de overlays/leyendas (subir al cambiar assets)
-const map = L.map('map',{center:[-33.9,-71.2],zoom:5});
+// rotate (leaflet-rotate): mapa girable, sin norte fijo (como Geonotas v141 / MTB Visor / Sendereando)
+const map = L.map('map',{center:[-33.9,-71.2],zoom:5, rotate:true, touchRotate:true, rotateControl:false, bearing:0});
 const bases = {
   "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
   "Topográfico": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
@@ -259,8 +286,10 @@ const bases = {
 };
 bases["Satelital"].addTo(map);
 L.control.layers(bases,null,{position:'topright'}).addTo(map);
-CATS.forEach(([c],i)=>map.createPane('pane_'+c).style.zIndex = 300 + i*10);
-map.createPane('pane_grilla').style.zIndex = 400;   // grilla sobre los overlays
+// dentro de rotatePane (leaflet-rotate): colgados del mapPane no girarían con el mapa
+const PANE_GIRA = map.getPane('rotatePane') || undefined;
+CATS.forEach(([c],i)=>map.createPane('pane_'+c, PANE_GIRA).style.zIndex = 300 + i*10);
+map.createPane('pane_grilla', PANE_GIRA).style.zIndex = 400;   // grilla sobre los overlays
 
 const overlays = {}; // id -> L.imageOverlay
 
@@ -351,6 +380,170 @@ window.addEventListener('orientationchange',()=>setTimeout(()=>map.invalidateSiz
 // En movil la barra del navegador aparece/desaparece cambiando el alto SIN emitir 'resize':
 // observar el contenedor cubre esos casos.
 if(window.ResizeObserver) new ResizeObserver(remedir).observe(document.getElementById('map'));
+
+/* ---- Orientación del mapa: sin norte fijo (portado de Geonotas v141 / MTB Visor v22) ----
+   Tres modos: 'norte' (norte arriba), 'libre' (girado con dos dedos; en PC, Shift + arrastrar) y
+   'rumbo' (arriba queda hacia donde vas). En 'rumbo', yendo en auto (>9 km/h) manda el rumbo del
+   GPS, que es estable; a pie o detenido, la brújula del teléfono. Si al soltar los dedos el mapa
+   queda a <7° del norte, se endereza solo. bearing = −(rumbo verdadero). */
+const giro={modo:'norte', yo:false, raf:0, brujula:null, decl:0, oyente:null, btn:null, gpsRumbo:null};
+const difAng=(a,b)=>((a-b)%360+540)%360-180;
+function giroPoner(b){ giro.yo=true; try{ map.setBearing(b); }finally{ giro.yo=false; } }
+function giroPintar(){
+  const b=giro.btn; if(!b) return;
+  b.classList.toggle('rumbo',giro.modo==='rumbo');
+  b.title=giro.modo==='rumbo'?'El mapa sigue tu rumbo (toca para norte arriba)'
+         :giro.modo==='libre'?'Mapa girado (toca para norte arriba)':'Norte arriba (toca para que el mapa siga tu rumbo)';
+  b.querySelector('svg').style.transform='rotate('+map.getBearing()+'deg)';
+}
+const Norte=L.Control.extend({options:{position:'topright'},onAdd(){
+  const d=L.DomUtil.create('div','leaflet-bar ctl-btn ctl-norte');
+  const a=L.DomUtil.create('a','',d); a.href='#'; a.setAttribute('role','button'); a.setAttribute('aria-label','Orientación del mapa');
+  a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 16.5 12h-9z" fill="#e0362c"/><path d="M12 22 7.5 12h9z" fill="#9aa3ad"/></svg><small>N</small>';
+  L.DomEvent.on(a,'click',e=>{ L.DomEvent.stop(e);
+    if(giro.modo==='norte') giroModoRumbo(); else giroNorte(); });
+  L.DomEvent.disableClickPropagation(d); giro.btn=a; return d; }});
+new Norte().addTo(map);
+function giroNorte(){ giroBrujulaParar(); giro.modo='norte'; giroPoner(0); giroPintar(); }
+map.on('rotate',()=>{
+  if(!giro.yo && giro.modo!=='libre'){ giroBrujulaParar(); giro.modo='libre'; }   // lo giró con los dedos
+  giroPintar(); gpsPintarRumbo();
+});
+map.getContainer().addEventListener('touchend',e=>{
+  if(giro.modo!=='libre'||e.touches.length) return;
+  if(Math.abs(difAng(map.getBearing(),0))<7) giroNorte();
+});
+function giroAplicar(){
+  if(giro.modo!=='rumbo'||giro.raf) return;
+  giro.raf=requestAnimationFrame(()=>{ giro.raf=0;
+    if(giro.modo!=='rumbo') return;
+    // rumbo verdadero: el del GPS si vas rápido; si no, la brújula corregida por declinación
+    const r=giro.gpsRumbo!=null?giro.gpsRumbo:(giro.brujula!=null?giro.brujula+giro.decl:null);
+    if(r==null) return;
+    const b=((-r)%360+360)%360;
+    if(Math.abs(difAng(b,map.getBearing()))>.8) giroPoner(b);
+  });
+}
+function giroBrujulaParar(){
+  if(giro.oyente){ window.removeEventListener(giro.oyente.evt,giro.oyente.fn); giro.oyente=null; }
+  giro.brujula=null;
+}
+function rumboDeEvento(e){
+  if(typeof e.webkitCompassHeading==='number') return e.webkitCompassHeading;   // iOS: norte magnético
+  if(e.absolute===false) return null;            // alpha relativo (sin brújula): no hay norte
+  if(e.alpha!=null) return (360-e.alpha)%360;     // Android, orientación absoluta
+  return null;
+}
+async function giroModoRumbo(){
+  if(typeof DeviceOrientationEvent!=='undefined' && typeof DeviceOrientationEvent.requestPermission==='function'){
+    try{ if(await DeviceOrientationEvent.requestPermission()!=='granted') throw 0; }
+    catch(e){ if(!gps.watch){ aviso('Sin permiso de orientación el mapa no puede seguir tu rumbo.'); return; } }
+  }
+  giroBrujulaParar();
+  const c=gps.ult?gps.ult:map.getCenter();
+  try{ giro.decl=declinacionMagnetica(c.lat,c.lng)||0; }catch(e){ giro.decl=0; }
+  const evt=('ondeviceorientationabsolute' in window)?'deviceorientationabsolute':'deviceorientation';
+  const fn=e=>{
+    let h=rumboDeEvento(e); if(h==null) return;
+    h=(h+((screen.orientation&&screen.orientation.angle)||0))%360;   // teléfono apaisado: arriba de la pantalla
+    // suavizado circular: la brújula del teléfono tiembla ±2-3°
+    giro.brujula = giro.brujula==null ? h : (giro.brujula+difAng(h,giro.brujula)*.25+360)%360;
+    giroAplicar();
+  };
+  window.addEventListener(evt,fn); giro.oyente={evt,fn};
+  giro.modo='rumbo'; giroPintar();
+  if(gps.ult) map.panTo(gps.ult);
+  aviso('🧭 El mapa sigue tu rumbo. En auto usa la dirección del GPS; a pie, la brújula del teléfono.',5000);
+  setTimeout(()=>{ if(giro.modo==='rumbo'&&giro.brujula==null&&giro.gpsRumbo==null){ giroNorte();
+    aviso('Este equipo no entrega la brújula al navegador: el mapa seguirá tu rumbo cuando te muevas con el GPS encendido.',7000); } },3000);
+}
+
+/* ---- GPS: ubicarse y seguir la posición (también en auto) ----
+   watchPosition con alta precisión entrega ~1 posición por segundo. El mapa se desliza suave hacia
+   cada posición nueva (animación del largo del intervalo, sin saltos); si mueves el mapa con el dedo
+   deja de seguirte hasta que tocas el botón otra vez. Con el GPS encendido la pantalla no se apaga. */
+const gps={watch:null, sigue:false, ult:null, marca:null, circ:null, btn:null, tPan:0, wake:null, primera:true, vel:null};
+const Gps=L.Control.extend({options:{position:'topleft'},onAdd(){
+  const d=L.DomUtil.create('div','leaflet-bar ctl-btn ctl-gps');
+  const a=L.DomUtil.create('a','',d); a.href='#'; a.setAttribute('role','button'); a.setAttribute('aria-label','Mi ubicación');
+  a.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  L.DomEvent.on(a,'click',e=>{ L.DomEvent.stop(e);
+    if(!gps.watch) gpsIniciar();
+    else if(!gps.sigue){ gps.sigue=true; if(gps.ult) map.panTo(gps.ult); gpsPintar(); }
+    else gpsParar(); });
+  L.DomEvent.disableClickPropagation(d); gps.btn=a; return d; }});
+new Gps().addTo(map);
+const Vel=L.Control.extend({options:{position:'bottomleft'},onAdd(){ gps.vel=L.DomUtil.create('div','gps-vel'); return gps.vel; }});
+new Vel().addTo(map);
+function gpsPintar(){
+  const a=gps.btn;
+  a.classList.toggle('on',!!gps.watch); a.classList.toggle('sigue',!!gps.watch&&gps.sigue);
+  a.classList.toggle('buscando',!!gps.watch&&!gps.ult);
+  a.title=!gps.watch?'Mostrar mi ubicación':gps.sigue?'Siguiéndote (toca para apagar el GPS)':'Volver a mi ubicación';
+}
+function gpsIniciar(){
+  if(!navigator.geolocation){ aviso('Este navegador no tiene GPS.'); return; }
+  gps.sigue=true; gps.primera=true;
+  gps.watch=navigator.geolocation.watchPosition(gpsPos,gpsError,{enableHighAccuracy:true,maximumAge:1000,timeout:20000});
+  gpsPintar(); pantallaEncendida(true);
+}
+function gpsParar(){
+  if(gps.watch!=null) navigator.geolocation.clearWatch(gps.watch);
+  gps.watch=null; gps.sigue=false; gps.ult=null; giro.gpsRumbo=null;
+  if(gps.marca){ gps.marca.remove(); gps.circ.remove(); gps.marca=gps.circ=null; }
+  gps.vel.classList.remove('on'); gpsPintar(); pantallaEncendida(false);
+}
+function gpsError(e){
+  if(e.code===1){ gpsParar(); aviso('📍 Sin permiso de ubicación. Actívalo en los ajustes del navegador para este sitio.',8000); }
+  else if(!gps.ult) aviso('📍 Buscando señal GPS… al aire libre se encuentra más rápido.',5000);
+}
+function gpsPintarRumbo(){
+  if(!gps.marca||!gps.marca._icon) return;
+  const r=gps.rumbo, el=gps.marca._icon;
+  el.classList.toggle('con-rumbo',r!=null);
+  // el marcador queda derecho en pantalla: el cono se dibuja en rumbo + giro del mapa
+  if(r!=null) el.querySelector('.cono').style.transform='rotate('+(r+map.getBearing())+'deg)';
+}
+function gpsPos(p){
+  const c=p.coords, ll=L.latLng(c.latitude,c.longitude);
+  gps.ult=ll;
+  const vel=c.speed!=null&&c.speed>=0?c.speed:null;                    // m/s
+  // rumbo del GPS solo con movimiento real (a pie el rumbo GPS salta de un lado a otro)
+  gps.rumbo = vel!=null&&vel>2.5&&c.heading!=null&&!isNaN(c.heading) ? c.heading : null;
+  giro.gpsRumbo=gps.rumbo;
+  if(!gps.marca){
+    gps.circ=L.circle(ll,{radius:c.accuracy,color:'#1a73e8',weight:1,fillOpacity:.12,interactive:false}).addTo(map);
+    gps.marca=L.marker(ll,{icon:L.divIcon({className:'gps-yo',html:'<div class="cono"></div><div class="punto"></div>',iconSize:[0,0]}),
+                           interactive:false,keyboard:false,zIndexOffset:1000}).addTo(map);
+  }else{ gps.marca.setLatLng(ll); gps.circ.setLatLng(ll).setRadius(c.accuracy); }
+  gpsPintarRumbo();
+  // velocidad en km/h (en auto); oculta a pie
+  if(vel!=null&&vel>2.5){ gps.vel.textContent=Math.round(vel*3.6)+' km/h'; gps.vel.classList.add('on'); }
+  else gps.vel.classList.remove('on');
+  if(giro.modo==='rumbo') giroAplicar();
+  if(gps.primera){
+    gps.primera=false;
+    map.setView(ll,Math.max(map.getZoom(),c.accuracy>500?12:15),{animate:true});
+  }else if(gps.sigue){
+    // deslizamiento continuo: la animación dura lo que falta para la próxima posición (~1 s)
+    const ahora=Date.now(), dt=Math.min(1.2,Math.max(.25,(ahora-gps.tPan)/1000)); gps.tPan=ahora;
+    const pp=map.latLngToContainerPoint(ll), cc=map.getSize().divideBy(2);
+    if(pp.distanceTo(cc)>2) map.panTo(ll,{animate:true,duration:dt,easeLinearity:1,noMoveStart:true});
+  }
+  gpsPintar();
+}
+// si mueves el mapa con el dedo, deja de seguirte (el botón queda azul claro: tócalo para volver)
+map.on('dragstart',()=>{ if(gps.sigue){ gps.sigue=false; gpsPintar(); } });
+// pantalla encendida mientras el GPS está activo (navegando en auto)
+async function pantallaEncendida(si){
+  try{
+    if(si&&'wakeLock' in navigator){ if(gps.wake&&!gps.wake.released) return; gps.wake=await navigator.wakeLock.request('screen'); }
+    else if(!si&&gps.wake){ await gps.wake.release(); gps.wake=null; }
+  }catch(e){}
+}
+// el navegador suelta el bloqueo al ocultar la página: se pide de nuevo al volver
+document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='visible'&&gps.watch) pantallaEncendida(true); });
+gpsPintar(); giroPintar();
 
 /* ---- Barra del mapa activo (el último que se activó) ---- */
 const activa=document.getElementById('activa');
