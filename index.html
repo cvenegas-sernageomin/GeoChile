@@ -257,6 +257,8 @@ function crearCapa(cont, c){
       if(!overlays[c.id]) overlays[c.id]=L.imageOverlay(c.overlay+ASSET_V,bounds,
         {opacity:+rng.value,pane:'pane_'+c.categoria});
       overlays[c.id].addTo(map); div.classList.add('on');
+      // Al activar un mapa se encuadra en él (el hillshade cubre todo Chile: no se mueve la vista)
+      if(c.categoria!=='hillshade') map.fitBounds(bounds);
     }else if(overlays[c.id]){ overlays[c.id].remove(); div.classList.remove('on'); }
   });
   rng.addEventListener('input',()=>{ if(overlays[c.id]) overlays[c.id].setOpacity(+rng.value); });
