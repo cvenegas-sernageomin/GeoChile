@@ -2970,10 +2970,10 @@
     "autor": "",
     "informe": "IR-22-99 (16120_IR_99, Fernández & Espinoza)",
     "bounds": {
-      "n": -27.292018,
-      "s": -27.978962,
-      "e": -68.658556,
-      "w": -70.219074
+      "n": -27.291412,
+      "s": -27.978958,
+      "e": -68.67864,
+      "w": -70.239775
     },
     "overlay": "peligros/atacama_copiapo_hoja3.webp",
     "leyenda": "peligros/atacama_copiapo_leyenda.webp",
@@ -2981,7 +2981,8 @@
     "recortado": false,
     "pdf": null,
     "region": "Atacama",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12 DEM SRTM: 2009 m antes -> 1.9 m"
   },
   {
     "id": "pel_atacama_copiapo_hoja4",
@@ -3338,10 +3339,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de la Ciudad de Arauco, Región del Biobío. Mapa 5-1 (Marín, Ortiz, Falcón, Arenas)",
     "bounds": {
-      "n": -37.224066,
-      "s": -37.263239,
-      "e": -73.264873,
-      "w": -73.35112
+      "n": -37.223707,
+      "s": -37.263564,
+      "e": -73.263965,
+      "w": -73.353691
     },
     "overlay": "peligros/flujos_biobio_arauco.webp",
     "leyenda": "peligros/flujos_biobio_arauco_leyenda.webp",
@@ -3349,7 +3350,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12 DEM SRTM: 72 m antes -> 1.6 m"
   },
   {
     "id": "pel_flujos_biobio_tubul",
@@ -3453,10 +3455,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Concepción-Talcahuano-Hualpén-Chiguayante, Región del Biobío. Mapa 12-1b (Falcón, Ramírez, Arenas, Cravatt, Huerta, Marín)",
     "bounds": {
-      "n": -36.771893,
-      "s": -36.962725,
-      "e": -72.987613,
-      "w": -73.173062
+      "n": -36.771806,
+      "s": -36.962618,
+      "e": -72.978045,
+      "w": -73.182837
     },
     "overlay": "peligros/flujos_biobio_concepcion_b.webp",
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
@@ -3464,6 +3466,7 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12 DEM SRTM: 188 m antes -> 2.7 m"
   }
 ]
