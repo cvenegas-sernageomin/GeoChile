@@ -48,7 +48,14 @@
   #activa .tit{flex:1 1 100%;font-size:13px;font-weight:600;color:#1a5276;white-space:nowrap;
                overflow:hidden;text-overflow:ellipsis}
   #activa label{display:flex;align-items:center;gap:6px;flex:1;min-width:150px;font-size:13px;color:#334155}
-  #activa input[type=range]{flex:1;height:24px;accent-color:#1a5276}
+  #activa input[type=range]{flex:1;min-width:0;width:auto;height:24px;accent-color:#1a5276}
+  /* Teléfono: el deslizador va en su propia fila y Leyenda / PDF debajo, a lo ancho; si no,
+     el deslizador no baja de su ancho mínimo y queda montado bajo el botón de leyenda */
+  @media (max-width:640px){
+    #activa label{flex:1 1 100%;min-width:0}
+    #activa button,#activa .pdf{flex:1;text-align:center;padding:0 12px;height:36px;box-sizing:border-box;
+      display:flex;align-items:center;justify-content:center}
+  }
   #activa .pdf{font-size:13px;border:1px solid #e0a878;background:#fff5ec;color:#a2531a;border-radius:8px;
                padding:7px 12px;text-decoration:none;white-space:nowrap;font-weight:600}
   #activa .pdf:hover{background:#fde8d4}
