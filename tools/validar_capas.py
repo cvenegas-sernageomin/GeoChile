@@ -1,6 +1,6 @@
 import json, sys
 
-CATS = {"geologia", "aplicada", "historico", "academico", "hillshade"}
+CATS = {"geologia", "peligros", "aplicada", "historico", "academico", "hillshade"}
 REQ = {"id", "categoria", "titulo", "bounds", "overlay", "leyenda", "opacidad", "recortado"}
 
 def validar(capas):

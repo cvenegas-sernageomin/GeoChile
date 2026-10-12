@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="theme-color" content="#1a5276"/>
 <title>Visor GeoChile — SERNAGEOMIN</title>
+<link rel="icon" href="icons/icono.svg" type="image/svg+xml"/>
+<link rel="icon" href="icons/icono-32.png" sizes="32x32" type="image/png"/>
+<link rel="apple-touch-icon" href="icons/icono-180.png"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <style>
   html,body{margin:0;height:100%;font-family:'Segoe UI',Arial,sans-serif;
@@ -114,9 +117,9 @@
 <div id="legmodal"><div id="legwrap"><button id="legclose">✕ Cerrar</button><img id="legimg"/></div></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const CATS = [["geologia","🗺️ Geología Básica"],["aplicada","⚠️ Geología Aplicada"],
+const CATS = [["geologia","🗺️ Geología Básica"],["peligros","⚠️ Peligros Geológicos"],["aplicada","🧪 Geología Aplicada"],
   ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
-const ASSET_V = '?v=20261010e';   // cache-bust de overlays/leyendas (subir al cambiar assets)
+const ASSET_V = '?v=20261012a';   // cache-bust de overlays/leyendas (subir al cambiar assets)
 const map = L.map('map',{center:[-33.9,-71.2],zoom:5});
 const bases = {
   "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),

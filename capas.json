@@ -904,7 +904,7 @@
   },
   {
     "id": "lic_curico_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de licuefacción — Curicó",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -925,7 +925,7 @@
   },
   {
     "id": "rem_F09_curico_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de remociones en masa — Curicó",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -939,14 +939,14 @@
       "w": -71.27955
     },
     "overlay": "overlays/rem_F09_curico_2010.webp",
-    "leyenda": null,
+    "leyenda": "peligros/maule_curico_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F09_curico_2010_texto.pdf"
   },
   {
     "id": "rem_F13_constitucion_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de remociones en masa — Constitución",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -960,14 +960,14 @@
       "w": -72.453032
     },
     "overlay": "overlays/rem_F13_constitucion_2010.webp",
-    "leyenda": null,
+    "leyenda": "peligros/maule_constitucion_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F13_constitucion_2010_texto.pdf"
   },
   {
     "id": "rem_duao_iloca_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de remociones en masa — Duao-Iloca",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -981,14 +981,14 @@
       "w": -72.203974
     },
     "overlay": "overlays/rem_duao_iloca_2010.webp",
-    "leyenda": null,
+    "leyenda": "peligros/maule_duaoiloca_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_duao_iloca_2010_texto.pdf"
   },
   {
     "id": "tsu_constitucion_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de tsunami — Constitución",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -1009,7 +1009,7 @@
   },
   {
     "id": "tsu_duao_iloca_2010",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligro de tsunami — Duao-Iloca",
     "fuente": "SERNAGEOMIN",
     "anio": "2010",
@@ -1030,7 +1030,7 @@
   },
   {
     "id": "vol_peligros_cerro_azul_quizapu_GAMB23",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligros volcánicos — Cerro Azul-Quizapú",
     "fuente": "SERNAGEOMIN",
     "anio": "",
@@ -1051,7 +1051,7 @@
   },
   {
     "id": "vol_peligros_descabezado_quizapu_GAMB39",
-    "categoria": "aplicada",
+    "categoria": "peligros",
     "titulo": "Peligros volcánicos — Descabezado Grande-Cerro Azul",
     "fuente": "SERNAGEOMIN",
     "anio": "",
@@ -2875,5 +2875,615 @@
     "opacidad": 1.0,
     "recortado": false,
     "pdf": ""
+  },
+  {
+    "id": "pel_pfi_permafrost",
+    "categoria": "academico",
+    "titulo": "Índice de Favorabilidad de Permafrost (PFI)",
+    "fuente": "Azócar, Brenning y Bodin (2017) — andespermafrost.com",
+    "anio": "2017",
+    "escala": "raster 30 m nativo (servido a ~150 m); solo terreno de montaña (máscara)",
+    "autor": "",
+    "informe": "Permafrost distribution modelling in the semi-arid Chilean Andes, The Cryosphere 11, 877-890, doi:10.5194/tc-11-877-2017",
+    "bounds": {
+      "n": -27.987513,
+      "s": -33.222765,
+      "e": -69.200522,
+      "w": -70.953546
+    },
+    "overlay": "peligros/pfi_permafrost.webp",
+    "leyenda": "peligros/pfi_permafrost_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null,
+    "licencia": "CC BY-SA 4.0"
+  },
+  {
+    "id": "pel_cruz_de_cana_contexto",
+    "categoria": "peligros",
+    "titulo": "Plano de Evacuación ante Amenaza de Remoción en Masa — Cruz de Caña (contexto)",
+    "fuente": "SENAPRED / SERNAGEOMIN / Municipalidad de Coquimbo",
+    "anio": "2025",
+    "escala": "1:20.000 aprox.",
+    "autor": "",
+    "informe": "Plano de evacuación Cruz de Caña, Comuna de Coquimbo (COD 225041021, edición julio 2025)",
+    "bounds": {
+      "n": -29.994986,
+      "s": -30.07512,
+      "e": -71.134966,
+      "w": -71.261117
+    },
+    "overlay": "peligros/cruz_de_cana_contexto.webp",
+    "leyenda": "peligros/cruz_de_cana_leyenda.webp",
+    "opacidad": 0.85,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_cruz_de_cana_detalle",
+    "categoria": "peligros",
+    "titulo": "Plano de Evacuación ante Amenaza de Remoción en Masa — Cruz de Caña (zoom urbano)",
+    "fuente": "SENAPRED / SERNAGEOMIN / Municipalidad de Coquimbo",
+    "anio": "2025",
+    "escala": "1:5.000 aprox.",
+    "autor": "",
+    "informe": "Plano de evacuación Cruz de Caña, Comuna de Coquimbo (COD 225041021, edición julio 2025)",
+    "bounds": {
+      "n": -30.008716,
+      "s": -30.030771,
+      "e": -71.177725,
+      "w": -71.217972
+    },
+    "overlay": "peligros/cruz_de_cana_detalle.webp",
+    "leyenda": "peligros/cruz_de_cana_leyenda.webp",
+    "opacidad": 0.85,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_islon_flujos_inundacion",
+    "categoria": "peligros",
+    "titulo": "Áreas expuestas a remociones en masa tipo flujo (aluviones) e inundaciones — Sector El Islón (Comuna de Coquimbo)",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2026",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "Fig. 19 — Sector El Islón, Comuna de Coquimbo, Región de Coquimbo",
+    "bounds": {
+      "n": -29.888959,
+      "s": -29.908288,
+      "e": -71.172979,
+      "w": -71.199694
+    },
+    "overlay": "peligros/islon_flujos_inundacion.webp",
+    "leyenda": "peligros/islon_flujos_inundacion_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_el_romero_flujos_inundacion",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Flujos de Detritos e Inundación — Sector Canal El Romero / Canal San Pedro (La Serena)",
+    "fuente": "Estudio de infraestructura de riego (canales El Romero / San Pedro) — SERNAGEOMIN",
+    "anio": "2026",
+    "escala": "1:5.000 aprox.",
+    "autor": "",
+    "informe": "Zonificacion.jpg (imagen renderizada, sin metadata de georreferenciación)",
+    "bounds": {
+      "n": -29.951821,
+      "s": -29.962258,
+      "e": -71.08077,
+      "w": -71.095004
+    },
+    "overlay": "peligros/el_romero_flujos_inundacion.webp",
+    "leyenda": "peligros/el_romero_flujos_inundacion_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_atacama_copiapo_hoja1",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Cuenca del Río Copiapó (Hoja 1 de 4, costa/Caldera)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2022",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-22-99 (16120_IR_99, Fernández & Espinoza)",
+    "bounds": {
+      "n": -27.011978,
+      "s": -27.498986,
+      "e": -70.506261,
+      "w": -70.983996
+    },
+    "overlay": "peligros/atacama_copiapo_hoja1.webp",
+    "leyenda": "peligros/atacama_copiapo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_atacama_copiapo_hoja2",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Cuenca del Río Copiapó (Hoja 2 de 4)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2022",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-22-99 (16120_IR_99, Fernández & Espinoza)",
+    "bounds": {
+      "n": -26.651021,
+      "s": -27.337688,
+      "e": -68.707029,
+      "w": -70.233305
+    },
+    "overlay": "peligros/atacama_copiapo_hoja2.webp",
+    "leyenda": "peligros/atacama_copiapo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_atacama_copiapo_hoja3",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Cuenca del Río Copiapó (Hoja 3 de 4, Copiapó/Los Loros)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2022",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-22-99 (16120_IR_99, Fernández & Espinoza)",
+    "bounds": {
+      "n": -27.292018,
+      "s": -27.978962,
+      "e": -68.658556,
+      "w": -70.219074
+    },
+    "overlay": "peligros/atacama_copiapo_hoja3.webp",
+    "leyenda": "peligros/atacama_copiapo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_atacama_copiapo_hoja4",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Cuenca del Río Copiapó (Hoja 4 de 4, cordillera/frontera Argentina)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2022",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "IR-22-99 (16120_IR_99, Fernández & Espinoza)",
+    "bounds": {
+      "n": -27.959133,
+      "s": -28.642666,
+      "e": -68.966873,
+      "w": -70.167775
+    },
+    "overlay": "peligros/atacama_copiapo_hoja4.webp",
+    "leyenda": "peligros/atacama_copiapo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_caida_rocas_maipo",
+    "categoria": "peligros",
+    "titulo": "Caída de rocas — Cajón del Maipo (San José de Maipo)",
+    "fuente": "Plataforma SIGMA — CIGIDEN",
+    "anio": "2021",
+    "escala": "—",
+    "autor": "",
+    "informe": "Susceptibilidad y propagación de caídas de rocas (SIGMA)",
+    "bounds": {
+      "n": -33.545573,
+      "s": -33.824812,
+      "e": -70.201374,
+      "w": -70.439476
+    },
+    "overlay": "peligros/caida_rocas_maipo.webp",
+    "leyenda": "peligros/caida_rocas_maipo_leyenda.webp",
+    "opacidad": 0.65,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_coquimbo_norte",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa — Región de Coquimbo, Sector Norte",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2018",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "IR-COQ-02 (15633_IR_68)",
+    "bounds": {
+      "n": -29.017529,
+      "s": -30.780946,
+      "e": -69.76875,
+      "w": -71.764805
+    },
+    "overlay": "peligros/coquimbo_norte.webp",
+    "leyenda": "peligros/coquimbo_norte_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_coquimbo_sur",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa — Región de Coquimbo, Sector Sur",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2021",
+    "escala": "1:250.000",
+    "autor": "",
+    "informe": "IR-COQ-03 (16024_IR_88 / IR-21-88)",
+    "bounds": {
+      "n": -30.194771,
+      "s": -32.292706,
+      "e": -70.00939,
+      "w": -72.02419
+    },
+    "overlay": "peligros/coquimbo_sur.webp",
+    "leyenda": "peligros/coquimbo_sur_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_valpo_concon",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa e Inundaciones — Concón (Hoja 1 de 3)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2005",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "IR-05-29 (11543_IR_29)",
+    "bounds": {
+      "n": -32.915479,
+      "s": -33.015172,
+      "e": -71.473365,
+      "w": -71.558987
+    },
+    "overlay": "peligros/valpo_concon.webp",
+    "leyenda": "peligros/valpo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_valpo_vina_del_mar",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa e Inundaciones — Viña del Mar (Hoja 2 de 3)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2005",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "IR-05-29 (11543_IR_29)",
+    "bounds": {
+      "n": -33.010789,
+      "s": -33.075506,
+      "e": -71.470639,
+      "w": -71.555651
+    },
+    "overlay": "peligros/valpo_vina_del_mar.webp",
+    "leyenda": "peligros/valpo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_valpo_valparaiso",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa e Inundaciones — Valparaíso (Hoja 3 de 3)",
+    "fuente": "SERNAGEOMIN — Programa Nacional de Peligros Geológicos",
+    "anio": "2005",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "IR-05-29 (11543_IR_29)",
+    "bounds": {
+      "n": -33.015687,
+      "s": -33.082085,
+      "e": -71.551367,
+      "w": -71.664304
+    },
+    "overlay": "peligros/valpo_valparaiso.webp",
+    "leyenda": "peligros/valpo_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_ohiggins_rancagua",
+    "categoria": "peligros",
+    "titulo": "Peligro de Remociones en Masa — Área de Rancagua (Región de O'Higgins)",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Ambiental",
+    "anio": "2017",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "Carta Geológica de Chile - Geología Ambiental Nº29",
+    "bounds": {
+      "n": -33.999869,
+      "s": -34.249935,
+      "e": -70.49964,
+      "w": -71.00027
+    },
+    "overlay": "peligros/ohiggins_rancagua.webp",
+    "leyenda": "peligros/ohiggins_rancagua_leyenda.webp",
+    "opacidad": 0.75,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_aluvionales_maipo",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Flujos Aluvionales — Cuenca del Río Maipo",
+    "fuente": "Plataforma SIGMA — CIGIDEN (FONDEF ID19I10021)",
+    "anio": "2021",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "Susceptibilidad de Flujos Aluvionales (SIGMA)",
+    "bounds": {
+      "n": -32.907483,
+      "s": -34.292426,
+      "e": -69.766117,
+      "w": -71.651594
+    },
+    "overlay": "peligros/flujos_aluvionales.webp",
+    "leyenda": "peligros/flujos_aluvionales_leyenda.webp",
+    "opacidad": 0.65,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_deslizamientos_laderas_maipo",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Deslizamientos de Laderas — Cuenca del Río Maipo",
+    "fuente": "Plataforma SIGMA — CIGIDEN (FONDEF ID19I10021)",
+    "anio": "2021",
+    "escala": "1:100.000",
+    "autor": "",
+    "informe": "Susceptibilidad de Deslizamientos de Laderas (SIGMA)",
+    "bounds": {
+      "n": -32.907444,
+      "s": -34.292392,
+      "e": -69.765875,
+      "w": -71.652305
+    },
+    "overlay": "peligros/deslizamientos_laderas.webp",
+    "leyenda": "peligros/deslizamientos_laderas_leyenda.webp",
+    "opacidad": 0.65,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_sjmaipo_peligro",
+    "categoria": "peligros",
+    "titulo": "Peligro por Flujos — Cuenca Alta Río Maipo (San José de Maipo)",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2026",
+    "escala": "1:25.000 aprox.",
+    "autor": "",
+    "informe": "Mapa de peligro de flujos de la cuenca alta del río Maipo, Comuna de San José de Maipo",
+    "bounds": {
+      "n": -32.92233425710519,
+      "s": -34.41656692456429,
+      "e": -69.68926470585771,
+      "w": -70.62618632977818
+    },
+    "overlay": "peligros/flujos_sjmaipo_peligro.webp",
+    "leyenda": null,
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_lobar_alcance",
+    "categoria": "peligros",
+    "titulo": "Grado de Peligro por Alcance de Flujos — Cuenca Río Mapocho (Lo Barnechea)",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2026",
+    "escala": "1:20.000 aprox.",
+    "autor": "",
+    "informe": "Mapa de grado de peligro por alcance de flujos de la cuenca alta del río Mapocho, Comuna de Lo Barnechea",
+    "bounds": {
+      "n": -33.0538833218287,
+      "s": -33.53291001155171,
+      "e": -70.1287109778595,
+      "w": -70.65112849954863
+    },
+    "overlay": "peligros/flujos_lobar_alcance.webp",
+    "leyenda": null,
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_lobar_generacion",
+    "categoria": "peligros",
+    "titulo": "Grado de Peligro por Generación de Flujos — Cuenca Río Mapocho (Lo Barnechea)",
+    "fuente": "SERNAGEOMIN",
+    "anio": "2026",
+    "escala": "1:20.000 aprox.",
+    "autor": "",
+    "informe": "Mapa de grado de peligro por generación de flujos de la cuenca alta del río Mapocho, Comuna de Lo Barnechea",
+    "bounds": {
+      "n": -33.05388332188512,
+      "s": -33.53291001160818,
+      "e": -70.12871097786802,
+      "w": -70.65112849955756
+    },
+    "overlay": "peligros/flujos_lobar_generacion.webp",
+    "leyenda": null,
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_tirua",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Tirúa (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Tirúa, Región del Biobío. Mapa 2-1 (Jara, Moreno, Marín 2011; Inf. IR-12-48)",
+    "bounds": {
+      "n": -38.320481,
+      "s": -38.353696,
+      "e": -73.476586,
+      "w": -73.514675
+    },
+    "overlay": "peligros/flujos_biobio_tirua.webp",
+    "leyenda": "peligros/flujos_biobio_tirua_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_curanilahue",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Curanilahue (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:25.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Curanilahue, Región del Biobío (Inf. IR-12-48)",
+    "bounds": {
+      "n": -37.452841,
+      "s": -37.521969,
+      "e": -73.308941,
+      "w": -73.372523
+    },
+    "overlay": "peligros/flujos_biobio_curanilahue.webp",
+    "leyenda": "peligros/flujos_biobio_curanilahue_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_arauco",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Arauco (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de la Ciudad de Arauco, Región del Biobío. Mapa 5-1 (Marín, Ortiz, Falcón, Arenas)",
+    "bounds": {
+      "n": -37.224066,
+      "s": -37.263239,
+      "e": -73.264873,
+      "w": -73.35112
+    },
+    "overlay": "peligros/flujos_biobio_arauco.webp",
+    "leyenda": "peligros/flujos_biobio_arauco_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_tubul",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Caletas Tubul y Las Peñas (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:25.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área Caletas Tubul-Las Peñas, Región del Biobío. Mapa 7-1 (Marín, Ortiz, Falcón; Inf. IR-8-48)",
+    "bounds": {
+      "n": -37.197212,
+      "s": -37.278977,
+      "e": -73.384157,
+      "w": -73.503421
+    },
+    "overlay": "peligros/flujos_biobio_tubul.webp",
+    "leyenda": "peligros/flujos_biobio_tubul_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_puntalavapie",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Caleta Punta Lavapié (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Caleta Punta Lavapié, Región del Biobío. Mapa 6-1 (Marín, Ortiz; Inf. IR-12-48)",
+    "bounds": {
+      "n": -37.139985,
+      "s": -37.165303,
+      "e": -73.570717,
+      "w": -73.610298
+    },
+    "overlay": "peligros/flujos_biobio_puntalavapie.webp",
+    "leyenda": "peligros/flujos_biobio_puntalavapie_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_penco",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Penco (Bío-Bío)",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2011",
+    "escala": "1:10.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Penco, Región del Biobío",
+    "bounds": {
+      "n": -36.693822,
+      "s": -36.757295,
+      "e": -72.954165,
+      "w": -73.010138
+    },
+    "overlay": "peligros/flujos_biobio_penco.webp",
+    "leyenda": "peligros/flujos_biobio_penco_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_concepcion_a",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Talcahuano / Hualpén (Bío-Bío) — Mapa 12-1a",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2012",
+    "escala": "1:25.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Concepción-Talcahuano-Hualpén-Chiguayante, Región del Biobío. Mapa 12-1a (Falcón, Ramírez, Arenas, Cravatt, Huerta, Marín)",
+    "bounds": {
+      "n": -36.606568,
+      "s": -36.7973,
+      "e": -73.02809,
+      "w": -73.215138
+    },
+    "overlay": "peligros/flujos_biobio_concepcion_a.webp",
+    "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
+  },
+  {
+    "id": "pel_flujos_biobio_concepcion_b",
+    "categoria": "peligros",
+    "titulo": "Remociones en Masa — Concepción / Chiguayante (Bío-Bío) — Mapa 12-1b",
+    "fuente": "SERNAGEOMIN — Geología para la Reconstrucción y la Gestión del Riesgo",
+    "anio": "2012",
+    "escala": "1:25.000",
+    "autor": "",
+    "informe": "Evaluación preliminar de peligros geológicos: Área de Concepción-Talcahuano-Hualpén-Chiguayante, Región del Biobío. Mapa 12-1b (Falcón, Ramírez, Arenas, Cravatt, Huerta, Marín)",
+    "bounds": {
+      "n": -36.771893,
+      "s": -36.962725,
+      "e": -72.987613,
+      "w": -73.173062
+    },
+    "overlay": "peligros/flujos_biobio_concepcion_b.webp",
+    "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
+    "opacidad": 0.8,
+    "recortado": false,
+    "pdf": null
   }
 ]
