@@ -49,6 +49,9 @@
                overflow:hidden;text-overflow:ellipsis}
   #activa label{display:flex;align-items:center;gap:6px;flex:1;min-width:150px;font-size:13px;color:#334155}
   #activa input[type=range]{flex:1;height:24px;accent-color:#1a5276}
+  #activa .pdf{font-size:13px;border:1px solid #e0a878;background:#fff5ec;color:#a2531a;border-radius:8px;
+               padding:7px 12px;text-decoration:none;white-space:nowrap;font-weight:600}
+  #activa .pdf:hover{background:#fde8d4}
   #activa button{font-size:13px;border:none;background:#1a5276;color:#fff;border-radius:8px;
                  padding:7px 12px;cursor:pointer;white-space:nowrap;font-weight:600}
 
@@ -193,6 +196,7 @@
       <div class="tit"></div>
       <label>Transparencia <input type="range" min="0" max="1" step="0.05"/></label>
       <button type="button">ⓘ Leyenda</button>
+      <a class="pdf" target="_blank" rel="noopener noreferrer">⬇ PDF</a>
     </div>
     <div id="pbody">
       <div id="grilla">
@@ -341,12 +345,17 @@ if(window.ResizeObserver) new ResizeObserver(remedir).observe(document.getElemen
 /* ---- Barra del mapa activo (el último que se activó) ---- */
 const activa=document.getElementById('activa');
 const actTit=activa.querySelector('.tit'), actRng=activa.querySelector('input'), actLeg=activa.querySelector('button');
+const actPdf=activa.querySelector('.pdf');
 let actual=null;   // {c, rng}: capa mostrada en la barra y el deslizador de su fila
 function mostrarActiva(c,rng){
   actual={c,rng};
   actTit.textContent='🗺️ '+c.titulo;
   actRng.value=rng.value;
   actLeg.style.display=c.leyenda?'':'none';
+  // mismo filtro de URL que el enlace de la fila (https absoluto o ruta relativa del repo)
+  const pdfOk=c.pdf && (/^https:\/\//i.test(c.pdf) || /^[\w][\w./-]*$/.test(c.pdf));
+  if(pdfOk){ actPdf.href=c.pdf; actPdf.title='Abrir informe'+(c.informe?' '+c.informe:'')+' (PDF)'; }
+  actPdf.style.display=pdfOk?'':'none';
   activa.classList.add('on');
 }
 function quitarActiva(id){
