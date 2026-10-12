@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23196774.svg)](https://doi.org/10.5281/zenodo.23196774)
 
 Visor web de cartografía geológica de Chile (SERNAGEOMIN) — antes "Geo_Repo_Maule_Sernageomin".
-Overlays raster recortados (mapa) + leyendas aparte, hillshade y trabajos académicos,
+Overlays raster recortados (mapa) + leyendas aparte y hillshade,
 sobre base satelital/topográfica. Visor de escritorio, sin instalación.
 
 **Publicado:** https://cvenegas-sernageomin.github.io/GeoChile/
@@ -13,10 +13,11 @@ como respaldo.
 
 ## Contenido
 
-- **Geología (91)** — cartas oficiales de las series Geología Básica y Carta Geológica de Chile (antigua CGCH), Laguna del Maule, Tinguiririca-Teno. Georreferencia auditada contra los SIG oficiales de SERNAGEOMIN y el relieve SRTM; 42 cartas corregidas (2026-10-10). La serie antigua CGCH se mantiene tal como fue georreferenciada.
-- **Aplicada (13)** — geofísica, geoquímica, remociones, tsunami, licuefacción, volcanes, recursos minerales.
+- **Geología (91)** — agrupadas por región; cartas oficiales de las series Geología Básica y Carta Geológica de Chile (antigua CGCH), Laguna del Maule, Tinguiririca-Teno. Georreferencia auditada contra los SIG oficiales de SERNAGEOMIN y el relieve SRTM; 42 cartas corregidas (2026-10-10). La serie antigua CGCH se mantiene tal como fue georreferenciada.
+- **Peligros Geológicos (36)** — remociones en masa, flujos y aluviones, peligros volcánicos, tsunami, licuefacción y planes de evacuación; agrupados por tema y región (28 traspasados desde la PWA de catastro de remociones en masa, 2026-10-12).
+- **Aplicada (5)** — geofísica, geoquímica, recursos minerales.
 - **Histórico (2)** — mapas académicos/históricos de referencia regional.
-- **Académicos (8)** — trabajos universitarios, hoja completa con su leyenda original.
+- **Académicos** — categoría reservada; los trabajos universitarios se retiraron (2026-10-12) hasta contar con autorización de sus autores.
 - **Hillshade (23)** — relieve sombreado Copernicus GLO-30, una por carta 1:100.000 (F07–F29).
 
 No incluye sismos ni fallas activas (fuera de alcance de este visor).
@@ -25,7 +26,7 @@ No incluye sismos ni fallas activas (fuera de alcance de este visor).
 
 - `index.html` + `viewer_legend.js` — visor Leaflet (lee `capas.json` en vivo).
 - `capas.json` — índice de capas (id, categoría, título, fuente, bounds, rutas de overlay/leyenda).
-- `overlays/`, `leyendas/`, `hillshade/`, `academicos/` — assets WebP/JPG.
+- `overlays/`, `leyendas/`, `peligros/`, `hillshade/` — assets WebP/JPG. `icons/` — icono del visor.
 - `tools/` — pipeline de reprocesamiento (Python 3.12: cv2, pyproj, Pillow, pymupdf).
 
 ## Agregar o actualizar un mapa

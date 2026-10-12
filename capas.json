@@ -18,7 +18,8 @@
     "leyenda": "leyendas/geo_F19_pichibelco.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "informes/CGCH_GB_214_TextoyMapa.pdf"
+    "pdf": "informes/CGCH_GB_214_TextoyMapa.pdf",
+    "region": "Maule"
   },
   {
     "id": "geo_F21_raster",
@@ -39,7 +40,8 @@
     "leyenda": "leyendas/geo_F21_raster_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB220_san_clemente_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB220_san_clemente_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "hs_F07",
@@ -525,174 +527,6 @@
     "pdf": null
   },
   {
-    "id": "aca_astaburuaga",
-    "categoria": "academico",
-    "titulo": "Astaburuaga — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.42704431737173,
-      "s": -36.05183751410424,
-      "e": -69.88367277719409,
-      "w": -71.0913051880827
-    },
-    "overlay": "academicos/aca_astaburuaga.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_duhalde_rehnfeldt_1981",
-    "categoria": "academico",
-    "titulo": "Duhalde & Rehnfeldt (1981) — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.6206978633862,
-      "s": -35.923958434058974,
-      "e": -70.75199157748906,
-      "w": -71.2851721570181
-    },
-    "overlay": "academicos/aca_duhalde_rehnfeldt_1981.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_fischer",
-    "categoria": "academico",
-    "titulo": "Fischer — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.611299072616994,
-      "s": -35.77744955077424,
-      "e": -70.7431276130009,
-      "w": -70.87789247117357
-    },
-    "overlay": "academicos/aca_fischer.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_garibaldi",
-    "categoria": "academico",
-    "titulo": "Garibaldi — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.894467958239964,
-      "s": -36.062047958239965,
-      "e": -70.78103678571053,
-      "w": -70.85936678571052
-    },
-    "overlay": "academicos/aca_garibaldi.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_munoz_etal_2018",
-    "categoria": "academico",
-    "titulo": "Muñoz et al. (2018) — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -34.88657742472844,
-      "s": -35.19525761574102,
-      "e": -70.37532267415064,
-      "w": -70.59284019702979
-    },
-    "overlay": "academicos/aca_munoz_etal_2018.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_piquer_2010",
-    "categoria": "academico",
-    "titulo": "Piquer (2010) — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.008131283723245,
-      "s": -35.20246454341179,
-      "e": -70.3277484667237,
-      "w": -70.64481717031344
-    },
-    "overlay": "academicos/aca_piquer_2010.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_singer_1997_tatara",
-    "categoria": "academico",
-    "titulo": "Singer (1997) — Complejo Volcánico Tatara-San Pedro",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -35.886523837267475,
-      "s": -36.100531837267475,
-      "e": -70.63028609223952,
-      "w": -70.97627309223951
-    },
-    "overlay": "academicos/aca_singer_1997_tatara.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
-    "id": "aca_tapia_etal",
-    "categoria": "academico",
-    "titulo": "Tapia et al. — trabajo académico Región del Maule",
-    "fuente": "Trabajo académico (ver informe original)",
-    "anio": "",
-    "escala": "",
-    "autor": "",
-    "informe": "",
-    "bounds": {
-      "n": -33.373976222757705,
-      "s": -37.2435202227577,
-      "e": -68.4306317560987,
-      "w": -73.4719757560987
-    },
-    "overlay": "academicos/aca_tapia_etal.webp",
-    "leyenda": null,
-    "opacidad": 1.0,
-    "recortado": false,
-    "pdf": null
-  },
-  {
     "id": "geo_F22_rio_claro_IR110",
     "categoria": "geologia",
     "titulo": "Geología del área Río Claro (IR-110)",
@@ -711,7 +545,8 @@
     "leyenda": "",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR110_rio_claro_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR110_rio_claro_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "geo_F28_carta64",
@@ -732,7 +567,8 @@
     "leyenda": "leyendas/geo_F28_carta64_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "informes/Carta_64TextoyMapa.pdf"
+    "pdf": "informes/Carta_64TextoyMapa.pdf",
+    "region": "Maule"
   },
   {
     "id": "geo_lagunamaule_LDMField_NE",
@@ -753,7 +589,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf",
+    "region": "Maule"
   },
   {
     "id": "geof_bouguer_geof115",
@@ -774,7 +611,8 @@
     "leyenda": "leyendas/geof_bouguer_geof115.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "geoq_IR114_mataquito_sedimentosPEC",
@@ -795,7 +633,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR114_mataquito_geoquimica_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR114_mataquito_geoquimica_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "rme15_yacimientos_rmi_maule",
@@ -816,7 +655,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/RME15_yacimientos_rmi_maule_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/RME15_yacimientos_rmi_maule_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "gfv_andes_35_38",
@@ -837,7 +677,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Maule"
   },
   {
     "id": "geo_tinguiririca_teno",
@@ -858,7 +699,8 @@
     "leyenda": "leyendas/geo_tinguiririca_teno.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR89_tinguiririca_teno_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/IR89_tinguiririca_teno_texto.pdf",
+    "region": "O'Higgins"
   },
   {
     "id": "geof_residual_geof115",
@@ -879,7 +721,8 @@
     "leyenda": "leyendas/geof_residual_geof115.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "hidrogeoq_F19_cauquenes",
@@ -900,7 +743,8 @@
     "leyenda": "leyendas/hidrogeoq_F19_cauquenes.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR84_cauquenes_hidrogeologia_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR84_cauquenes_hidrogeologia_texto.pdf",
+    "region": "Maule"
   },
   {
     "id": "lic_curico_2010",
@@ -921,7 +765,9 @@
     "leyenda": "leyendas/lic_curico_2010.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/lic_curico_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/lic_curico_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Licuefacción"
   },
   {
     "id": "rem_F09_curico_2010",
@@ -942,7 +788,9 @@
     "leyenda": "peligros/maule_curico_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F09_curico_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F09_curico_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Remociones en masa"
   },
   {
     "id": "rem_F13_constitucion_2010",
@@ -963,7 +811,9 @@
     "leyenda": "peligros/maule_constitucion_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F13_constitucion_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_F13_constitucion_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Remociones en masa"
   },
   {
     "id": "rem_duao_iloca_2010",
@@ -984,7 +834,9 @@
     "leyenda": "peligros/maule_duaoiloca_leyenda.webp",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_duao_iloca_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/rem_duao_iloca_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Remociones en masa"
   },
   {
     "id": "tsu_constitucion_2010",
@@ -1005,7 +857,9 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_constitucion_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_constitucion_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Tsunami"
   },
   {
     "id": "tsu_duao_iloca_2010",
@@ -1026,7 +880,9 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_duao_iloca_2010_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/tsu_duao_iloca_2010_texto.pdf",
+    "region": "Maule",
+    "tema": "Tsunami"
   },
   {
     "id": "vol_peligros_cerro_azul_quizapu_GAMB23",
@@ -1047,7 +903,9 @@
     "leyenda": "leyendas/vol_peligros_cerro_azul_quizapu_GAMB23.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB23_cerro_azul_quizapu_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB23_cerro_azul_quizapu_texto.pdf",
+    "region": "Maule",
+    "tema": "Peligros volcánicos"
   },
   {
     "id": "vol_peligros_descabezado_quizapu_GAMB39",
@@ -1068,7 +926,9 @@
     "leyenda": "leyendas/vol_peligros_descabezado_quizapu_GAMB39.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB39_descabezado_quizapu_texto.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB39_descabezado_quizapu_texto.pdf",
+    "region": "Maule",
+    "tema": "Peligros volcánicos"
   },
   {
     "id": "escobar_1977_chile",
@@ -1089,7 +949,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Maule"
   },
   {
     "id": "geo_lagunamaule_LDMField_NW",
@@ -1110,7 +971,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf",
+    "region": "Maule"
   },
   {
     "id": "geo_lagunamaule_LDMField_SE",
@@ -1131,7 +993,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf",
+    "region": "Maule"
   },
   {
     "id": "geo_lagunamaule_LDMField_SW",
@@ -1152,7 +1015,8 @@
     "leyenda": null,
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf"
+    "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/Boletin63_lagunamaule_volcanic.pdf",
+    "region": "Maule"
   },
   {
     "id": "CGCH_GB_123_TextoyMapa",
@@ -1173,7 +1037,8 @@
     "leyenda": "leyendas/CGCH_GB_123_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_135_136_TextoyMapa",
@@ -1194,7 +1059,8 @@
     "leyenda": "leyendas/CGCH_GB_135_136_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_GB_132_TextoyMapa",
@@ -1215,7 +1081,8 @@
     "leyenda": "leyendas/CGCH_GB_132_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_35_TextoyMapa",
@@ -1236,7 +1103,8 @@
     "leyenda": "leyendas/CGCH_35_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_GB_217_218_TextoyMapa",
@@ -1257,7 +1125,8 @@
     "leyenda": "leyendas/CGCH_GB_217_218_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_24_TextoyMapa",
@@ -1278,7 +1147,8 @@
     "leyenda": "leyendas/CGCH_24_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_GB_182_TextoyMapa",
@@ -1299,7 +1169,8 @@
     "leyenda": "leyendas/CGCH_GB_182_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_18_TextoyMapa",
@@ -1320,7 +1191,8 @@
     "leyenda": "leyendas/CGCH_18_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_GB_162_163_TextoyMapa",
@@ -1341,7 +1213,8 @@
     "leyenda": "leyendas/CGCH_GB_162_163_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_17_TextoyMapa",
@@ -1362,7 +1235,8 @@
     "leyenda": "leyendas/CGCH_17_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_21_22_TextoyMapa",
@@ -1383,7 +1257,8 @@
     "leyenda": "leyendas/CGCH_21_22_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_07_10_TextoyMapa",
@@ -1404,7 +1279,8 @@
     "leyenda": "leyendas/CGCH_07_10_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_33_TextoyMapa",
@@ -1425,7 +1301,8 @@
     "leyenda": "leyendas/CGCH_33_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_32_TextoyMapa",
@@ -1446,7 +1323,8 @@
     "leyenda": "leyendas/CGCH_32_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_GB_207_TextoyMapa",
@@ -1467,7 +1345,8 @@
     "leyenda": "leyendas/CGCH_GB_207_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_31_TextoyMapa",
@@ -1488,7 +1367,8 @@
     "leyenda": "leyendas/CGCH_31_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_201_TextoyMapa",
@@ -1509,7 +1389,8 @@
     "leyenda": "leyendas/CGCH_GB_201_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_141_142_TextoyMapa",
@@ -1530,7 +1411,8 @@
     "leyenda": "leyendas/CGCH_GB_141_142_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_199_TextoyMapa",
@@ -1551,7 +1433,8 @@
     "leyenda": "leyendas/CGCH_GB_199_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_215_216_TextoyMapa",
@@ -1572,7 +1455,8 @@
     "leyenda": "leyendas/CGCH_GB_215_216_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_198_TextoyMapa",
@@ -1593,7 +1477,8 @@
     "leyenda": "leyendas/CGCH_GB_198_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_206_TextoyMapa",
@@ -1614,7 +1499,8 @@
     "leyenda": "leyendas/CGCH_GB_206_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_14_TextoyMapa",
@@ -1635,7 +1521,8 @@
     "leyenda": "leyendas/CGCH_14_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_11_TextoyMapa",
@@ -1656,7 +1543,8 @@
     "leyenda": "leyendas/CGCH_11_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_30_TextoyMapa",
@@ -1677,7 +1565,8 @@
     "leyenda": "leyendas/CGCH_30_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_144_TextoyMapa",
@@ -1698,7 +1587,8 @@
     "leyenda": "leyendas/CGCH_GB_144_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_26_TextoyMapa",
@@ -1719,7 +1609,8 @@
     "leyenda": "leyendas/CGCH_26_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_187_188_TextoyMapa",
@@ -1740,7 +1631,8 @@
     "leyenda": "leyendas/CGCH_GB_187_188_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_189_TextoyMapa",
@@ -1761,7 +1653,8 @@
     "leyenda": "leyendas/CGCH_GB_189_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_183_184_TextoyMapa",
@@ -1782,7 +1675,8 @@
     "leyenda": "leyendas/CGCH_GB_183_184_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_202_203_TextoyMapa",
@@ -1803,7 +1697,8 @@
     "leyenda": "leyendas/CGCH_GB_202_203_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_138_TextoyMapa",
@@ -1824,7 +1719,8 @@
     "leyenda": "leyendas/CGCH_GB_138_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_129_TextoyMapa",
@@ -1845,7 +1741,8 @@
     "leyenda": "leyendas/CGCH_GB_129_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_164_165_TextoyMapa",
@@ -1866,7 +1763,8 @@
     "leyenda": "leyendas/CGCH_GB_164_165_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_121_TextoyMapa",
@@ -1887,7 +1785,8 @@
     "leyenda": "leyendas/CGCH_GB_121_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_161_TextoyMapa",
@@ -1908,7 +1807,8 @@
     "leyenda": "leyendas/CGCH_GB_161_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_169_TextoyMapa",
@@ -1929,7 +1829,8 @@
     "leyenda": "leyendas/CGCH_GB_169_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_34_TextoyMapa",
@@ -1950,7 +1851,8 @@
     "leyenda": "leyendas/CGCH_34_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_37_TextoyMapa",
@@ -1971,7 +1873,8 @@
     "leyenda": "leyendas/CGCH_37_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_185_186_TextoyMapa",
@@ -1992,7 +1895,8 @@
     "leyenda": "leyendas/CGCH_GB_185_186_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_139_140_TextoyMapa",
@@ -2013,7 +1917,8 @@
     "leyenda": "leyendas/CGCH_GB_139_140_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_25_TextoyMapa",
@@ -2034,7 +1939,8 @@
     "leyenda": "leyendas/CGCH_25_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_05_TextoyMapa",
@@ -2055,7 +1961,8 @@
     "leyenda": "leyendas/CGCH_05_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_145_TextoyMapa",
@@ -2076,7 +1983,8 @@
     "leyenda": "leyendas/CGCH_GB_145_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_204_205_TextoyMapa",
@@ -2097,7 +2005,8 @@
     "leyenda": "leyendas/CGCH_GB_204_205_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_03_TextoyMapa",
@@ -2118,7 +2027,8 @@
     "leyenda": "leyendas/CGCH_03_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_06_TextoyMapa",
@@ -2139,7 +2049,8 @@
     "leyenda": "leyendas/CGCH_06_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_12_TextoyMapa",
@@ -2160,7 +2071,8 @@
     "leyenda": "leyendas/CGCH_12_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_200_TextoyMapa",
@@ -2181,7 +2093,8 @@
     "leyenda": "leyendas/CGCH_GB_200_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_01_TextoyMapa",
@@ -2202,7 +2115,8 @@
     "leyenda": "leyendas/CGCH_01_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_13_TextoyMapa",
@@ -2223,7 +2137,8 @@
     "leyenda": "leyendas/CGCH_13_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "Cerros_de_Cantaritos_Laguna_Chica",
@@ -2244,7 +2159,8 @@
     "leyenda": "leyendas/Cerros_de_Cantaritos_Laguna_Chica_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "El_Transito_Lagunillas",
@@ -2265,7 +2181,8 @@
     "leyenda": "leyendas/El_Transito_Lagunillas_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_175_176_TextoyMapa",
@@ -2286,7 +2203,8 @@
     "leyenda": "leyendas/CGCH_GB_175_176_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_133_134_TextoyMapa",
@@ -2307,7 +2225,8 @@
     "leyenda": "leyendas/CGCH_GB_133_134_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama"
   },
   {
     "id": "CGCH_GB_192_193_TextoyMapa",
@@ -2328,7 +2247,8 @@
     "leyenda": "leyendas/CGCH_GB_192_193_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_15_TextoyMapa",
@@ -2349,7 +2269,8 @@
     "leyenda": "leyendas/CGCH_15_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_23_TextoyMapa",
@@ -2370,7 +2291,8 @@
     "leyenda": "leyendas/CGCH_23_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_28_TextoyMapa",
@@ -2391,7 +2313,8 @@
     "leyenda": "leyendas/CGCH_28_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_16_TextoyMapa",
@@ -2412,7 +2335,8 @@
     "leyenda": "leyendas/CGCH_16_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_GB_211_212_TextoyMapa",
@@ -2433,7 +2357,8 @@
     "leyenda": "leyendas/CGCH_GB_211_212_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "Ovalle_y_Peña_Blanca",
@@ -2454,7 +2379,8 @@
     "leyenda": "leyendas/Ovalle_y_Peña_Blanca_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_GB_219_TextoyMapa",
@@ -2475,7 +2401,8 @@
     "leyenda": "leyendas/CGCH_GB_219_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Araucanía"
   },
   {
     "id": "CGCH_GB_122_TextoyMapa",
@@ -2496,7 +2423,8 @@
     "leyenda": "leyendas/CGCH_GB_122_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Araucanía"
   },
   {
     "id": "CGCH_GB_128_TextoyMapa",
@@ -2517,7 +2445,8 @@
     "leyenda": "leyendas/CGCH_GB_128_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Araucanía"
   },
   {
     "id": "CGCH_GB_137_TextoyMapa",
@@ -2538,7 +2467,8 @@
     "leyenda": "leyendas/CGCH_GB_137_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Los Ríos"
   },
   {
     "id": "CGCH_GB_210_TextoyMapa",
@@ -2559,7 +2489,8 @@
     "leyenda": "leyendas/CGCH_GB_210_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Los Ríos"
   },
   {
     "id": "CGCH_GB_126_TextoyMapa",
@@ -2580,7 +2511,8 @@
     "leyenda": "leyendas/CGCH_GB_126_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Los Lagos"
   },
   {
     "id": "CGCH_GB_127_TextoyMapa",
@@ -2601,7 +2533,8 @@
     "leyenda": "leyendas/CGCH_GB_127_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Aysén"
   },
   {
     "id": "CGCH_29_TextoyMapa",
@@ -2622,7 +2555,8 @@
     "leyenda": "leyendas/CGCH_29_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Aysén"
   },
   {
     "id": "CGCH_GB_125_TextoyMapa",
@@ -2643,7 +2577,8 @@
     "leyenda": "leyendas/CGCH_GB_125_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Aysén"
   },
   {
     "id": "CGCH_36_TextoyMapa",
@@ -2664,7 +2599,8 @@
     "leyenda": "leyendas/CGCH_36_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": null
+    "pdf": null,
+    "region": "Magallanes"
   },
   {
     "id": "CGCH_GB_146_TextoyMapa",
@@ -2685,7 +2621,8 @@
     "leyenda": "leyendas/CGCH_GB_146_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": ""
+    "pdf": "",
+    "region": "Tarapacá"
   },
   {
     "id": "CGCH_GB_150_TextoyMapa",
@@ -2706,7 +2643,8 @@
     "leyenda": "leyendas/CGCH_GB_150_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": ""
+    "pdf": "",
+    "region": "Atacama"
   },
   {
     "id": "M207_Sierra_Vaquillas_Altas",
@@ -2727,7 +2665,8 @@
     "leyenda": "leyendas/M207_Sierra_Vaquillas_Altas_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_190_TextoyMapa",
@@ -2748,7 +2687,8 @@
     "leyenda": "leyendas/CGCH_GB_190_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_191_TextoyMapa",
@@ -2769,7 +2709,8 @@
     "leyenda": "leyendas/CGCH_GB_191_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Antofagasta"
   },
   {
     "id": "CGCH_GB_194_TextoyMapa",
@@ -2790,7 +2731,8 @@
     "leyenda": "leyendas/CGCH_GB_194_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_GB_197_TextoyMapa",
@@ -2811,7 +2753,8 @@
     "leyenda": "leyendas/CGCH_GB_197_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
-    "pdf": ""
+    "pdf": "",
+    "region": "Arica y Parinacota"
   },
   {
     "id": "CGCH_GB_213_TextoyMapa",
@@ -2832,7 +2775,8 @@
     "leyenda": "leyendas/CGCH_GB_213_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Valparaíso"
   },
   {
     "id": "CGCH_GB_221_TextoyMapa",
@@ -2853,7 +2797,8 @@
     "leyenda": "leyendas/CGCH_GB_221_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
+    "pdf": "",
+    "region": "Coquimbo"
   },
   {
     "id": "CGCH_GB_222_TextoyMapa",
@@ -2874,29 +2819,8 @@
     "leyenda": "leyendas/CGCH_GB_222_TextoyMapa_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": false,
-    "pdf": ""
-  },
-  {
-    "id": "pel_pfi_permafrost",
-    "categoria": "academico",
-    "titulo": "Índice de Favorabilidad de Permafrost (PFI)",
-    "fuente": "Azócar, Brenning y Bodin (2017) — andespermafrost.com",
-    "anio": "2017",
-    "escala": "raster 30 m nativo (servido a ~150 m); solo terreno de montaña (máscara)",
-    "autor": "",
-    "informe": "Permafrost distribution modelling in the semi-arid Chilean Andes, The Cryosphere 11, 877-890, doi:10.5194/tc-11-877-2017",
-    "bounds": {
-      "n": -27.987513,
-      "s": -33.222765,
-      "e": -69.200522,
-      "w": -70.953546
-    },
-    "overlay": "peligros/pfi_permafrost.webp",
-    "leyenda": "peligros/pfi_permafrost_leyenda.webp",
-    "opacidad": 0.75,
-    "recortado": false,
-    "pdf": null,
-    "licencia": "CC BY-SA 4.0"
+    "pdf": "",
+    "region": "Biobío"
   },
   {
     "id": "pel_cruz_de_cana_contexto",
@@ -2917,7 +2841,9 @@
     "leyenda": "peligros/cruz_de_cana_leyenda.webp",
     "opacidad": 0.85,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Planes de evacuación"
   },
   {
     "id": "pel_cruz_de_cana_detalle",
@@ -2938,7 +2864,9 @@
     "leyenda": "peligros/cruz_de_cana_leyenda.webp",
     "opacidad": 0.85,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Planes de evacuación"
   },
   {
     "id": "pel_islon_flujos_inundacion",
@@ -2959,7 +2887,9 @@
     "leyenda": "peligros/islon_flujos_inundacion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_el_romero_flujos_inundacion",
@@ -2980,7 +2910,9 @@
     "leyenda": "peligros/el_romero_flujos_inundacion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_atacama_copiapo_hoja1",
@@ -3001,7 +2933,9 @@
     "leyenda": "peligros/atacama_copiapo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_atacama_copiapo_hoja2",
@@ -3022,7 +2956,9 @@
     "leyenda": "peligros/atacama_copiapo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_atacama_copiapo_hoja3",
@@ -3043,7 +2979,9 @@
     "leyenda": "peligros/atacama_copiapo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_atacama_copiapo_hoja4",
@@ -3064,7 +3002,9 @@
     "leyenda": "peligros/atacama_copiapo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Atacama",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_caida_rocas_maipo",
@@ -3085,7 +3025,9 @@
     "leyenda": "peligros/caida_rocas_maipo_leyenda.webp",
     "opacidad": 0.65,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_coquimbo_norte",
@@ -3106,7 +3048,9 @@
     "leyenda": "peligros/coquimbo_norte_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_coquimbo_sur",
@@ -3127,7 +3071,9 @@
     "leyenda": "peligros/coquimbo_sur_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_valpo_concon",
@@ -3148,7 +3094,9 @@
     "leyenda": "peligros/valpo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Valparaíso",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_valpo_vina_del_mar",
@@ -3169,7 +3117,9 @@
     "leyenda": "peligros/valpo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Valparaíso",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_valpo_valparaiso",
@@ -3190,7 +3140,9 @@
     "leyenda": "peligros/valpo_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Valparaíso",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_ohiggins_rancagua",
@@ -3211,7 +3163,9 @@
     "leyenda": "peligros/ohiggins_rancagua_leyenda.webp",
     "opacidad": 0.75,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "O'Higgins",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_aluvionales_maipo",
@@ -3232,7 +3186,9 @@
     "leyenda": "peligros/flujos_aluvionales_leyenda.webp",
     "opacidad": 0.65,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_deslizamientos_laderas_maipo",
@@ -3253,7 +3209,9 @@
     "leyenda": "peligros/deslizamientos_laderas_leyenda.webp",
     "opacidad": 0.65,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_sjmaipo_peligro",
@@ -3274,7 +3232,9 @@
     "leyenda": null,
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_flujos_lobar_alcance",
@@ -3295,7 +3255,9 @@
     "leyenda": null,
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_flujos_lobar_generacion",
@@ -3316,7 +3278,9 @@
     "leyenda": null,
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Metropolitana",
+    "tema": "Flujos de detritos y aluviones"
   },
   {
     "id": "pel_flujos_biobio_tirua",
@@ -3337,7 +3301,9 @@
     "leyenda": "peligros/flujos_biobio_tirua_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_curanilahue",
@@ -3358,7 +3324,9 @@
     "leyenda": "peligros/flujos_biobio_curanilahue_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_arauco",
@@ -3379,7 +3347,9 @@
     "leyenda": "peligros/flujos_biobio_arauco_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_tubul",
@@ -3400,7 +3370,9 @@
     "leyenda": "peligros/flujos_biobio_tubul_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_puntalavapie",
@@ -3421,7 +3393,9 @@
     "leyenda": "peligros/flujos_biobio_puntalavapie_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_penco",
@@ -3442,7 +3416,9 @@
     "leyenda": "peligros/flujos_biobio_penco_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_concepcion_a",
@@ -3463,7 +3439,9 @@
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   },
   {
     "id": "pel_flujos_biobio_concepcion_b",
@@ -3484,6 +3462,8 @@
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
     "opacidad": 0.8,
     "recortado": false,
-    "pdf": null
+    "pdf": null,
+    "region": "Biobío",
+    "tema": "Remociones en masa"
   }
 ]

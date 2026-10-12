@@ -53,6 +53,10 @@
           break-inside:avoid}
   summary{cursor:pointer;padding:11px 10px;font-weight:600;color:#1a5276;font-size:14px}
   .capa{padding:9px 10px;border-top:1px solid #eef2f6}
+  details details{border:none;border-top:1px solid #eef2f6;border-radius:0;margin:0 0 0 10px}
+  details details summary{padding:8px 10px;font-size:13px;color:#2c5f7c}
+  details details details summary{font-weight:500;color:#475569}
+  .vacio{padding:9px 12px;font-size:13px;color:#64748b;border-top:1px solid #eef2f6}
   .capa label{display:flex;align-items:center;gap:9px;font-size:14px;cursor:pointer;
               line-height:1.3}
   .capa input[type=checkbox],#grilla input[type=checkbox]{width:19px;height:19px;flex:none;
@@ -119,7 +123,7 @@
 <script>
 const CATS = [["geologia","🗺️ Geología Básica"],["peligros","⚠️ Peligros Geológicos"],["aplicada","🧪 Geología Aplicada"],
   ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
-const ASSET_V = '?v=20261012a';   // cache-bust de overlays/leyendas (subir al cambiar assets)
+const ASSET_V = '?v=20261012b';   // cache-bust de overlays/leyendas (subir al cambiar assets)
 const map = L.map('map',{center:[-33.9,-71.2],zoom:5});
 const bases = {
   "Satelital": L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}),
@@ -261,16 +265,38 @@ function crearCapa(cont, c){
   cont.appendChild(div);
 }
 
+// Subgrupos plegables dentro de una categoría: por tema y/o región (regiones de norte a sur).
+const REGIONES=['Arica y Parinacota','Tarapacá','Antofagasta','Atacama','Coquimbo','Valparaíso','Metropolitana',
+  "O'Higgins",'Maule','Ñuble','Biobío','Araucanía','Los Ríos','Los Lagos','Aysén','Magallanes'];
+function llenarGrupos(cont,grupo,claves){
+  if(!claves.length){ grupo.forEach(c=>crearCapa(cont,c)); return; }
+  const [k,...resto]=claves, porValor={};
+  grupo.forEach(c=>{ const v=c[k]||'Otros'; (porValor[v]=porValor[v]||[]).push(c); });
+  const orden=k==='region'
+    ? (a,b)=>(REGIONES.indexOf(a)+1||99)-(REGIONES.indexOf(b)+1||99)
+    : (a,b)=>porValor[b].length-porValor[a].length || a.localeCompare(b,'es');
+  Object.keys(porValor).sort(orden).forEach(v=>{
+    const d=document.createElement('details');
+    const s=document.createElement('summary'); s.textContent=`${v} (${porValor[v].length})`;
+    d.appendChild(s); llenarGrupos(d,porValor[v],resto); cont.appendChild(d);
+  });
+}
+
 // cache:'no-cache' revalida siempre contra el servidor (304 si no cambio): sin esto el
 // navegador sirve un capas.json viejo de su cache y el visor no ve las capas nuevas.
 fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
   const cont=document.getElementById('capas');
   CATS.forEach(([cat,label])=>{
     const grupo=capas.filter(c=>c.categoria===cat);
-    if(!grupo.length) return;
     const d=document.createElement('details');
     d.innerHTML=`<summary>${label} (${grupo.length})</summary>`;
-    grupo.forEach(c=>crearCapa(d,c));
+    if(!grupo.length){
+      // Académicos: se mantiene la categoría, pero sin capas hasta tener permiso de los autores
+      if(cat!=='academico') return;
+      d.insertAdjacentHTML('beforeend','<div class="vacio">Próximamente: estos mapas se publicarán cuando contemos con la autorización de sus autores.</div>');
+    }else if(cat==='peligros') llenarGrupos(d,grupo,['tema','region']);
+    else if(grupo.length>8 && cat!=='hillshade') llenarGrupos(d,grupo,['region']);
+    else grupo.forEach(c=>crearCapa(d,c));
     cont.appendChild(d);
   });
   map.invalidateSize();   // el panel ya tiene su alto final: re-medir el mapa

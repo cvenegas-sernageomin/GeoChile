@@ -1,43 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<rect width="512" height="512" rx="112" fill="#1a5276"/>
+<rect width="512" height="512" rx="112" fill="#0039A6"/>
 <clipPath id="m"><polygon points="28,430 118,262 160,308 250,118 326,262 368,214 484,430"/></clipPath>
 <clipPath id="i"><polygon points="0,0 174,0 343,512 0,512"/></clipPath><clipPath id="d"><polygon points="174,0 512,0 512,512 343,512"/></clipPath>
 <g clip-path="url(#m)">
 <g clip-path="url(#i)">
-<polygon points="-50,49 600,-72 600,-20 -50,123" fill="#e9a3c9"/>
-<polygon points="-50,101 600,-20 600,32 -50,175" fill="#f4a259"/>
-<polygon points="-50,153 600,32 600,84 -50,227" fill="#8cc084"/>
-<polygon points="-50,205 600,84 600,136 -50,279" fill="#f6d55c"/>
-<polygon points="-50,257 600,136 600,188 -50,331" fill="#9b72cf"/>
-<polygon points="-50,309 600,188 600,240 -50,383" fill="#5aa9e6"/>
-<polygon points="-50,361 600,240 600,292 -50,435" fill="#c0504d"/>
-<polygon points="-50,413 600,292 600,344 -50,487" fill="#e9a3c9"/>
-<polygon points="-50,465 600,344 600,396 -50,539" fill="#f4a259"/>
-<polygon points="-50,517 600,396 600,448 -50,591" fill="#8cc084"/>
-<polygon points="-50,569 600,448 600,500 -50,643" fill="#f6d55c"/>
-<polygon points="-50,621 600,500 600,552 -50,695" fill="#9b72cf"/>
-<polygon points="-50,673 600,552 600,604 -50,747" fill="#5aa9e6"/>
-<polygon points="-50,725 600,604 600,656 -50,799" fill="#c0504d"/>
+<polygon points="-50,49 600,-72 600,-20 -50,123" fill="#D52B1E"/>
+<polygon points="-50,101 600,-20 600,32 -50,175" fill="#ffffff"/>
+<polygon points="-50,153 600,32 600,84 -50,227" fill="#8fb0e3"/>
+<polygon points="-50,205 600,84 600,136 -50,279" fill="#a8170e"/>
+<polygon points="-50,257 600,136 600,188 -50,331" fill="#f2f2f2"/>
+<polygon points="-50,309 600,188 600,240 -50,383" fill="#5b86d1"/>
+<polygon points="-50,361 600,240 600,292 -50,435" fill="#D52B1E"/>
+<polygon points="-50,413 600,292 600,344 -50,487" fill="#ffffff"/>
+<polygon points="-50,465 600,344 600,396 -50,539" fill="#8fb0e3"/>
+<polygon points="-50,517 600,396 600,448 -50,591" fill="#a8170e"/>
+<polygon points="-50,569 600,448 600,500 -50,643" fill="#f2f2f2"/>
+<polygon points="-50,621 600,500 600,552 -50,695" fill="#5b86d1"/>
 </g>
 <g clip-path="url(#d)">
-<polygon points="-50,79 600,-42 600,10 -50,153" fill="#e9a3c9"/>
-<polygon points="-50,131 600,10 600,62 -50,205" fill="#f4a259"/>
-<polygon points="-50,183 600,62 600,114 -50,257" fill="#8cc084"/>
-<polygon points="-50,235 600,114 600,166 -50,309" fill="#f6d55c"/>
-<polygon points="-50,287 600,166 600,218 -50,361" fill="#9b72cf"/>
-<polygon points="-50,339 600,218 600,270 -50,413" fill="#5aa9e6"/>
-<polygon points="-50,391 600,270 600,322 -50,465" fill="#c0504d"/>
-<polygon points="-50,443 600,322 600,374 -50,517" fill="#e9a3c9"/>
-<polygon points="-50,495 600,374 600,426 -50,569" fill="#f4a259"/>
-<polygon points="-50,547 600,426 600,478 -50,621" fill="#8cc084"/>
-<polygon points="-50,599 600,478 600,530 -50,673" fill="#f6d55c"/>
-<polygon points="-50,651 600,530 600,582 -50,725" fill="#9b72cf"/>
-<polygon points="-50,703 600,582 600,634 -50,777" fill="#5aa9e6"/>
-<polygon points="-50,755 600,634 600,686 -50,829" fill="#c0504d"/>
+<polygon points="-50,79 600,-42 600,10 -50,153" fill="#D52B1E"/>
+<polygon points="-50,131 600,10 600,62 -50,205" fill="#ffffff"/>
+<polygon points="-50,183 600,62 600,114 -50,257" fill="#8fb0e3"/>
+<polygon points="-50,235 600,114 600,166 -50,309" fill="#a8170e"/>
+<polygon points="-50,287 600,166 600,218 -50,361" fill="#f2f2f2"/>
+<polygon points="-50,339 600,218 600,270 -50,413" fill="#5b86d1"/>
+<polygon points="-50,391 600,270 600,322 -50,465" fill="#D52B1E"/>
+<polygon points="-50,443 600,322 600,374 -50,517" fill="#ffffff"/>
+<polygon points="-50,495 600,374 600,426 -50,569" fill="#8fb0e3"/>
+<polygon points="-50,547 600,426 600,478 -50,621" fill="#a8170e"/>
+<polygon points="-50,599 600,478 600,530 -50,673" fill="#f2f2f2"/>
+<polygon points="-50,651 600,530 600,582 -50,725" fill="#5b86d1"/>
 </g>
 </g>
 <polygon points="214,186 250,118 286,190 268,178 250,196 232,176" fill="#fff"/>
-<polyline points="318,436 232,176" fill="none" stroke="#b3001b" stroke-width="12" stroke-linecap="round" stroke-dasharray="0"/>
-<polygon points="28,430 118,262 160,308 250,118 326,262 368,214 484,430" fill="none" stroke="#0d2b3e" stroke-width="10" stroke-linejoin="round"/>
-<rect x="28" y="426" width="456" height="10" fill="#0d2b3e"/>
+<polygon points="110,62 123,100 163,101 131,125 143,163 110,140 77,163 89,125 57,101 97,100" fill="#fff"/>
+<polyline points="318,436 232,176" fill="none" stroke="#0a1f5c" stroke-width="12" stroke-linecap="round" stroke-dasharray="0"/>
+<polygon points="28,430 118,262 160,308 250,118 326,262 368,214 484,430" fill="none" stroke="#0a1f5c" stroke-width="10" stroke-linejoin="round"/>
+<rect x="28" y="426" width="456" height="10" fill="#0a1f5c"/>
 </svg>
