@@ -3297,10 +3297,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Tirúa, Región del Biobío. Mapa 2-1 (Jara, Moreno, Marín 2011; Inf. IR-12-48)",
     "bounds": {
-      "n": -38.320481,
+      "w": -73.516645,
+      "e": -73.474633,
       "s": -38.353696,
-      "e": -73.476586,
-      "w": -73.514675
+      "n": -38.320481
     },
     "overlay": "peligros/flujos_biobio_tirua.webp",
     "leyenda": "peligros/flujos_biobio_tirua_leyenda.webp",
@@ -3308,7 +3308,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 66 m -> 8 m)"
   },
   {
     "id": "pel_flujos_biobio_curanilahue",
@@ -3320,10 +3321,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Curanilahue, Región del Biobío (Inf. IR-12-48)",
     "bounds": {
-      "n": -37.452841,
+      "w": -73.376416,
+      "e": -73.305107,
       "s": -37.521969,
-      "e": -73.308941,
-      "w": -73.372523
+      "n": -37.452841
     },
     "overlay": "peligros/flujos_biobio_curanilahue.webp",
     "leyenda": "peligros/flujos_biobio_curanilahue_leyenda.webp",
@@ -3331,7 +3332,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 48 m -> 37 m)"
   },
   {
     "id": "pel_flujos_biobio_arauco",
@@ -3367,10 +3369,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área Caletas Tubul-Las Peñas, Región del Biobío. Mapa 7-1 (Marín, Ortiz, Falcón; Inf. IR-8-48)",
     "bounds": {
-      "n": -37.197212,
+      "w": -73.508019,
+      "e": -73.379684,
       "s": -37.278977,
-      "e": -73.384157,
-      "w": -73.503421
+      "n": -37.197212
     },
     "overlay": "peligros/flujos_biobio_tubul.webp",
     "leyenda": "peligros/flujos_biobio_tubul_leyenda.webp",
@@ -3378,7 +3380,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 32 m -> 27 m)"
   },
   {
     "id": "pel_flujos_biobio_puntalavapie",
@@ -3390,10 +3393,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Caleta Punta Lavapié, Región del Biobío. Mapa 6-1 (Marín, Ortiz; Inf. IR-12-48)",
     "bounds": {
-      "n": -37.139985,
+      "w": -73.611742,
+      "e": -73.569286,
       "s": -37.165303,
-      "e": -73.570717,
-      "w": -73.610298
+      "n": -37.139985
     },
     "overlay": "peligros/flujos_biobio_puntalavapie.webp",
     "leyenda": "peligros/flujos_biobio_puntalavapie_leyenda.webp",
@@ -3401,7 +3404,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 46 m -> 18 m)"
   },
   {
     "id": "pel_flujos_biobio_penco",
@@ -3413,10 +3417,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Penco, Región del Biobío",
     "bounds": {
-      "n": -36.693822,
+      "w": -73.013341,
+      "e": -72.951009,
       "s": -36.757295,
-      "e": -72.954165,
-      "w": -73.010138
+      "n": -36.693822
     },
     "overlay": "peligros/flujos_biobio_penco.webp",
     "leyenda": "peligros/flujos_biobio_penco_leyenda.webp",
@@ -3424,7 +3428,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 86 m -> 6 m)"
   },
   {
     "id": "pel_flujos_biobio_concepcion_a",
@@ -3436,10 +3441,10 @@
     "autor": "",
     "informe": "Evaluación preliminar de peligros geológicos: Área de Concepción-Talcahuano-Hualpén-Chiguayante, Región del Biobío. Mapa 12-1a (Falcón, Ramírez, Arenas, Cravatt, Huerta, Marín)",
     "bounds": {
-      "n": -36.606568,
+      "w": -73.225208,
+      "e": -73.018487,
       "s": -36.7973,
-      "e": -73.02809,
-      "w": -73.215138
+      "n": -36.606568
     },
     "overlay": "peligros/flujos_biobio_concepcion_a.webp",
     "leyenda": "peligros/flujos_biobio_concepcion_leyenda.webp",
@@ -3447,7 +3452,8 @@
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/IR-12-48.pdf",
     "region": "Biobío",
-    "tema": "Remociones en masa"
+    "tema": "Remociones en masa",
+    "georref_auditada": "2026-10-12: imagen UTM19S reproyectada a geográficas (DEM SRTM: 146 m -> 17 m)"
   },
   {
     "id": "pel_flujos_biobio_concepcion_b",
