@@ -2990,10 +2990,10 @@
     "autor": "Luis Lara P., Hugo Moreno R.",
     "informe": "GB-83",
     "bounds": {
-      "n": -39.500259,
-      "s": -39.99948,
-      "e": -71.42044,
-      "w": -71.99957
+      "n": -39.504266,
+      "s": -40.00351,
+      "e": -71.422826,
+      "w": -72.002029
     },
     "overlay": "overlays/CGCH_GB_83_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_83_TextoyMapa_leyenda.jpg",
@@ -3232,10 +3232,10 @@
     "autor": "David Quiroz P., Paul Duhart O.",
     "informe": "GB-94",
     "bounds": {
-      "n": -43.006909,
-      "s": -43.506448,
-      "e": -73.505358,
-      "w": -74.004666
+      "n": -43.003609,
+      "s": -43.503148,
+      "e": -73.502808,
+      "w": -74.002116
     },
     "overlay": "overlays/CGCH_GB_94_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_94_TextoyMapa_leyenda.jpg",
