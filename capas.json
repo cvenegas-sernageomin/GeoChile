@@ -664,7 +664,7 @@
   },
   {
     "id": "gfv_andes_35_38",
-    "categoria": "historico",
+    "categoria": "geologia",
     "titulo": "Reconocimiento geológico de la Alta Cordillera de los Andes entre los paralelos 35° y 38° Sur",
     "fuente": "González Ferrán & Vergara Martínez — Universidad de Chile, Instituto de Geología",
     "anio": "1964",
@@ -682,7 +682,12 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": null,
-    "region": "Maule"
+    "region": [
+      "Maule",
+      "Ñuble",
+      "Biobío",
+      "Araucanía"
+    ]
   },
   {
     "id": "geo_tinguiririca_teno",
@@ -938,7 +943,7 @@
   },
   {
     "id": "escobar_1977_chile",
-    "categoria": "historico",
+    "categoria": "geologia",
     "titulo": "Mapa geológico de Chile (Escobar, 1977)",
     "fuente": "Escobar",
     "anio": "1977",
@@ -956,7 +961,13 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": null,
-    "region": "Maule"
+    "region": [
+      "Metropolitana",
+      "O'Higgins",
+      "Maule",
+      "Ñuble",
+      "Biobío"
+    ]
   },
   {
     "id": "geo_lagunamaule_LDMField_NW",

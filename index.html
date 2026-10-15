@@ -289,7 +289,7 @@
 <script src="vendor/wmm.js"></script>
 <script>
 const CATS = [["geologia","🗺️ Geología Básica"],["peligros","⚠️ Peligros Geológicos"],["aplicada","🧪 Geología Aplicada"],
-  ["historico","📜 Histórico"],["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
+  ["academico","🎓 Académicos"],["hillshade","🏔️ Hillshade"]];
 const ASSET_V = '?v=20261014b';   // cache-bust de overlays/leyendas (subir al cambiar assets)
 // rotate (leaflet-rotate): mapa girable, sin norte fijo (como Geonotas v141 / MTB Visor / Sendereando)
 const map = L.map('map',{center:[-33.9,-71.2],zoom:5, rotate:true, touchRotate:true, rotateControl:false, bearing:0});
@@ -324,7 +324,7 @@ const escH = t => String(t ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&
 function capasDeHoja(h){
   const [w,s,e,n]=h.b, A=(e-w)*(n-s);
   return CAPAS_LISTA.filter(c=>{
-    if(!c.bounds || c.categoria==='hillshade' || c.categoria==='historico') return false;
+    if(!c.bounds || c.categoria==='hillshade') return false;
     const B=c.bounds, iw=Math.min(e,B.e)-Math.max(w,B.w), ih=Math.min(n,B.n)-Math.max(s,B.s);
     if(iw<=0 || ih<=0) return false;
     const I=iw*ih, Ac=(B.e-B.w)*(B.n-B.s);
@@ -721,7 +721,7 @@ const REGIONES=['Arica y Parinacota','Tarapacá','Antofagasta','Atacama','Coquim
 function llenarGrupos(cont,grupo,claves){
   if(!claves.length){ grupo.forEach(c=>crearCapa(cont,c)); return; }
   const [k,...resto]=claves, porValor={};
-  grupo.forEach(c=>{ const v=c[k]||'Otros'; (porValor[v]=porValor[v]||[]).push(c); });
+  grupo.forEach(c=>{ [].concat(c[k]||'Otros').forEach(v=>(porValor[v]=porValor[v]||[]).push(c)); });   // region puede ser lista
   const orden=k==='region'
     ? (a,b)=>(REGIONES.indexOf(a)+1||99)-(REGIONES.indexOf(b)+1||99)
     : k==='tema' && Object.keys(porValor).some(v=>TEMAS.includes(v))
