@@ -51,6 +51,12 @@ _T = {
         CRS.from_proj4("+proj=utm +zone=19 +south +ellps=intl +towgs84=-270,183,-390,0,0,0,0 +units=m +no_defs"),
         4326, always_xy=True),
 }
+# Correcciones de posición (metros UTM sumados a la geometría del .shp). M86: los yacimientos del shapefile vienen con el cambio de
+# datum PSAD56->WGS84 aplicado DOS veces (las demás capas de M86, y todas las de M82/M84/M85, están bien). Evidencia: (1) los
+# símbolos de la lámina caen +197 E / +368 N de los puntos (correlación de símbolos, 67 yacimientos; en M82/M84 el desfase es 0);
+# (2) el rajo de El Venado Sur (imagen satelital Esri) está en la posición de la lámina, no en la del shapefile;
+# (3) en M82/M84 el shapefile = listado impreso -(183, 355) m, por eso se suma esa misma traslación una vez.
+CORRECCION_XY = {"M86": {"yacimientos": (183.0, 355.0)}}
 EXTRAE = re.compile(r"\.(shp|dbf|shx|prj|tab|dat|map|id|ind|mdb|xls|txt)$", re.I)
 TAMANOS = {"P": "Pequeño", "M": "Mediano", "G": "Grande", "MG": "Muy grande"}
 NULOS = {"", "nan", "none", "<na>", "null"}
@@ -268,6 +274,10 @@ def paquete_access(m, base, rep, salida):
                     rep[f"{m}:{tabla}:tabla_difiere_del_shp"] += 1
             elif ex is not None and abs(ex - xy[0]) >= 2000:
                 rep[f"{m}:{tabla}:tabla_con_coordenadas_malas"] += 1
+            dxy = CORRECCION_XY.get(m, {}).get(tipo)
+            if dxy:
+                xy = (xy[0] + dxy[0], xy[1] + dxy[1])
+                rep[f"{m}:{tipo}:posicion_corregida"] += 1
             lon, lat = a_wgs(m, *xy)
             if tipo == "yacimientos":
                 d = yacimiento(r, subtipo)

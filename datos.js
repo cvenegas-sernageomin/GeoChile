@@ -3,7 +3,7 @@
    cada tipo trae sus filtros (multi / rango / texto). Usa globals del visor: map, L, PANE_GIRA, panel, togglePanel. */
 (function(){
 'use strict';
-const DATA_V='?v=20261015b';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
+const DATA_V='?v=20261015c';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
 const COLORES=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#008b8b','#9a6324','#800000','#808000','#000075','#f032e6','#2a9d8f','#bcbd22','#7f7f7f'];
 const ICONO={geocronologia:'⏳',fosiles:'🦴',yacimientos:'⛏️',estructuras:'📐'};
 const RADIO={geocronologia:6,fosiles:6,yacimientos:5,estructuras:4};

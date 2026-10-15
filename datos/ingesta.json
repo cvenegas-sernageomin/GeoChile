@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T15:45:33",
+ "generado": "2026-10-15T16:23:05",
  "gdb": {
   "GB-100_M145\\M145_FreirinaElMorado.gdb": {
    "fosiles": 40,
@@ -678,12 +678,12 @@
     "duplicados_estructuras": 55
    },
    "M86": {
+    "M86:yacimientos:posicion_corregida": 68,
     "M86:yacimientos": 68,
     "M86:geocronologia": 31,
     "M86:RMM_ESTRUCT:tabla_difiere_del_shp": 165,
     "M86:estructuras": 169,
-    "cargados_yacimientos": 67,
-    "duplicados_yacimientos": 1,
+    "cargados_yacimientos": 68,
     "duplicados_geocronologia": 21,
     "cargados_geocronologia": 10,
     "cargados_estructuras": 168,
@@ -699,7 +699,7 @@
  "totales": {
   "geocronologia": 7012,
   "fosiles": 1605,
-  "yacimientos": 8099,
+  "yacimientos": 8100,
   "estructuras": 14053
  }
 }
