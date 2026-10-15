@@ -1069,7 +1069,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-135-136.pdf",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M202_Visviri_VillaIndustrial_GIS.zip",
+    "gdb_codigo": "M202"
   },
   {
     "id": "CGCH_GB_132_TextoyMapa",
@@ -1091,7 +1093,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-132.pdf",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M125_Geologia_Volcan_Parinacota_GIS.zip",
+    "gdb_codigo": "M125"
   },
   {
     "id": "CGCH_35_TextoyMapa",
@@ -1179,7 +1183,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-182.pdf",
-    "region": "Tarapacá"
+    "region": "Tarapacá",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M325_Geologia_PampaLirima_Cancosa_GIS.zip",
+    "gdb_codigo": "M325"
   },
   {
     "id": "CGCH_18_TextoyMapa",
@@ -1355,7 +1361,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-207.pdf",
-    "region": "Tarapacá"
+    "region": "Tarapacá",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M341_Carta_Quehuita_Chela_GIS.zip",
+    "gdb_codigo": "M341"
   },
   {
     "id": "CGCH_31_TextoyMapa",
@@ -1421,7 +1429,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-141-142.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M203_Tocopilla_MariaElena_GIS.zip",
+    "gdb_codigo": "M203"
   },
   {
     "id": "CGCH_GB_199_TextoyMapa",
@@ -1443,7 +1453,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-199.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M312_CartaCalama_GIS.zip",
+    "gdb_codigo": "M312"
   },
   {
     "id": "CGCH_GB_215_216_TextoyMapa",
@@ -1465,7 +1477,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-215-216.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M327_Geologia_area_CupoToconce_CerrosTocorpuri_GIS.zip",
+    "gdb_codigo": "M327"
   },
   {
     "id": "CGCH_GB_198_TextoyMapa",
@@ -1487,7 +1501,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": null,
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M353_Sierra_Gorda_GIS_Texto.rar",
+    "gdb_codigo": "M353"
   },
   {
     "id": "CGCH_GB_206_TextoyMapa",
@@ -1597,7 +1613,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-144.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M292_Carta_SierraMariposa_GIS.zip",
+    "gdb_codigo": "M292"
   },
   {
     "id": "CGCH_26_TextoyMapa",
@@ -1641,7 +1659,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-187-188.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M309_CartasBlancoEncalada_PampaRemiendos_GIS.zip",
+    "gdb_codigo": "M309"
   },
   {
     "id": "CGCH_GB_189_TextoyMapa",
@@ -1663,7 +1683,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": null,
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M349_Augusta_Victoria_Gis_Texto_Anexo.rar",
+    "gdb_codigo": "M349"
   },
   {
     "id": "CGCH_GB_183_184_TextoyMapa",
@@ -1685,7 +1707,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-183-184.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M310_Punta%20Posallaves-SierraVicMackenna_Texto.rar",
+    "gdb_codigo": "M310"
   },
   {
     "id": "CGCH_GB_202_203_TextoyMapa",
@@ -1707,7 +1731,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-202-203.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M351_SalarPuntaNegra_CerroSurBayo_GIS.zip",
+    "gdb_codigo": "M351"
   },
   {
     "id": "CGCH_GB_138_TextoyMapa",
@@ -1729,7 +1755,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-138.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M197_Carta_LosVientos_GIS.zip",
+    "gdb_codigo": "M197"
   },
   {
     "id": "CGCH_GB_129_TextoyMapa",
@@ -1751,7 +1779,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-129.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M192_CartaCatalina_GIS.zip",
+    "gdb_codigo": "M192"
   },
   {
     "id": "CGCH_GB_164_165_TextoyMapa",
@@ -1773,7 +1803,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-164-165.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M208_Cartas_BahiaIslaBlanca_Taltal_GIS.zip",
+    "gdb_codigo": "M208"
   },
   {
     "id": "CGCH_GB_121_TextoyMapa",
@@ -1795,7 +1827,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-121.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M172_Carta_Altamira_GIS.zip",
+    "gdb_codigo": "M172"
   },
   {
     "id": "CGCH_GB_161_TextoyMapa",
@@ -1817,7 +1851,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-161.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M209_Carta_Cifuncho_GIS.zip",
+    "gdb_codigo": "M209"
   },
   {
     "id": "CGCH_GB_169_TextoyMapa",
@@ -1905,7 +1941,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-185-186.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M313_CerroPanteonAliste_CerroColorado_GIS.zip",
+    "gdb_codigo": "M313"
   },
   {
     "id": "CGCH_GB_139_140_TextoyMapa",
@@ -1927,7 +1965,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-139-140.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M198_Area_LagunaWheelwright_PasoSanFrancisco_GIS.zip",
+    "gdb_codigo": "M198"
   },
   {
     "id": "CGCH_25_TextoyMapa",
@@ -1993,7 +2033,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-145.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M199_LagunaNegroFrancisco_GIS.zip",
+    "gdb_codigo": "M199"
   },
   {
     "id": "CGCH_GB_204_205_TextoyMapa",
@@ -2015,7 +2057,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-204-205.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M338_Nevados_Ojos_del_Salado_CerroFraile_GIS.zip",
+    "gdb_codigo": "M338"
   },
   {
     "id": "CGCH_03_TextoyMapa",
@@ -2103,7 +2147,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-200.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M336_Geologia_CerroCadillal_CerroJotabeche_GIS.zip",
+    "gdb_codigo": "M336"
   },
   {
     "id": "CGCH_01_TextoyMapa",
@@ -2169,7 +2215,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-181.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M314%20Geologia_CerrodeCantaritos_LagunaChica_GIS.zip",
+    "gdb_codigo": "M314"
   },
   {
     "id": "El_Transito_Lagunillas",
@@ -2191,7 +2239,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-149.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M213_ElTransito_Lagunillas_GIS.zip",
+    "gdb_codigo": "M213"
   },
   {
     "id": "CGCH_GB_175_176_TextoyMapa",
@@ -2213,7 +2263,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-175-176.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M315_RioChollay_Matancilla_CajonDelEncierro_GIS.zip",
+    "gdb_codigo": "M315"
   },
   {
     "id": "CGCH_GB_133_134_TextoyMapa",
@@ -2235,7 +2287,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-133-134.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M201_Geologia_Area_CarrizalilloElTofo_GIS.zip",
+    "gdb_codigo": "M201"
   },
   {
     "id": "CGCH_GB_192_193_TextoyMapa",
@@ -2257,7 +2311,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-192-193.pdf",
-    "region": "Coquimbo"
+    "region": "Coquimbo",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M352_Guanta_LosCuartitos_y_PasoDeVacasHeladas_GIS_Texto_Anexo.rar",
+    "gdb_codigo": "M352"
   },
   {
     "id": "CGCH_15_TextoyMapa",
@@ -2389,7 +2445,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": null,
-    "region": "Coquimbo"
+    "region": "Coquimbo",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M159_Ovalle_PenaBlanca_GIS.zip",
+    "gdb_codigo": "M159"
   },
   {
     "id": "CGCH_GB_219_TextoyMapa",
@@ -2433,7 +2491,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-122.pdf",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M173_Temuco_NuevaImperial_GIS.zip",
+    "gdb_codigo": "M173"
   },
   {
     "id": "CGCH_GB_128_TextoyMapa",
@@ -2455,7 +2515,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-128.pdf",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M191_Geologia_Area_VillarricaHuiscapi_GIS.zip",
+    "gdb_codigo": "M191"
   },
   {
     "id": "CGCH_GB_137_TextoyMapa",
@@ -2499,7 +2561,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-210.pdf",
-    "region": "Los Ríos"
+    "region": "Los Ríos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M316_Geologia_area_RioBueno_Paillaco_GIS.zip",
+    "gdb_codigo": "M316"
   },
   {
     "id": "CGCH_GB_126_TextoyMapa",
@@ -2521,7 +2585,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-126.pdf",
-    "region": "Los Lagos"
+    "region": "Los Lagos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M185_Geologia_Volcan_Osorno_GIS.zip",
+    "gdb_codigo": "M185"
   },
   {
     "id": "CGCH_GB_127_TextoyMapa",
@@ -2587,7 +2653,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-125.pdf",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M176_Geologia_BahiaMurta_CerrosinNombre_GIS.zip",
+    "gdb_codigo": "M176"
   },
   {
     "id": "CGCH_36_TextoyMapa",
@@ -2631,7 +2699,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-146.pdf",
-    "region": "Tarapacá"
+    "region": "Tarapacá",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M215_Carta_Cuya_GIS.zip",
+    "gdb_codigo": "M215"
   },
   {
     "id": "CGCH_GB_150_TextoyMapa",
@@ -2653,7 +2723,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-150.pdf",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M214_EstacionCha%C3%B1ar_JuntadeChingoles_GIS.zip",
+    "gdb_codigo": "M214"
   },
   {
     "id": "M207_Sierra_Vaquillas_Altas",
@@ -2697,7 +2769,9 @@
     "opacidad": 1.0,
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-190.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M418_Ascotan_Co_Inacaliri_GIS.zip",
+    "gdb_codigo": "M418"
   },
   {
     "id": "CGCH_GB_191_TextoyMapa",
@@ -2719,7 +2793,9 @@
     "opacidad": 1.0,
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-191.pdf",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M350%20Imilac_Qda_Guanaqueros.rar",
+    "gdb_codigo": "M350"
   },
   {
     "id": "CGCH_GB_194_TextoyMapa",
@@ -2741,7 +2817,9 @@
     "opacidad": 1.0,
     "recortado": false,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-194.pdf",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M321_Carta_LagoChungara_GIS.zip",
+    "gdb_codigo": "M321"
   },
   {
     "id": "CGCH_GB_197_TextoyMapa",
@@ -2763,7 +2841,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://github.com/cvenegas-sernageomin/GeoChile/releases/download/informes/GB-197.pdf",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M320_Carta_Putre_GIS.zip",
+    "gdb_codigo": "M320"
   },
   {
     "id": "CGCH_GB_213_TextoyMapa",
@@ -2851,7 +2931,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Metropolitana"
+    "region": "Metropolitana",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M40_Talagante_SanFranciscoMostazal_GIS.zip",
+    "gdb_codigo": "M40"
   },
   {
     "id": "CGCH_GB_76_TextoyMapa",
@@ -2873,7 +2955,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M24_CartaCaldera_GIS.zip",
+    "gdb_codigo": "M24"
   },
   {
     "id": "CGCH_GB_77_78_TextoyMapa",
@@ -2895,7 +2979,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M30_Carta_Castilla_Totoral_Bajo_GIS.zip",
+    "gdb_codigo": "M30"
   },
   {
     "id": "CGCH_GB_79_TextoyMapa",
@@ -2917,7 +3003,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Lagos"
+    "region": "Los Lagos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M110_Geologia_CastroDalcahue_GIS.zip",
+    "gdb_codigo": "M110"
   },
   {
     "id": "CGCH_GB_80_TextoyMapa",
@@ -2939,7 +3027,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M48_Geologia_Area_Coyhaique_Balmaceda_GIS.zip",
+    "gdb_codigo": "M48"
   },
   {
     "id": "CGCH_GB_81_TextoyMapa",
@@ -2961,7 +3051,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Ríos"
+    "region": "Los Ríos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M50_Geologia_Area_LosLagos_Malalhue_GIS.zip",
+    "gdb_codigo": "M50"
   },
   {
     "id": "CGCH_GB_82_TextoyMapa",
@@ -2983,7 +3075,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M32_Carta_Baquedano_GIS.zip",
+    "gdb_codigo": "M32"
   },
   {
     "id": "CGCH_GB_83_TextoyMapa",
@@ -3005,7 +3099,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Ríos"
+    "region": "Los Ríos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M49_Geologia_Area_Liquine_Neltume_GIS.zip",
+    "gdb_codigo": "M49"
   },
   {
     "id": "CGCH_GB_84_TextoyMapa",
@@ -3027,7 +3123,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M57_Hoja_Arica_GIS.zip",
+    "gdb_codigo": "M57"
   },
   {
     "id": "CGCH_GB_85_TextoyMapa",
@@ -3049,7 +3147,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M56_Area_Oriental_Hojas_Cochrane_VillaOHiggins_GIS.zip",
+    "gdb_codigo": "M56"
   },
   {
     "id": "CGCH_GB_86_TextoyMapa",
@@ -3071,7 +3171,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Lagos"
+    "region": "Los Lagos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M123_Geologia_Chonchi_Cucao_GIS.zip",
+    "gdb_codigo": "M123"
   },
   {
     "id": "CGCH_GB_87_TextoyMapa",
@@ -3093,7 +3195,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M109_Geologia_Volvan_Lanin_GIS.zip",
+    "gdb_codigo": "M109"
   },
   {
     "id": "CGCH_GB_88_TextoyMapa",
@@ -3115,7 +3219,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M114_Geologia_Volcan_Llaima_GIS.zip",
+    "gdb_codigo": "M114"
   },
   {
     "id": "CGCH_GB_89_TextoyMapa",
@@ -3137,7 +3243,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M45_Cartas_Antofagasta_PuntaTetas_GIS.zip",
+    "gdb_codigo": "M45"
   },
   {
     "id": "CGCH_GB_90_TextoyMapa",
@@ -3159,7 +3267,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M117_Hoja_El_Salvador_GIS.zip",
+    "gdb_codigo": "M117"
   },
   {
     "id": "CGCH_GB_91_TextoyMapa",
@@ -3181,7 +3291,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M25_Hoja_Copiapo_GIS.zip",
+    "gdb_codigo": "M25"
   },
   {
     "id": "CGCH_GB_92_TextoyMapa",
@@ -3203,7 +3315,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M26_Carta_Los_Loros_GIS.zip",
+    "gdb_codigo": "M26"
   },
   {
     "id": "CGCH_GB_93_TextoyMapa",
@@ -3225,7 +3339,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M126_Geologia_CV_Taapaca_GIS.zip",
+    "gdb_codigo": "M126"
   },
   {
     "id": "CGCH_GB_94_TextoyMapa",
@@ -3247,7 +3363,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Lagos"
+    "region": "Los Lagos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M141_Quellon_Isla%20San%20Pedro_GIS.zip",
+    "gdb_codigo": "M141"
   },
   {
     "id": "CGCH_GB_95_TextoyMapa",
@@ -3269,7 +3387,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M113_Guadal_Puerto_Sanchez_GIS.zip",
+    "gdb_codigo": "M113"
   },
   {
     "id": "CGCH_GB_96_TextoyMapa",
@@ -3291,7 +3411,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Coquimbo"
+    "region": "Coquimbo",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M120_Andacollo_PuertoAldea_GIS.zip",
+    "gdb_codigo": "M120"
   },
   {
     "id": "CGCH_GB_97_TextoyMapa",
@@ -3313,7 +3435,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Coquimbo"
+    "region": "Coquimbo",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M47_Geologia_Area_VicunaPichasca_GIS.zip",
+    "gdb_codigo": "M47"
   },
   {
     "id": "CGCH_GB_98_TextoyMapa",
@@ -3335,7 +3459,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M124_Geologia_Volcan_Villarrica_GIS.zip",
+    "gdb_codigo": "M124"
   },
   {
     "id": "CGCH_GB_99_TextoyMapa",
@@ -3357,7 +3483,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Lagos"
+    "region": "Los Lagos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M140_Geologia_CV_Puyehue_CordonCaulle_GIS.zip",
+    "gdb_codigo": "M140"
   },
   {
     "id": "CGCH_GB_100_TextoyMapa",
@@ -3379,7 +3507,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M145_Geologia_FreirinaElMorado_GIS.zip",
+    "gdb_codigo": "M145"
   },
   {
     "id": "CGCH_GB_101_TextoyMapa",
@@ -3401,7 +3531,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Arica y Parinacota"
+    "region": "Arica y Parinacota",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M125_Geologia_Volcan_Parinacota_GIS.zip",
+    "gdb_codigo": "M125"
   },
   {
     "id": "CGCH_GB_102_TextoyMapa",
@@ -3423,7 +3555,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M46_Carta_IncadeOro_GIS.zip",
+    "gdb_codigo": "M46"
   },
   {
     "id": "CGCH_GB_103_104_TextoyMapa",
@@ -3445,7 +3579,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M147_Cartas_Mejillones_PeninsulaMejillones_GIS.zip",
+    "gdb_codigo": "M147"
   },
   {
     "id": "CGCH_GB_105_TextoyMapa",
@@ -3467,7 +3603,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M148_Oficina_Domeyko_GIS.zip",
+    "gdb_codigo": "M148"
   },
   {
     "id": "CGCH_GB_106_TextoyMapa",
@@ -3489,7 +3627,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M149_Geologia_Area_LancoLoncoche_GIS.zip",
+    "gdb_codigo": "M149"
   },
   {
     "id": "CGCH_GB_107_TextoyMapa",
@@ -3511,7 +3651,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Los Ríos"
+    "region": "Los Ríos",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M150_Geologia_CV_MochoChoshuenco_GIS.zip",
+    "gdb_codigo": "M150"
   },
   {
     "id": "CGCH_GB_108_TextoyMapa",
@@ -3533,7 +3675,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M151_Geologia_Area_Nireguao_BanoNuevo_GIS.zip",
+    "gdb_codigo": "M151"
   },
   {
     "id": "CGCH_GB_109_TextoyMapa",
@@ -3577,7 +3721,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M154_Geologia_Area_QueuleTolten_GIS.zip",
+    "gdb_codigo": "M154"
   },
   {
     "id": "CGCH_GB_111_TextoyMapa",
@@ -3599,7 +3745,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M155_Geologia_CarrizalBajo_Chacritas_GIS.zip",
+    "gdb_codigo": "M155"
   },
   {
     "id": "CGCH_GB_112_TextoyMapa",
@@ -3621,7 +3769,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Aysén"
+    "region": "Aysén",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M156_Greologia_ChileChico_R%C3%ADoLasNieves_GIS.zip",
+    "gdb_codigo": "M156"
   },
   {
     "id": "CGCH_GB_113_TextoyMapa",
@@ -3643,7 +3793,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Tarapacá"
+    "region": "Tarapacá",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M157_Geologia_Iquique_AltoHospicio_GIS.zip",
+    "gdb_codigo": "M157"
   },
   {
     "id": "CGCH_GB_114_TextoyMapa",
@@ -3665,7 +3817,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Ñuble"
+    "region": "Ñuble",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M158_Geologia_CV_NevadosdeChillan_GIS.zip",
+    "gdb_codigo": "M158"
   },
   {
     "id": "CGCH_GB_115_TextoyMapa",
@@ -3687,7 +3841,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Araucanía"
+    "region": "Araucanía",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M163_Geologia_Area_PuconCurarrehue_GIS.zip",
+    "gdb_codigo": "M163"
   },
   {
     "id": "CGCH_GB_116_TextoyMapa",
@@ -3709,7 +3865,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Coquimbo"
+    "region": "Coquimbo",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M162_Geologia_Area_MontePatriElMaqui_GIS.zip",
+    "gdb_codigo": "M162"
   },
   {
     "id": "CGCH_GB_117_TextoyMapa",
@@ -3753,7 +3911,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "O'Higgins"
+    "region": "O'Higgins",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M167_Rancagua_San_Vicente_GIS.zip",
+    "gdb_codigo": "M167"
   },
   {
     "id": "CGCH_GB_119_TextoyMapa",
@@ -3775,7 +3935,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Antofagasta"
+    "region": "Antofagasta",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M58_Carta_Exploradora_GIS.zip",
+    "gdb_codigo": "M58"
   },
   {
     "id": "CGCH_GB_120_TextoyMapa",
@@ -3797,7 +3959,9 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "",
-    "region": "Atacama"
+    "region": "Atacama",
+    "gdb": "https://www.sernageomin.cl/doctransparencia/Productos/Paquetes_Mapas_OSIG/M164_Geologia_Area_VallenarDomeyko_GIS.zip",
+    "gdb_codigo": "M164"
   },
   {
     "id": "pel_cruz_de_cana_contexto",
