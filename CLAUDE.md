@@ -6,7 +6,7 @@ Ficha en memoria: `proyecto-geo-repo-maule-sernageomin`.
 
 ## Estructura
 `index.html` + `viewer_legend.js` leen `capas.json` en vivo (`fetch(...,{cache:'no-cache'})`).
-`overlays/*.webp` (mapa recortado), `leyendas/*.jpg`, `peligros/`, `hillshade/`, `tools/` (pipeline Python).
+`overlays/*.webp` (mapa recortado), `leyendas/*.jpg`, `peligros/`, `tools/` (el hillshade se retiró el 2026-10-15; sigue en el historial de git) (pipeline Python).
 PDF de informes: los grandes van en la **Release «informes»** del repo (Pages no aguanta >1 GB).
 
 ## Reglas
