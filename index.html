@@ -629,6 +629,7 @@ function crearCapa(cont, c){
 }
 
 // Subgrupos plegables dentro de una categoría: por tema y/o región (regiones de norte a sur).
+const TEMAS=['Mapas Geofísicos','Mapas de Geología Económica','Mapas de Geoquímica','Mapas Hidrogeológicos'];
 const REGIONES=['Arica y Parinacota','Tarapacá','Antofagasta','Atacama','Coquimbo','Valparaíso','Metropolitana',
   "O'Higgins",'Maule','Ñuble','Biobío','Araucanía','Los Ríos','Los Lagos','Aysén','Magallanes'];
 function llenarGrupos(cont,grupo,claves){
@@ -637,6 +638,8 @@ function llenarGrupos(cont,grupo,claves){
   grupo.forEach(c=>{ const v=c[k]||'Otros'; (porValor[v]=porValor[v]||[]).push(c); });
   const orden=k==='region'
     ? (a,b)=>(REGIONES.indexOf(a)+1||99)-(REGIONES.indexOf(b)+1||99)
+    : k==='tema' && Object.keys(porValor).some(v=>TEMAS.includes(v))
+    ? (a,b)=>(TEMAS.indexOf(a)+1||99)-(TEMAS.indexOf(b)+1||99)
     : (a,b)=>porValor[b].length-porValor[a].length || a.localeCompare(b,'es');
   Object.keys(porValor).sort(orden).forEach(v=>{
     const d=document.createElement('details');
@@ -660,6 +663,7 @@ fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
         +'<div class="invita">📬 <b>¿Hiciste un mapa geológico en tu tesis o investigación?</b> Compártelo con la comunidad: envía tu mapa georreferenciado (GeoTIFF, KMZ o shapefile) con su leyenda y la referencia de la publicación a '
         +'<a href="mailto:carlos.venegas@sernageomin.cl?subject=Mapa%20acad%C3%A9mico%20para%20el%20Visor%20GeoChile">carlos.venegas@sernageomin.cl</a>. Lo revisaremos para publicarlo aquí, con tu autoría.</div>');
     }else if(cat==='peligros') llenarGrupos(d,grupo,['tema','region']);
+    else if(cat==='aplicada') llenarGrupos(d,grupo,['tema']);
     else if(grupo.length>8 && cat!=='hillshade') llenarGrupos(d,grupo,['region']);
     else grupo.forEach(c=>crearCapa(d,c));
     cont.appendChild(d);

@@ -613,7 +613,8 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf",
-    "region": "Maule"
+    "region": "Maule",
+    "tema": "Mapas Geofísicos"
   },
   {
     "id": "geoq_IR114_mataquito_sedimentosPEC",
@@ -635,7 +636,8 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR114_mataquito_geoquimica_texto.pdf",
-    "region": "Maule"
+    "region": "Maule",
+    "tema": "Mapas de Geoquímica"
   },
   {
     "id": "rme15_yacimientos_rmi_maule",
@@ -657,7 +659,8 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/RME15_yacimientos_rmi_maule_texto.pdf",
-    "region": "Maule"
+    "region": "Maule",
+    "tema": "Mapas de Geología Económica"
   },
   {
     "id": "gfv_andes_35_38",
@@ -723,7 +726,8 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GEOF115_constitucion_gravimetria_texto.pdf",
-    "region": "Maule"
+    "region": "Maule",
+    "tema": "Mapas Geofísicos"
   },
   {
     "id": "hidrogeoq_F19_cauquenes",
@@ -745,7 +749,8 @@
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/IR84_cauquenes_hidrogeologia_texto.pdf",
-    "region": "Maule"
+    "region": "Maule",
+    "tema": "Mapas Hidrogeológicos"
   },
   {
     "id": "lic_curico_2010",
