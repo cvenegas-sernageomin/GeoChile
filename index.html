@@ -36,7 +36,13 @@
   #ptoggle:active{background:#c9dced}
 
   /* Cuerpo desplazable; al contraer solo queda la barra */
-  #pbody{overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 12px 14px;
+  #pgrip{flex:none;height:20px;display:flex;align-items:center;justify-content:center;cursor:ns-resize;
+         touch-action:none;user-select:none;background:#fff}
+  #pgrip i{display:block;width:46px;height:5px;border-radius:3px;background:#9fb3c6}
+  #pgrip:hover i{background:#1a5276}
+  #phead{touch-action:none}
+  #panel.arrastrando{transition:none}
+  #pbody{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 12px 14px;
          padding-bottom:calc(14px + env(safe-area-inset-bottom))}
   #panel.collapsed #pbody{display:none}
 
@@ -217,6 +223,7 @@
 <div id="app">
   <div id="map"></div>
   <div id="panel">
+    <div id="pgrip" aria-hidden="true" title="Arrastra para subir o bajar el panel"><i></i></div>
     <div id="phead" role="button" tabindex="0" aria-expanded="true" aria-controls="pbody"
          title="Mostrar u ocultar el panel">
       <img id="plogo" src="assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
@@ -354,20 +361,64 @@ gridSel.addEventListener('change',()=>{ if(gridSel.value) irACarta(gridSel.value
 const panel = document.getElementById('panel');
 const phead = document.getElementById('phead');
 const ptoggle = document.getElementById('ptoggle');
-function togglePanel(){
-  const col = panel.classList.toggle('collapsed');
+function togglePanel(forzar){
+  const col = panel.classList.toggle('collapsed', typeof forzar==='boolean' ? forzar : undefined);
+  if(col) panel.style.maxHeight='';
   ptoggle.innerHTML = col ? '&#9650;' : '&#9660;';      // ▲ desplegar / ▼ ocultar
   ptoggle.title = ptoggle.ariaLabel = col ? 'Mostrar panel' : 'Ocultar panel';
   phead.setAttribute('aria-expanded', String(!col));
   setTimeout(()=>map.invalidateSize(), 220);
 }
-phead.addEventListener('click', togglePanel);
+phead.addEventListener('click', ()=>{ if(!arrastro) togglePanel(); });
 phead.addEventListener('keydown', e=>{
   if(e.key==='Enter' || e.key===' '){ e.preventDefault(); togglePanel(); }
 });
 // el boton vive dentro de la barra: evita contar el click dos veces
 ptoggle.addEventListener('click', e=>e.stopPropagation());
-ptoggle.addEventListener('click', togglePanel);
+ptoggle.addEventListener('click', ()=>togglePanel());
+
+/* Cortina: arrastrar la manija o la barra sube/baja el panel; al soltar, si quedó casi cerrado se contrae */
+let arrastro=false;
+(function(){
+  let y0=0,h0=0,ph=null,mov=false;
+  const fijo=()=>panel.offsetHeight-document.getElementById('pbody').offsetHeight;   // manija + barra + activa
+  function ini(e){
+    if(e.target.closest('button')||e.button>0) return;
+    ph=e.currentTarget; ph.setPointerCapture(e.pointerId);
+    y0=e.clientY; h0=panel.offsetHeight; mov=false; arrastro=false;
+  }
+  function mueve(e){
+    if(!ph) return;
+    const dy=y0-e.clientY;
+    if(!mov && Math.abs(dy)<6) return;
+    mov=true; arrastro=true; panel.classList.add('arrastrando');
+    const H=Math.min(h0+dy, window.innerHeight*0.85), min=fijo()+50;
+    if(H<min){ panel.classList.add('collapsed'); panel.style.maxHeight=''; }
+    else{
+      if(panel.classList.contains('collapsed')){ panel.classList.remove('collapsed'); }
+      panel.style.maxHeight=H+'px';
+    }
+  }
+  function fin(e){
+    if(!ph) return;
+    try{ ph.releasePointerCapture(e.pointerId); }catch(_){}
+    ph=null; panel.classList.remove('arrastrando');
+    if(mov){
+      const col=panel.classList.contains('collapsed');
+      ptoggle.innerHTML = col ? '&#9650;' : '&#9660;';
+      ptoggle.title = ptoggle.ariaLabel = col ? 'Mostrar panel' : 'Ocultar panel';
+      phead.setAttribute('aria-expanded', String(!col));
+      map.invalidateSize();
+      setTimeout(()=>{ arrastro=false; },60);
+    }
+  }
+  [document.getElementById('pgrip'), phead].forEach(el=>{
+    el.addEventListener('pointerdown',ini); el.addEventListener('pointermove',mueve);
+    el.addEventListener('pointerup',fin); el.addEventListener('pointercancel',fin);
+  });
+  // un toque en la manija también abre/cierra
+  document.getElementById('pgrip').addEventListener('click',()=>{ if(!arrastro) togglePanel(); });
+})();
 ['pinstalar','payuda'].forEach(id=>document.getElementById(id).addEventListener('click', e=>e.stopPropagation()));
 
 // En telefono conviene partir con el mapa a la vista
