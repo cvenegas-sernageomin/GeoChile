@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-15T11:35:16",
+ "generado": "2026-10-15T15:45:33",
  "gdb": {
   "GB-100_M145\\M145_FreirinaElMorado.gdb": {
    "fosiles": 40,
@@ -101,8 +101,26 @@
    "geocronologia": 20,
    "yacimientos": 15
   },
+  "GB-129_M192\\M192_CartaCatalina.gdb": {
+   "estructuras": 8,
+   "geocronologia": 105,
+   "yacimientos": 8
+  },
   "GB-130_M193\\M193_Geologia_Volcan_Calbuco.gdb": {
    "geocronologia": 47
+  },
+  "GB-141-142_M203\\M203_Tocopilla_MariaElena.gdb": {
+   "estructuras": 307,
+   "fosiles": 1,
+   "geocronologia": 29,
+   "yacimientos": 95
+  },
+  "GB-161_M209\\M209_Carta_Cifuncho.gdb": {
+   "fosiles": 70,
+   "estructuras": 122,
+   "duplicados_fosiles": 30,
+   "geocronologia": 24,
+   "yacimientos": 67
   },
   "GB-195-196_M340\\M340 Guanillos del Norte y Salar de Llamara.gdb": {
    "estructuras": 319,
@@ -539,10 +557,149 @@
  "fallidas": {
   "M316_GIS\\M316_0.gdb": "C:\\Users\\carlos.venegas\\IA\\Claude\\proyectos\\cartas-geologicas-sernageomin\\_mapas_por_ingresar\\gdb_extraidos\\M316_GIS\\M316_0.gdb: Permission denied"
  },
+ "recursos": {
+  "datum": {
+   "M104": "WGS84",
+   "M105": "WGS84",
+   "M168": "PSAD56",
+   "M169": "PSAD56",
+   "M195": "PSAD56",
+   "M305": "PSAD56",
+   "M81": "WGS84",
+   "M82": "WGS84",
+   "M84": "WGS84",
+   "M85": "WGS84",
+   "M86": "WGS84",
+   "M89": "WGS84"
+  },
+  "paquetes": {
+   "M104": {
+    "M104:yacimientos": 1332,
+    "cargados_yacimientos": 1229,
+    "duplicados_yacimientos": 103
+   },
+   "M105": {
+    "M105:yacimientos": 9,
+    "M105:geocronologia": 34,
+    "M105:estructuras": 38,
+    "cargados_yacimientos": 9,
+    "cargados_geocronologia": 34,
+    "cargados_estructuras": 38
+   },
+   "M111": {
+    "sin_puntos": true
+   },
+   "M168": {
+    "M168:yacimientos": 61,
+    "M168:geocronologia": 28,
+    "M168:estructuras": 127,
+    "cargados_yacimientos": 3,
+    "duplicados_yacimientos": 58,
+    "duplicados_geocronologia": 22,
+    "cargados_geocronologia": 6,
+    "duplicados_estructuras": 86,
+    "cargados_estructuras": 41
+   },
+   "M169": {
+    "M169:yacimientos": 72,
+    "M169:geocronologia": 24,
+    "M169:geocronologia:sin_coordenadas": 2,
+    "M169:estructuras": 158,
+    "cargados_yacimientos": 72,
+    "cargados_geocronologia": 9,
+    "duplicados_geocronologia": 15,
+    "duplicados_estructuras": 99,
+    "cargados_estructuras": 59
+   },
+   "M195": {
+    "M195:yacimientos": 200,
+    "M195:geocronologia": 51,
+    "M195:estructuras": 41,
+    "cargados_yacimientos": 199,
+    "duplicados_yacimientos": 1,
+    "cargados_geocronologia": 24,
+    "duplicados_geocronologia": 27,
+    "cargados_estructuras": 23,
+    "duplicados_estructuras": 18
+   },
+   "M305": {
+    "M305:yacimientos": 215,
+    "M305:geocronologia": 62,
+    "M305:estructuras": 102,
+    "cargados_yacimientos": 212,
+    "duplicados_yacimientos": 3,
+    "duplicados_geocronologia": 41,
+    "cargados_geocronologia": 21,
+    "cargados_estructuras": 78,
+    "duplicados_estructuras": 24
+   },
+   "M81": {
+    "M81:yacimientos": 78,
+    "M81:geocronologia": 43,
+    "M81:estructuras": 37,
+    "cargados_yacimientos": 75,
+    "duplicados_yacimientos": 3,
+    "duplicados_geocronologia": 32,
+    "cargados_geocronologia": 11,
+    "duplicados_estructuras": 34,
+    "cargados_estructuras": 3
+   },
+   "M82": {
+    "M82:yacimientos": 108,
+    "M82:geocronologia": 23,
+    "M82:estructuras": 55,
+    "cargados_yacimientos": 98,
+    "duplicados_yacimientos": 10,
+    "duplicados_geocronologia": 22,
+    "cargados_geocronologia": 1,
+    "duplicados_estructuras": 24,
+    "cargados_estructuras": 31
+   },
+   "M84": {
+    "M84:yacimientos": 205,
+    "M84:geocronologia": 29,
+    "M84:RMM_ESTRUCT:tabla_difiere_del_shp": 252,
+    "M84:estructuras": 252,
+    "cargados_yacimientos": 176,
+    "duplicados_yacimientos": 29,
+    "cargados_geocronologia": 27,
+    "duplicados_geocronologia": 2,
+    "cargados_estructuras": 252
+   },
+   "M85": {
+    "M85:yacimientos": 54,
+    "M85:geocronologia": 31,
+    "M85:RMM_ESTRUCT:tabla_difiere_del_shp": 157,
+    "M85:estructuras": 157,
+    "cargados_yacimientos": 54,
+    "duplicados_geocronologia": 29,
+    "cargados_geocronologia": 2,
+    "cargados_estructuras": 102,
+    "duplicados_estructuras": 55
+   },
+   "M86": {
+    "M86:yacimientos": 68,
+    "M86:geocronologia": 31,
+    "M86:RMM_ESTRUCT:tabla_difiere_del_shp": 165,
+    "M86:estructuras": 169,
+    "cargados_yacimientos": 67,
+    "duplicados_yacimientos": 1,
+    "duplicados_geocronologia": 21,
+    "cargados_geocronologia": 10,
+    "cargados_estructuras": 168,
+    "duplicados_estructuras": 1
+   },
+   "M89": {
+    "M89:yacimientos": 372,
+    "cargados_yacimientos": 369,
+    "duplicados_yacimientos": 3
+   }
+  }
+ },
  "totales": {
-  "geocronologia": 6709,
-  "fosiles": 1534,
-  "yacimientos": 5366,
-  "estructuras": 12821
+  "geocronologia": 7012,
+  "fosiles": 1605,
+  "yacimientos": 8099,
+  "estructuras": 14053
  }
 }
