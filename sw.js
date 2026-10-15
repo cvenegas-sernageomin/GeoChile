@@ -1,9 +1,10 @@
 // Service worker del Visor GeoChile.
 // OJO: el origen cvenegas-sernageomin.github.io lo comparten varias PWA (Geonotas, catastro...):
 // solo se tocan las cachés con prefijo "geochile-", nunca las de las otras apps.
-const VER = 'geochile-shell-5';
+const VER = 'geochile-shell-6';
+const DATOS = 'geochile-datos';   // datos/*.json (GDB): caché aparte para que no se pierdan al subir VER
 const MAPAS = 'geochile-mapas';   // overlays y leyendas que el usuario abrió: quedan para usarlos sin señal
-const SHELL = ['./', 'index.html', 'capas.json', 'viewer_legend.js?v=20260827', 'manifest.json', 'vendor/leaflet-rotate.js', 'vendor/wmm.js',
+const SHELL = ['./', 'index.html', 'capas.json', 'viewer_legend.js?v=20260827', 'manifest.json', 'datos.js?v=20261015', 'vendor/leaflet-rotate.js', 'vendor/wmm.js',
   'icons/icono.svg', 'icons/icono-192.png', 'assets/banner_sernageomin.jpg',
   'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'];
 
@@ -22,7 +23,9 @@ self.addEventListener('fetch', e => {
   const url = new URL(req.url);
   const propio = url.origin === location.origin && url.pathname.startsWith(new URL('./', location).pathname);
   if (propio && /\/(overlays|leyendas|peligros|hillshade)\//.test(url.pathname)) {
-    e.respondWith(mapa(req, url));
+    e.respondWith(mapa(req, url, MAPAS));
+  } else if (propio && /\/datos\/[\w.-]+\.json$/.test(url.pathname)) {
+    e.respondWith(mapa(req, url, DATOS));   // caché primero: el ?v= (DATA_V en datos.js) cambia al regenerar
   } else if (propio || url.hostname === 'unpkg.com') {
     // red primero (capas.json e index cambian con cada publicación); sin señal, lo guardado
     e.respondWith(fetch(req).then(r => {
@@ -36,8 +39,8 @@ self.addEventListener('fetch', e => {
 
 // Overlays y leyendas: caché primero. El ?v= cambia al republicar un mapa; al guardar la
 // versión nueva se borra la vieja del mismo archivo para no acumular imágenes.
-async function mapa(req, url) {
-  const c = await caches.open(MAPAS);
+async function mapa(req, url, cache) {
+  const c = await caches.open(cache);
   const hit = await c.match(req);
   if (hit) return hit;
   const r = await fetch(req);

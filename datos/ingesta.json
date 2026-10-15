@@ -1,0 +1,548 @@
+{
+ "generado": "2026-10-15T11:35:16",
+ "gdb": {
+  "GB-100_M145\\M145_FreirinaElMorado.gdb": {
+   "fosiles": 40,
+   "geocronologia": 83,
+   "estructuras": 394,
+   "duplicados_geocronologia": 1,
+   "yacimientos": 89
+  },
+  "GB-101_M125\\M125_GeologiaVolcanParinacota.gdb": {
+   "geocronologia": 21,
+   "edad_unidad_inferida": 3
+  },
+  "GB-102_M46\\M46_IncadeOro.gdb": {
+   "estructuras": 150,
+   "fosiles": 10,
+   "geocronologia": 120,
+   "yacimientos": 218,
+   "duplicados_yacimientos": 6
+  },
+  "GB-103-104_M147\\M147_CartasMejillonesPeninsulaMejillones.gdb": {
+   "estructuras": 176,
+   "fosiles": 36,
+   "geocronologia": 76,
+   "yacimientos": 78
+  },
+  "GB-105_M148\\M148_Oficina_Domeyko.gdb": {
+   "estructuras": 104,
+   "fosiles": 49,
+   "geocronologia": 61,
+   "yacimientos": 7
+  },
+  "GB-106_M149\\M149 Lanco Loncoche_Paquete\\M149_Lanco_ Loncoche.gdb": {
+   "estructuras": 201,
+   "geocronologia": 4,
+   "yacimientos": 20
+  },
+  "GB-108_M151\\M151_Ñireguao_Baño_Nuevo_GB.gdb": {
+   "estructuras": 280,
+   "fosiles": 55,
+   "geocronologia": 57,
+   "yacimientos": 23
+  },
+  "GB-110_M154\\M154_Queule Tolten.gdb": {
+   "estructuras": 102,
+   "geocronologia": 3,
+   "yacimientos": 5
+  },
+  "GB-111_M155\\M155_GeologiaCarrizalBajoChacritas.gdb": {
+   "estructuras": 404,
+   "fosiles": 51,
+   "geocronologia": 80,
+   "yacimientos": 165
+  },
+  "GB-112_M156\\M156_Chile_Chico_Río de las Nieves.gdb": {
+   "estructuras": 162,
+   "fosiles": 83,
+   "geocronologia": 75,
+   "yacimientos": 30
+  },
+  "GB-113_M157\\M157_Iquique_Alto_Hospicio.gdb": {
+   "estructuras": 57,
+   "fosiles": 7,
+   "geocronologia": 13,
+   "yacimientos": 14
+  },
+  "GB-115_M163\\M163_Area_PuconCurarrehue.gdb": {
+   "estructuras": 55,
+   "geocronologia": 72
+  },
+  "GB-116_M162\\M162_MontePatriElMaqui.gdb": {
+   "estructuras": 172,
+   "fosiles": 14,
+   "geocronologia": 25,
+   "yacimientos": 66
+  },
+  "GB-118_M167\\M167_Rancagua_San_Vicente\\M167_Rancagua_San_Vicente.gdb": {
+   "estructuras": 188,
+   "duplicados_estructuras": 1,
+   "fosiles": 10,
+   "geocronologia": 31,
+   "yacimientos": 55
+  },
+  "GB-119_M58\\M58_Carta_Exploradora.gdb": {
+   "estructuras": 169,
+   "fosiles": 33,
+   "geocronologia": 117,
+   "yacimientos": 48
+  },
+  "GB-120_M164\\M164_GeologiaAreaVallenarDomeyko.gdb": {
+   "estructuras": 362,
+   "fosiles": 38,
+   "duplicados_fosiles": 1,
+   "geocronologia": 94,
+   "yacimientos": 118
+  },
+  "GB-124_M175\\M175_PtoIngenieroIbañez-CoCastillo.gdb": {
+   "estructuras": 134,
+   "fosiles": 12,
+   "geocronologia": 20,
+   "yacimientos": 15
+  },
+  "GB-130_M193\\M193_Geologia_Volcan_Calbuco.gdb": {
+   "geocronologia": 47
+  },
+  "GB-195-196_M340\\M340 Guanillos del Norte y Salar de Llamara.gdb": {
+   "estructuras": 319,
+   "fosiles": 20,
+   "geocronologia": 162,
+   "edad_unidad_inferida": 1,
+   "yacimientos": 49
+  },
+  "GB-223-224_M456\\M456GeologiaDeLasÁreasLaUniónQuilacahuinRíoColún.gdb": {
+   "yacimientos": 73,
+   "estructuras": 264,
+   "geocronologia": 26,
+   "fosiles": 87
+  },
+  "GB-74_M40\\M40_Talagante San Francisco de Mostazal.gdb": {
+   "estructuras": 135,
+   "fosiles": 12,
+   "geocronologia": 30,
+   "yacimientos": 81,
+   "duplicados_yacimientos": 31
+  },
+  "GB-76_M24\\M24_CartaCaldera.gdb": {
+   "estructuras": 28,
+   "fosiles": 26,
+   "geocronologia": 57,
+   "yacimientos": 96
+  },
+  "GB-77-78_M30\\M30_Castilla_totoralBajo.gdb": {
+   "estructuras": 124,
+   "fosiles": 21,
+   "geocronologia": 35,
+   "yacimientos": 191
+  },
+  "GB-79_M110\\M110_Castro_Dalcahue.gdb": {
+   "estructuras": 111,
+   "duplicados_estructuras": 1,
+   "fosiles": 11,
+   "geocronologia": 133,
+   "yacimientos": 9,
+   "duplicados_fosiles": 4
+  },
+  "GB-80_M48\\M48_Coyhaique_Balmaceda.gdb": {
+   "estructuras": 229,
+   "fosiles": 26,
+   "geocronologia": 38,
+   "edad_unidad_inferida": 7,
+   "yacimientos": 2
+  },
+  "GB-81_M50\\M50_Los_Lagos_Malalhue.gdb": {
+   "estructuras": 136,
+   "fosiles": 12,
+   "geocronologia": 4,
+   "yacimientos": 18
+  },
+  "GB-82_M32\\M32_Baquedano.gdb": {
+   "estructuras": 60,
+   "fosiles": 5,
+   "geocronologia": 35,
+   "yacimientos": 13
+  },
+  "GB-83_M49\\M49_Liquiñe_Neltume.gdb": {
+   "estructuras": 41,
+   "duplicados_estructuras": 1,
+   "geocronologia": 53
+  },
+  "GB-89_M45\\M45_Antofagasta_PuntaTetas.gdb": {
+   "estructuras": 194,
+   "fosiles": 7,
+   "geocronologia": 43,
+   "yacimientos": 118,
+   "duplicados_yacimientos": 3
+  },
+  "GB-91_M25\\M25_Copiapo.gdb": {
+   "estructuras": 258,
+   "fosiles": 18,
+   "geocronologia": 74,
+   "yacimientos": 154
+  },
+  "GB-92_M26\\M26_Los_Loros.gdb": {
+   "estructuras": 361,
+   "fosiles": 45,
+   "geocronologia": 73,
+   "yacimientos": 212,
+   "duplicados_yacimientos": 1
+  },
+  "GB-94_M141\\M141_Quellon_Isla San Pedro.gdb": {
+   "estructuras": 52,
+   "duplicados_estructuras": 2,
+   "geocronologia": 7,
+   "yacimientos": 3
+  },
+  "GB-95_M113\\M113_Puerto_Guadal_Puerto_Sanchez_GB.gdb": {
+   "estructuras": 203,
+   "fosiles": 13,
+   "geocronologia": 44,
+   "yacimientos": 57
+  },
+  "GB-96_M120\\M120_AndacolloPtoAldea.gdb": {
+   "estructuras": 177,
+   "fosiles": 21,
+   "geocronologia": 77,
+   "yacimientos": 466
+  },
+  "GB-97_M47\\M47_VicunaPichasca.gdb": {
+   "estructuras": 196,
+   "fosiles": 18,
+   "geocronologia": 24,
+   "yacimientos": 77
+  },
+  "GB-98_M124\\M124 Geología del Volcán Villarrica.gdb": {
+   "geocronologia": 98,
+   "estructuras": 16,
+   "fosiles": 1
+  },
+  "GB-C39_M429\\M429_Santiago.gdb": {
+   "yacimientos": 49,
+   "estructuras": 315,
+   "fosiles": 9
+  },
+  "GB-C68_M432\\M432_PiscoElqui_GB.gdb": {
+   "estructuras": 192,
+   "fosiles": 18,
+   "geocronologia": 27,
+   "yacimientos": 26
+  },
+  "GB-C69_M431\\M431_HojaIllapel.gdb": {
+   "estructuras": 284,
+   "fosiles": 41,
+   "geocronologia": 75,
+   "yacimientos": 492
+  },
+  "M159_Ovalle_PenaBlanca__M159\\M159_Ovalle_PeñaBlanca.gdb": {
+   "yacimientos": 118,
+   "estructuras": 139,
+   "geocronologia": 170,
+   "duplicados_geocronologia": 1,
+   "fosiles": 19
+  },
+  "M172_Carta_Altamira__M172\\M172 Carta Altamira.gdb": {
+   "estructuras": 40,
+   "fosiles": 3,
+   "geocronologia": 106,
+   "yacimientos": 29
+  },
+  "M173_Temuco_NuevaImperial__M173\\M173_Temuco-NuevaImperial.gdb": {
+   "estructuras": 44,
+   "fosiles": 26,
+   "geocronologia": 11,
+   "yacimientos": 30
+  },
+  "M176_Geologia_BahiaMurta_CerrosinNombre__M176\\M176_Geología del área Bahia Murta-Cerro sin nombre.gdb": {
+   "estructuras": 14,
+   "geocronologia": 24
+  },
+  "M185_Geologia_Volcan_Osorno__M185\\M185_Geología Volcán Osorno_GB.gdb": {
+   "geocronologia": 28,
+   "estructuras": 6
+  },
+  "M191_Geologia_Area_VillarricaHuiscapi__M191\\M191_VillarricaHuiscapi.gdb": {
+   "estructuras": 23,
+   "duplicados_estructuras": 2,
+   "fosiles": 2,
+   "geocronologia": 36,
+   "yacimientos": 17
+  },
+  "M192_CartaCatalina__M192\\M192_CartaCatalina.gdb": {
+   "estructuras": 8,
+   "geocronologia": 105,
+   "yacimientos": 8
+  },
+  "M197_Carta_LosVientos__M197\\M197_LosVientos.gdb": {
+   "estructuras": 43,
+   "fosiles": 1,
+   "geocronologia": 130,
+   "yacimientos": 21
+  },
+  "M198_Area_LagunaWheelwright_PasoSanFrancisco__M198\\M198_AreaSalarWheelwright.gdb": {
+   "estructuras": 45,
+   "geocronologia": 141
+  },
+  "M199_LagunaNegroFrancisco__M199\\M199_LagunaNegroFrancisco.gdb": {
+   "estructuras": 103,
+   "fosiles": 14,
+   "geocronologia": 55,
+   "yacimientos": 25
+  },
+  "M201_Geologia_Area_CarrizalilloElTofo__M201\\M201_CarrizalilloElTofo.gdb": {
+   "estructuras": 216,
+   "fosiles": 37,
+   "duplicados_fosiles": 4,
+   "geocronologia": 118,
+   "yacimientos": 116
+  },
+  "M202_Visviri_VillaIndustrial__M202\\M202_VisviriVillaIndustrial.gdb": {
+   "estructuras": 65,
+   "fosiles": 3,
+   "geocronologia": 48,
+   "yacimientos": 12
+  },
+  "M203_Tocopilla_MariaElena__M203\\M203_Tocopilla_MariaElena.gdb": {
+   "estructuras": 307,
+   "fosiles": 1,
+   "geocronologia": 29,
+   "yacimientos": 95
+  },
+  "M208_Cartas_BahiaIslaBlanca_Taltal__M208\\M208_BahiaIslaBlanca_Taltal.gdb": {
+   "estructuras": 102,
+   "duplicados_estructuras": 9,
+   "fosiles": 10,
+   "geocronologia": 29,
+   "yacimientos": 104
+  },
+  "M209_Carta_Cifuncho__M209\\M209_Carta_Cifuncho.gdb": {
+   "fosiles": 70,
+   "estructuras": 122,
+   "duplicados_fosiles": 30,
+   "geocronologia": 24,
+   "yacimientos": 67
+  },
+  "M213_ElTransito_Lagunillas__M213\\M213_ElTransito_Lagunillas.gdb": {
+   "estructuras": 155,
+   "fosiles": 18,
+   "geocronologia": 105,
+   "yacimientos": 17
+  },
+  "M214_EstacionChañar_JuntadeChingoles__M214\\M214_Estacion_Chañar_Junta_de_Chingoles.gdb": {
+   "estructuras": 191,
+   "fosiles": 7,
+   "geocronologia": 70,
+   "yacimientos": 79
+  },
+  "M215_Carta_Cuya__M215\\M215_Carta_Cuya.gdb": {
+   "estructuras": 173,
+   "fosiles": 20,
+   "geocronologia": 19,
+   "yacimientos": 7
+  },
+  "M21_Hojas_Chanaral_DiegodeAlmagro__M21\\M21_Chanaral_y_Diego_de_Almagro.gdb": {
+   "estructuras": 73,
+   "fosiles": 3,
+   "geocronologia": 46,
+   "yacimientos": 20
+  },
+  "M22_QdaSalitrosa__M22\\M22_QdaSalitrosa.gdb": {
+   "estructuras": 93,
+   "fosiles": 2,
+   "geocronologia": 26,
+   "yacimientos": 65
+  },
+  "M28_Hoja_Salar_de_Maricunga__M28\\M28_Hoja_SalarMaricunga.gdb": {
+   "estructuras": 221,
+   "fosiles": 18,
+   "geocronologia": 122,
+   "yacimientos": 5
+  },
+  "M292_Carta_SierraMariposa__M292\\M292_Carta_sierraMariposa.gdb": {
+   "estructuras": 75,
+   "duplicados_estructuras": 1,
+   "fosiles": 6,
+   "geocronologia": 45,
+   "yacimientos": 2
+  },
+  "M29_Hoja_La_Guardia__M29\\M29_HojaLaGuardia.gdb": {
+   "estructuras": 222,
+   "fosiles": 18,
+   "geocronologia": 36
+  },
+  "M309_CartasBlancoEncalada_PampaRemiendos__M309\\M309_CartasBlancoEncaladayPampaRemiendos.gdb": {
+   "yacimientos": 49,
+   "estructuras": 144,
+   "duplicados_estructuras": 1,
+   "geocronologia": 92
+  },
+  "M312_CartaCalama__M312\\M312_Calama.gdb": {
+   "yacimientos": 82,
+   "estructuras": 246,
+   "geocronologia": 759,
+   "fosiles": 59,
+   "duplicados_geocronologia": 303
+  },
+  "M313_GIS\\M313_0.gdb": {
+   "estructuras": 45,
+   "geocronologia": 185,
+   "yacimientos": 2
+  },
+  "M314_GIS\\M314_0.gdb": {
+   "estructuras": 122,
+   "fosiles": 5,
+   "geocronologia": 77,
+   "yacimientos": 5
+  },
+  "M315_GIS\\M315_0.gdb": {
+   "estructuras": 322,
+   "fosiles": 28,
+   "geocronologia": 138,
+   "yacimientos": 15
+  },
+  "M316_GIS\\M316_1.gdb": {
+   "yacimientos": 106,
+   "estructuras": 40,
+   "geocronologia": 28,
+   "fosiles": 1
+  },
+  "M31_GIS\\M31_0.gdb": {
+   "estructuras": 54,
+   "fosiles": 5,
+   "geocronologia": 22,
+   "yacimientos": 3
+  },
+  "M320_GIS\\M320_0.gdb": {
+   "yacimientos": 33,
+   "estructuras": 102,
+   "fosiles": 13,
+   "geocronologia": 163
+  },
+  "M321_GIS\\M321_0.gdb": {
+   "estructuras": 68,
+   "geocronologia": 98,
+   "yacimientos": 10
+  },
+  "M325_GIS\\M325_0.gdb": {
+   "estructuras": 177,
+   "geocronologia": 127,
+   "yacimientos": 8
+  },
+  "M327_GIS\\M327_0.gdb": {
+   "yacimientos": 10,
+   "estructuras": 65,
+   "geocronologia": 129,
+   "fosiles": 7
+  },
+  "M336_GIS\\M336_0.gdb": {
+   "yacimientos": 29,
+   "estructuras": 109,
+   "geocronologia": 152
+  },
+  "M338_GIS\\M338_0.gdb": {
+   "yacimientos": 2,
+   "estructuras": 23,
+   "geocronologia": 103
+  },
+  "M338_GIS\\M338_1.gdb": {},
+  "M33_GIS\\M33_0.gdb": {
+   "estructuras": 192,
+   "fosiles": 23,
+   "geocronologia": 77,
+   "yacimientos": 11
+  },
+  "M341_GIS\\M341_0.gdb": {
+   "yacimientos": 74,
+   "estructuras": 420,
+   "geocronologia": 240,
+   "fosiles": 54
+  },
+  "M34_GIS\\M34_0.gdb": {
+   "estructuras": 290,
+   "fosiles": 49,
+   "geocronologia": 31,
+   "yacimientos": 76
+  },
+  "M351_GIS\\M351_0.gdb": {
+   "yacimientos": 8,
+   "estructuras": 67,
+   "geocronologia": 137,
+   "fosiles": 6
+  },
+  "M35_GIS\\M35_0.gdb": {
+   "estructuras": 49,
+   "fosiles": 9,
+   "geocronologia": 42,
+   "yacimientos": 147
+  },
+  "M36_GIS\\M36_0.gdb": {
+   "estructuras": 114,
+   "duplicados_estructuras": 7,
+   "fosiles": 12,
+   "geocronologia": 61,
+   "yacimientos": 87
+  },
+  "M37_GIS\\M37_0.gdb": {
+   "estructuras": 157,
+   "fosiles": 17,
+   "geocronologia": 66,
+   "yacimientos": 157
+  },
+  "M38_GIS\\M38_0.gdb": {
+   "estructuras": 105,
+   "fosiles": 57,
+   "geocronologia": 51,
+   "yacimientos": 145
+  },
+  "M39_GIS\\M39_0.gdb": {
+   "estructuras": 268,
+   "fosiles": 37,
+   "geocronologia": 56,
+   "yacimientos": 238
+  },
+  "M418_GIS\\M418_0.gdb": {
+   "estructuras": 5,
+   "geocronologia": 67,
+   "yacimientos": 25
+  },
+  "M428_GIS\\M428_0.gdb": {
+   "estructuras": 93,
+   "fosiles": 1,
+   "geocronologia": 8,
+   "yacimientos": 44,
+   "duplicados_fosiles": 1
+  },
+  "M51_GIS\\M51_0.gdb": {
+   "estructuras": 142,
+   "duplicados_estructuras": 2,
+   "fosiles": 6,
+   "geocronologia": 47,
+   "yacimientos": 4
+  },
+  "M52_GIS\\M52_0.gdb": {
+   "estructuras": 37,
+   "duplicados_estructuras": 5,
+   "fosiles": 10,
+   "geocronologia": 15,
+   "yacimientos": 22
+  },
+  "M53_GIS\\M53_0.gdb": {
+   "geocronologia": 58
+  },
+  "M55_GIS\\M55_0.gdb": {
+   "fosiles": 8,
+   "estructuras": 80,
+   "geocronologia": 43,
+   "duplicados_geocronologia": 1
+  }
+ },
+ "fallidas": {
+  "M316_GIS\\M316_0.gdb": "C:\\Users\\carlos.venegas\\IA\\Claude\\proyectos\\cartas-geologicas-sernageomin\\_mapas_por_ingresar\\gdb_extraidos\\M316_GIS\\M316_0.gdb: Permission denied"
+ },
+ "totales": {
+  "geocronologia": 6709,
+  "fosiles": 1534,
+  "yacimientos": 5366,
+  "estructuras": 12821
+ }
+}
