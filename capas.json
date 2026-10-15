@@ -2610,10 +2610,10 @@
     "autor": "Rita De la Cruz S., Joaquín Cortés C.",
     "informe": "GB-127",
     "bounds": {
-      "n": -43.998745,
-      "s": -45.02277,
-      "e": -70.879544,
-      "w": -72.334963
+      "n": -44.0,
+      "s": -45.0,
+      "e": -71.0,
+      "w": -72.333333
     },
     "overlay": "overlays/CGCH_GB_127_TextoyMapa.webp",
     "leyenda": "leyendas/CGCH_GB_127_TextoyMapa_leyenda.jpg",
