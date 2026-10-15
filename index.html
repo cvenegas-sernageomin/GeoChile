@@ -704,17 +704,25 @@ function llenarGrupos(cont,grupo,claves){
 fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
   const cont=document.getElementById('capas');
   CATS.forEach(([cat,label])=>{
+    if(cat==='peligros') return;   // los peligros viven dentro de Geología Aplicada
     const grupo=capas.filter(c=>c.categoria===cat);
+    const peligros=cat==='aplicada' ? capas.filter(c=>c.categoria==='peligros') : [];
     const d=document.createElement('details');
-    d.innerHTML=`<summary>${label} (${grupo.length})</summary>`;
+    d.innerHTML=`<summary>${label} (${grupo.length+peligros.length})</summary>`;
     if(!grupo.length){
       // Académicos: se mantiene la categoría, pero sin capas hasta tener permiso de los autores
       if(cat!=='academico') return;
       d.insertAdjacentHTML('beforeend','<div class="vacio">Próximamente: estos mapas se publicarán cuando contemos con la autorización de sus autores.</div>'
         +'<div class="invita">📬 <b>¿Hiciste un mapa geológico en tu tesis o investigación?</b> Compártelo con la comunidad: envía tu mapa georreferenciado (GeoTIFF, KMZ o shapefile) con su leyenda y la referencia de la publicación a '
         +'<a href="mailto:carlos.venegas@sernageomin.cl?subject=Mapa%20acad%C3%A9mico%20para%20el%20Visor%20GeoChile">carlos.venegas@sernageomin.cl</a>. Lo revisaremos para publicarlo aquí, con tu autoría.</div>');
-    }else if(cat==='peligros') llenarGrupos(d,grupo,['tema','region']);
-    else if(cat==='aplicada') llenarGrupos(d,grupo,['tema']);
+    }else if(cat==='aplicada'){
+      llenarGrupos(d,grupo,['tema']);
+      if(peligros.length){
+        const dp=document.createElement('details');
+        dp.innerHTML=`<summary>Mapas de Peligros Geológicos (${peligros.length})</summary>`;
+        llenarGrupos(dp,peligros,['tema','region']); d.appendChild(dp);
+      }
+    }
     else if(grupo.length>8 && cat!=='hillshade') llenarGrupos(d,grupo,['region']);
     else grupo.forEach(c=>crearCapa(d,c));
     cont.appendChild(d);

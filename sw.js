@@ -1,7 +1,7 @@
 // Service worker del Visor GeoChile.
 // OJO: el origen cvenegas-sernageomin.github.io lo comparten varias PWA (Geonotas, catastro...):
 // solo se tocan las cachés con prefijo "geochile-", nunca las de las otras apps.
-const VER = 'geochile-shell-8';
+const VER = 'geochile-shell-9';
 const DATOS = 'geochile-datos';   // datos/*.json (GDB): caché aparte para que no se pierdan al subir VER
 const MAPAS = 'geochile-mapas';   // overlays y leyendas que el usuario abrió: quedan para usarlos sin señal
 const SHELL = ['./', 'index.html', 'capas.json', 'viewer_legend.js?v=20260827', 'manifest.json', 'datos.js?v=20261015', 'vendor/leaflet-rotate.js', 'vendor/wmm.js',
