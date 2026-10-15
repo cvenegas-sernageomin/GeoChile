@@ -307,60 +307,80 @@ map.createPane('pane_grilla', PANE_GIRA).style.zIndex = 400;   // grilla sobre l
 
 const overlays = {}; // id -> L.imageOverlay
 
-/* ---- Grilla de cartas IGM 1:100.000 (F07-F29) ----
-   Coordenadas extraidas del maule_indice.kmz publicado (grilla regular 0.5°). */
-const GRID_IGM = [
-  {c:"F07",n:-34.5,s:-35.0,e:-72.0,w:-72.5}, {c:"F08",n:-34.5,s:-35.0,e:-71.5,w:-72.0},
-  {c:"F09",n:-34.5,s:-35.0,e:-71.0,w:-71.5}, {c:"F10",n:-34.5,s:-35.0,e:-70.5,w:-71.0},
-  {c:"F11",n:-34.5,s:-35.0,e:-70.0,w:-70.5}, {c:"F12",n:-35.0,s:-35.5,e:-72.5,w:-73.0},
-  {c:"F13",n:-35.0,s:-35.5,e:-72.0,w:-72.5}, {c:"F14",n:-35.0,s:-35.5,e:-71.5,w:-72.0},
-  {c:"F15",n:-35.0,s:-35.5,e:-71.0,w:-71.5}, {c:"F16",n:-35.0,s:-35.5,e:-70.5,w:-71.0},
-  {c:"F17",n:-35.0,s:-35.5,e:-70.0,w:-70.5}, {c:"F18",n:-35.5,s:-36.0,e:-72.5,w:-73.0},
-  {c:"F19",n:-35.5,s:-36.0,e:-72.0,w:-72.5}, {c:"F20",n:-35.5,s:-36.0,e:-71.5,w:-72.0},
-  {c:"F21",n:-35.5,s:-36.0,e:-71.0,w:-71.5}, {c:"F22",n:-35.5,s:-36.0,e:-70.5,w:-71.0},
-  {c:"F23",n:-35.5,s:-36.0,e:-70.0,w:-70.5}, {c:"F24",n:-36.0,s:-36.5,e:-72.5,w:-73.0},
-  {c:"F25",n:-36.0,s:-36.5,e:-72.0,w:-72.5}, {c:"F26",n:-36.0,s:-36.5,e:-71.5,w:-72.0},
-  {c:"F27",n:-36.0,s:-36.5,e:-71.0,w:-71.5}, {c:"F28",n:-36.0,s:-36.5,e:-70.5,w:-71.0},
-  {c:"F29",n:-36.0,s:-36.5,e:-70.0,w:-70.5}
-];
-const ESTILO_GRID = {color:'#b06a1f',weight:1.5,fillColor:'#ffffff',fillOpacity:.05};
+/* ---- Grilla de hojas IGM 1:100.000 de todo Chile (455 hojas) ----
+   Viene de grilla_igm100k.json (generado por tools/generar_grilla.py desde INDICE_HOJAS_100.kmz).
+   Cada hoja: c=codigo, nom=nombre, b=[w,s,e,n], p=poligono, g=[[codigo,titulo,url GDB],...] */
+const ESTILO_GRID = {color:'#b06a1f',weight:1,fillColor:'#ffffff',fillOpacity:.05};
 const ESTILO_GRID_HL = {color:'#d84315',weight:3,fillColor:'#ff7043',fillOpacity:.25};
-
 const gridLayer = L.layerGroup([], {pane:'pane_grilla'});
-const gridRects = {};   // codigo -> L.rectangle
-GRID_IGM.forEach(g=>{
-  const r = L.rectangle([[g.s,g.w],[g.n,g.e]], Object.assign({pane:'pane_grilla'}, ESTILO_GRID));
-  r.bindTooltip(g.c, {permanent:true, direction:'center', className:'grid-lbl'});
-  r.on('click', ()=>irACarta(g.c));
-  gridRects[g.c] = r;
-  gridLayer.addLayer(r);
-});
-
+const gridRects = {};   // codigo -> L.polygon
+let GRID_IGM = [];
+let CAPAS_LISTA = [];   // capas.json, para ofrecer los mapas que cubren cada hoja
 const gridChk = document.getElementById('grilla-chk');
 const gridSel = document.getElementById('grilla-sel');
-GRID_IGM.forEach(g=>{
-  const o=document.createElement('option'); o.value=g.c; o.textContent='Carta '+g.c;
-  gridSel.appendChild(o);
-});
+const escH = t => String(t ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 
-gridChk.addEventListener('change',()=>{
-  if(gridChk.checked) gridLayer.addTo(map); else gridLayer.remove();
-});
-
-let hlTimer = null;
+// mapas del visor que cubren la hoja (al menos la mitad de la hoja) o que caen casi enteros dentro de ella
+function capasDeHoja(h){
+  const [w,s,e,n]=h.b, A=(e-w)*(n-s);
+  return CAPAS_LISTA.filter(c=>{
+    if(!c.bounds || c.categoria==='hillshade' || c.categoria==='historico') return false;
+    const B=c.bounds, iw=Math.min(e,B.e)-Math.max(w,B.w), ih=Math.min(n,B.n)-Math.max(s,B.s);
+    if(iw<=0 || ih<=0) return false;
+    const I=iw*ih, Ac=(B.e-B.w)*(B.n-B.s);
+    return Ac<=4*A && (I/A>=.5 || I/Ac>=.6);
+  });
+}
+function popupHoja(h){
+  const caps=capasDeHoja(h);
+  let html=`<b>Hoja ${escH(h.c)}</b>${h.nom?' — '+escH(h.nom):''}<br><small>Escala 1:100.000 (IGM)</small>`;
+  const gdb=[...h.g];
+  caps.forEach(c=>{ if(c.gdb && /^https:\/\/www\.sernageomin\.cl\//i.test(c.gdb) && !gdb.some(x=>x[2]===c.gdb)) gdb.push([c.gdb_codigo||'',c.titulo,c.gdb]); });
+  if(caps.length) html+='<div style="margin-top:6px"><b>Mapas en el visor</b>'+caps.map(c=>`<br>🗺️ <a href="#" data-capa="${escH(c.id)}">${escH(c.titulo)}</a>`).join('')+'</div>';
+  if(gdb.length) html+='<div style="margin-top:6px"><b>Geodatabase (portal SERNAGEOMIN)</b>'+gdb.map(g=>`<br>⬇ <a href="${escH(g[2])}" target="_blank" rel="noopener noreferrer">${escH(g[0])} · ${escH(g[1])}</a>`).join('')+'</div>';
+  if(!caps.length && !gdb.length) html+='<div style="margin-top:6px;color:#667">Sin mapa ni GDB asociados todavía.</div>';
+  return html;
+}
 function irACarta(cod){
-  const g = GRID_IGM.find(x=>x.c===cod);
-  if(!g) return;
+  const h = GRID_IGM.find(x=>x.c===cod);
+  if(!h) return;
   if(!gridChk.checked){ gridChk.checked = true; gridLayer.addTo(map); }
-  map.fitBounds([[g.s,g.w],[g.n,g.e]]);
+  map.fitBounds([[h.b[1],h.b[0]],[h.b[3],h.b[2]]]);
   const r = gridRects[cod];
   if(!r) return;
   clearTimeout(hlTimer);
   Object.values(gridRects).forEach(x=>x.setStyle(ESTILO_GRID));
-  r.setStyle(ESTILO_GRID_HL);
+  r.setStyle(ESTILO_GRID_HL); r.openPopup();
   hlTimer = setTimeout(()=>r.setStyle(ESTILO_GRID), 1800);
 }
+let hlTimer = null;
+function cargarGrilla(){
+  fetch('grilla_igm100k.json').then(r=>r.json()).then(hojas=>{
+    GRID_IGM = hojas;
+    hojas.forEach(h=>{
+      const r = L.polygon(h.p.map(([x,y])=>[y,x]), Object.assign({pane:'pane_grilla'}, ESTILO_GRID));
+      r.bindTooltip(h.c, {permanent:map.getZoom()>=8, direction:'center', className:'grid-lbl'});
+      r.bindPopup(()=>popupHoja(h), {maxWidth:320});
+      gridRects[h.c] = r; gridLayer.addLayer(r);
+      const o=document.createElement('option'); o.value=h.c; o.textContent=h.c+(h.nom?' — '+h.nom:'');
+      gridSel.appendChild(o);
+    });
+  }).catch(e=>console.error('No se pudo cargar grilla_igm100k.json:', e));
+}
+// con 455 hojas, las etiquetas solo se muestran con zoom suficiente
+map.on('zoomend',()=>{ const ver=map.getZoom()>=8; Object.values(gridRects).forEach(r=>{ const t=r.getTooltip(); if(!t) return; r.unbindTooltip(); r.bindTooltip(t.getContent(),{permanent:ver,direction:'center',className:'grid-lbl'}); }); });
+// "Ver mapa" en el popup de la hoja: enciende la capa correspondiente
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[data-capa]'); if(!a) return;
+  e.preventDefault(); map.closePopup();
+  const fila=[...document.querySelectorAll('.capa')].find(x=>x._capa && x._capa.c.id===a.dataset.capa);
+  if(fila){ const chk=fila.querySelector('input[type=checkbox]'); if(!chk.checked) chk.click(); }
+});
+gridChk.addEventListener('change',()=>{
+  if(gridChk.checked) gridLayer.addTo(map); else gridLayer.remove();
+});
 gridSel.addEventListener('change',()=>{ if(gridSel.value) irACarta(gridSel.value); });
+cargarGrilla();
 
 /* ---- Panel inferior plegable (toda la barra es el control) ---- */
 const panel = document.getElementById('panel');
@@ -717,6 +737,7 @@ function llenarGrupos(cont,grupo,claves){
 // cache:'no-cache' revalida siempre contra el servidor (304 si no cambio): sin esto el
 // navegador sirve un capas.json viejo de su cache y el visor no ve las capas nuevas.
 fetch('capas.json',{cache:'no-cache'}).then(r=>r.json()).then(capas=>{
+  CAPAS_LISTA=capas;
   const cont=document.getElementById('capas');
   CATS.forEach(([cat,label])=>{
     if(cat==='peligros') return;   // los peligros viven dentro de Geología Aplicada
