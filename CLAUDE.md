@@ -17,7 +17,7 @@ PDF de informes: los grandes van en la **Release «informes»** del repo (Pages 
 - Gran parte del trabajo reciente se hizo en el otro PC: `git pull --ff-only` antes de editar.
 
 ## Página de inicio / descargas
-`portal/index.html` (https://cvenegas-sernageomin.github.io/GeoChile/portal/): portada tipo la del Maule con el botón al visor y los KMZ de `kmz/` (`tools/generar_kmz_cobertura.py`). Las cifras se leen en vivo de `capas.json` y `datos/index.json`. El visor sigue en la raíz (la PWA instalada apunta ahí).
+`portal/index.html` (https://cvenegas-sernageomin.github.io/GeoChile/portal/): portada tipo la del Maule con el botón al visor y los KMZ de `kmz/` (`tools/generar_kmz_cobertura.py`: `cartas_geologicas_raster.kmz` y `hojas_con_gdb.kmz`, que destacan lo que hay y no lo que falta). Las cifras se leen en vivo de `capas.json` y `datos/index.json`. El visor sigue en la raíz (la PWA instalada apunta ahí).
 
 ## Verificar
 Servidor: config `geochile` (puerto 8794) en `.claude/launch.json`. Tras push, `curl` al sitio y comparar `VER`/`ASSET_V`.
