@@ -3,7 +3,7 @@
    cada tipo trae sus filtros (multi / rango / texto). Usa globals del visor: map, L, PANE_GIRA, panel, togglePanel. */
 (function(){
 'use strict';
-const DATA_V='?v=20261016a';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
+const DATA_V='?v=20261016b';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
 const COLORES=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#008b8b','#9a6324','#800000','#808000','#000075','#f032e6','#2a9d8f','#bcbd22','#7f7f7f'];
 const ICONO={geocronologia:'⏳',fosiles:'🦴',yacimientos:'⛏️',estructuras:'📐'};
 const RADIO={geocronologia:6,fosiles:6,yacimientos:5,estructuras:4};
@@ -139,7 +139,7 @@ function aplicar(t){
   t.sel=sel; pintar(t); pintarResumen();
 }
 let debounce={};
-const programar=t=>{ clearTimeout(debounce[t.id]); debounce[t.id]=setTimeout(()=>aplicar(t),160); };
+const programar=t=>{ clearTimeout(debounce[t.id]); debounce[t.id]=setTimeout(()=>(t.aplicar||aplicar)(t),160); };
 
 /* ---- mapa ---- */
 function colorDe(t,i){
@@ -411,6 +411,7 @@ function crearTipo(id,cfg){
 }
 map.on('moveend',()=>{ for(const t of Object.values(T)) if(t.on&&t.vista.checked) programar(t); });
 
+window.GCDATOS={el,fmt,norm,crearMulti,programar};   // para vectores.js (unidades y fallas)
 fetch('capas.json').then(r=>r.json()).then(cs=>cs.forEach(c=>{ if(c.informe&&c.pdf&&!PDF_GB[c.informe]) PDF_GB[c.informe]=c.pdf; })).catch(()=>{});
 fetch('datos/index.json'+DATA_V).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(idx=>{
   INDEX=idx;
