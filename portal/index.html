@@ -70,8 +70,8 @@
   <h3>📊 Cobertura</h3>
   <div class="stats">
     <div class="stat"><div class="num" id="n-geo">—</div><div class="lbl">Mapas de Geología Básica</div></div>
-    <div class="stat"><div class="num" id="n-pel">—</div><div class="lbl">Mapas de Peligros Geológicos</div></div>
     <div class="stat"><div class="num" id="n-apl">—</div><div class="lbl">Mapas de Geología Aplicada</div></div>
+    <div class="stat"><div class="num" id="n-pel">—</div><div class="lbl">de ellos, Peligros Geológicos</div></div>
     <div class="stat"><div class="num" id="n-dat">—</div><div class="lbl">Puntos de datos de las GDB</div></div>
     <div class="stat"><div class="num">455</div><div class="lbl">Hojas IGM 1:100.000 en la grilla</div></div>
   </div>
@@ -80,10 +80,10 @@
   <div class="cards">
     <div class="card"><div class="icon">🗺️</div><h4>Geología Básica</h4>
       <p>Cartas geológicas oficiales y mapas históricos, recortados al marco y ordenados por región. Cada carta trae su leyenda, el informe en PDF cuando existe y el enlace a su geodatabase.</p></div>
-    <div class="card"><div class="icon">⚠️</div><h4>Peligros Geológicos</h4>
-      <p>Mapas de peligros (remociones en masa, flujos, caída de rocas y otros) por región, dentro de Geología Aplicada.</p></div>
-    <div class="card"><div class="icon">⛏️</div><h4>Geología Económica</h4>
-      <p>Mapas de recursos minerales: yacimientos metalíferos de Atacama y Coquimbo, con su leyenda.</p></div>
+    <div class="card"><div class="icon">⚠️</div><h4>Geología Aplicada: Peligros Geológicos</h4>
+      <p>Dentro de Geología Aplicada: mapas de peligros (remociones en masa, flujos, caída de rocas y otros), agrupados por tema y región.</p></div>
+    <div class="card"><div class="icon">⛏️</div><h4>Geología Aplicada: Geología Económica</h4>
+      <p>Dentro de Geología Aplicada: mapas de recursos minerales, con los yacimientos metalíferos de Atacama y Coquimbo y su leyenda.</p></div>
     <div class="card"><div class="icon">📍</div><h4>Datos de las GDB</h4>
       <p>Dataciones, fósiles, yacimientos y mediciones estructurales con filtros (método, época, edad, texto), tabla y descarga en CSV.</p></div>
     <div class="card rojo"><div class="icon">🟥</div><h4>KMZ: hojas sin carta</h4>
@@ -117,7 +117,7 @@
     const c=k=>caps.filter(x=>x.categoria===k).length;
     document.getElementById('n-geo').textContent=c('geologia');
     document.getElementById('n-pel').textContent=c('peligros');
-    document.getElementById('n-apl').textContent=c('aplicada');
+    document.getElementById('n-apl').textContent=c('aplicada')+c('peligros');   // los peligros viven dentro de Geología Aplicada
   }catch(e){}
   try{
     const idx=await (await fetch('../datos/index.json',{cache:'no-cache'})).json();
