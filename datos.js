@@ -3,7 +3,7 @@
    cada tipo trae sus filtros (multi / rango / texto). Usa globals del visor: map, L, PANE_GIRA, panel, togglePanel. */
 (function(){
 'use strict';
-const DATA_V='?v=20261016b';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
+const DATA_V='?v=20261016c';   // subir al regenerar datos/ (el service worker los guarda con caché primero)
 const COLORES=['#e6194b','#3cb44b','#4363d8','#f58231','#911eb4','#008b8b','#9a6324','#800000','#808000','#000075','#f032e6','#2a9d8f','#bcbd22','#7f7f7f'];
 const ICONO={geocronologia:'⏳',fosiles:'🦴',yacimientos:'⛏️',estructuras:'📐'};
 const RADIO={geocronologia:6,fosiles:6,yacimientos:5,estructuras:4};
@@ -18,6 +18,9 @@ const css=document.createElement('style');
 css.textContent=`
 #datos{column-span:all}
 #datos>details>summary{font-size:15px}
+.dgrupo{margin:6px 0 0 0;border-left:3px solid #cbd5e1;padding-left:6px}
+.dgrupo>summary{font-size:14px;font-weight:700;color:#1a5276}
+.dgbody{padding:2px 0 4px 0}
 .dtipo summary{display:flex;align-items:center;gap:6px}
 .dbody{padding:8px 10px 10px;border-top:1px solid #eef2f6}
 .dchk{display:flex;align-items:center;gap:8px;font-weight:600;color:#1a5276;font-size:14px;cursor:pointer}
@@ -411,16 +414,22 @@ function crearTipo(id,cfg){
 }
 map.on('moveend',()=>{ for(const t of Object.values(T)) if(t.on&&t.vista.checked) programar(t); });
 
-window.GCDATOS={el,fmt,norm,crearMulti,programar};   // para vectores.js (unidades y fallas)
+/* ---- estructura: Datos digitales de las GDB = puntos · líneas · polígonos ---- */
+const raiz=el('details'), rsum=el('summary',null,'📊 Datos digitales de las GDB'); raiz.append(rsum,
+  el('div','vacio','Datos vectoriales de las geodatabases oficiales de SERNAGEOMIN, por tipo de geometría: puntos, líneas y polígonos. Abre un grupo, marca la capa y filtra (p. ej. Geocronología: método U-Pb + época Mioceno; Unidades: época Jurásico + litología plutónica).'));
+const GRUPOS={}, NOMB_G={puntos:['📍','Puntos','dataciones, fósiles, yacimientos y estructuras'],lineas:['〰️','Líneas','fallas'],poligonos:['⬛','Polígonos','unidades geológicas']};
+for(const [k,[ic,tit,det]] of Object.entries(NOMB_G)){
+  const d=el('details','dgrupo'), s=el('summary',null,`${ic} ${tit}: ${det}`); const body=el('div','dgbody'); d.append(s,body); raiz.appendChild(d); GRUPOS[k]={d,s,body,base:`${ic} ${tit}: ${det}`};
+}
+sec.appendChild(raiz);
+const cuentaGrupo=(k,txt)=>{ const g=GRUPOS[k]; if(g) g.s.textContent=g.base+(txt?` (${txt})`:''); };
+window.GCDATOS={el,fmt,norm,crearMulti,programar,raiz,grupo:k=>GRUPOS[k].body,cuenta:cuentaGrupo};   // vectores.js usa estos grupos
 fetch('capas.json').then(r=>r.json()).then(cs=>cs.forEach(c=>{ if(c.informe&&c.pdf&&!PDF_GB[c.informe]) PDF_GB[c.informe]=c.pdf; })).catch(()=>{});
 fetch('datos/index.json'+DATA_V).then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }).then(idx=>{
   INDEX=idx;
   const ids=Object.keys(idx.tipos); if(!ids.length) return;
   const total=ids.reduce((a,k)=>a+idx.tipos[k].n,0);
-  const d=el('details'), s=el('summary',null,`📍 Datos de las GDB (${fmt(total)} puntos)`); d.appendChild(s);
-  const nota=el('div','vacio','Dataciones, fósiles, yacimientos y mediciones estructurales de las cartas con GDB. Marca un tipo y filtra, p. ej. Método U-Pb + Época Mioceno.');
-  d.appendChild(nota);
-  ids.forEach(id=>d.appendChild(crearTipo(id,idx.tipos[id])));
-  sec.appendChild(d);
+  cuentaGrupo('puntos',fmt(total)+' puntos');
+  ids.forEach(id=>GRUPOS.puntos.body.appendChild(crearTipo(id,idx.tipos[id])));
 }).catch(e=>console.warn('Sin datos puntuales:',e));
 })();

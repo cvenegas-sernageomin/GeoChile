@@ -208,10 +208,8 @@ function limpiarF(){
 }
 function construir(idx){
   IDX=idx;
-  const raiz=el('details'), sm=el('summary',null,`🗺️ Unidades geológicas y fallas (${fmt(idx.totales.poligonos)} polígonos · ${fmt(idx.totales.fallas)} fallas)`);
-  raiz.appendChild(sm);
-  raiz.appendChild(el('div','vacio','Polígonos de las unidades de las 93 cartas con GDB y sus fallas, con filtros por edad, litología y ambiente. Se cargan al acercar el mapa (zoom 9 o más).'));
-  const msg=el('div','vmsg'); msg.id='vmsg'; raiz.appendChild(msg);
+  G.cuenta('lineas',fmt(idx.totales.fallas)+' fallas'); G.cuenta('poligonos',fmt(idx.totales.poligonos)+' polígonos');
+  const msg=el('div','vmsg'); msg.id='vmsg'; G.raiz.insertBefore(msg,G.raiz.children[2]);   // aviso de zoom/carga, bajo la explicación
 
   /* unidades */
   const bu=bloque('u','Unidades geológicas','🧱'); U.ui=bu.d;
@@ -253,7 +251,8 @@ function construir(idx){
   ff.appendChild(el('div','vnota','Rojo: inversas · azul: normales · verde: de rumbo · gris: indeterminadas y fotolineamientos. Línea punteada: trazo inferido o cubierto.'));
   cf.onchange=()=>{ F.on=cf.checked; ff.classList.toggle('on',F.on); if(F.on) capaF.addTo(map); else capaF.remove(); actualizar(); };
 
-  raiz.append(bu.d,bf.d); sec.appendChild(raiz);
+  G.grupo('poligonos').appendChild(bu.d); G.grupo('lineas').appendChild(bf.d);
+  [['poligonos',bu.d],['lineas',bf.d]].forEach(([g,d])=>{ d.open=false; });
   // programar() de datos.js llama a t.aplicar: aquí es redibujar
   U.aplicar=actualizar; F.aplicar=actualizar; U.id='vec_u'; F.id='vec_f';
 }
