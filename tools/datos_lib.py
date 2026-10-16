@@ -208,3 +208,116 @@ def periodo_epoca_de_texto(*textos):
         if p in palabras:
             return (p.capitalize(), None)
     return (None, None)
+
+
+# ── Normalización de textos para los filtros ───────────────────────────────
+
+import html as _html
+import unicodedata as _ud
+from collections import Counter as _Counter
+
+REGION_CANON = [   # (fragmento sin tildes y en minúsculas, nombre corto) — el primero que calce gana
+    ("arica", "Arica y Parinacota"), ("tarapac", "Tarapacá"), ("antofagasta", "Antofagasta"), ("atacama", "Atacama"),
+    ("coquimbo", "Coquimbo"), ("valpara", "Valparaíso"), ("metropolitana", "Metropolitana"), ("libertador", "O'Higgins"),
+    ("higgins", "O'Higgins"), ("maule", "Maule"), ("nuble", "Ñuble"), ("biobio", "Biobío"), ("bobio", "Biobío"),
+    ("araucan", "La Araucanía"), ("rios", "Los Ríos"), ("lagos", "Los Lagos"), ("aisen", "Aysén"), ("aysen", "Aysén"),
+    ("magallanes", "Magallanes"),
+]
+FRONTERA = "Área fronteriza Chile-Argentina"
+ESTADO_CANON = {
+    "paralizado": "Paralizado", "paralizada": "Paralizado", "paralizado (abandonado)": "Paralizado",
+    "paralizado temporalmente": "Paralizado temporalmente", "inactiva": "Inactivo", "inactivo": "Inactivo",
+    "en explotacion": "En explotación", "explotacion": "En explotación", "en produccion": "En explotación",
+    "activa": "En explotación", "activo": "En explotación", "explotacion intermitente": "Explotación intermitente",
+    "explotacion artesanal": "Explotación artesanal", "al pirquen": "Al pirquén",
+    "exploracion": "Exploración", "en exploracion": "Exploración", "prospecto": "Prospecto",
+    "agotada": "Agotado", "agotado": "Agotado", "abandonada": "Abandonado", "abandonado": "Abandonado",
+    "sin informacion": "Sin información", "desarrollo": "En desarrollo", "en desarrollo": "En desarrollo",
+    "sin desarrollo": "Sin desarrollo", "produccion detenida": "Producción detenida",
+}
+
+
+def _sin_tildes(s):
+    return "".join(c for c in _ud.normalize("NFD", s) if _ud.category(c) != "Mn")
+
+
+def _llave(s):
+    return "".join(c for c in _sin_tildes(s).lower() if c.isalnum()).replace("zircon", "circon")
+
+
+def _llave_sin_letras_raras(s):
+    """Clave que ignora las letras acentuadas Y los huecos que dejó una letra perdida («Anf bola», «org nico»)."""
+    return "".join(c for c in s.lower() if c.isascii() and c.isalnum())
+
+
+def canonicalizar(valores):
+    """Lista de textos -> {texto: forma canónica}. Une mayúsculas/minúsculas, tildes faltantes y letras perdidas
+    por codificación; la forma elegida es la acentuada más frecuente y siempre empieza con mayúscula."""
+    cnt = _Counter(v for v in valores if v)
+    padre = {v: v for v in cnt}
+
+    def raiz(v):
+        while padre[v] != v:
+            padre[v] = padre[padre[v]]
+            v = padre[v]
+        return v
+    for fn in (_llave, _llave_sin_letras_raras):
+        vistos = {}
+        for v in cnt:
+            k = fn(v)
+            if not k:
+                continue
+            if k in vistos:
+                padre[raiz(v)] = raiz(vistos[k])
+            else:
+                vistos[k] = v
+    grupos = {}
+    for v in cnt:
+        grupos.setdefault(raiz(v), []).append(v)
+    out = {}
+    for g in grupos.values():
+        def puntaje(v):
+            return (any(not c.isascii() and c != "�" for c in v), "�" not in v and "  " not in v, cnt[v])
+        mejor = max(g, key=puntaje)
+        mejor = mejor[:1].upper() + mejor[1:]
+        for v in g:
+            out[v] = mejor
+    return out
+
+
+def normalizar_estado(v):
+    if not v:
+        return None
+    s = _html.unescape(str(v)).strip()
+    if any(c.isdigit() for c in s):                 # «20% Mn», «700 g/t Ag»: no son estados
+        return None
+    k = _sin_tildes(s).lower()
+    if k in ESTADO_CANON:
+        return ESTADO_CANON[k]
+    partes = [ESTADO_CANON.get(p.strip(), None) for p in k.replace(",", "/").split("/")]
+    if partes and all(partes):                      # «Paralizado / Exploración» -> primera forma
+        return partes[0]
+    return s[:1].upper() + s[1:]
+
+
+def normalizar_region(v):
+    """Región(es) con entidades HTML deshechas y nombre corto; varias regiones separadas por «|»."""
+    if not v:
+        return None
+    s = _html.unescape(str(v)).strip()
+    if "fronteriz" in _sin_tildes(s).lower():
+        return FRONTERA
+    # separar solo en guiones que unen regiones (todo guion entre nombres de región); los nombres cortos no llevan guion
+    partes = []
+    for p in s.replace(" y la ", "-").split("-"):
+        k = _sin_tildes(p).lower().strip()
+        for frag, nombre in REGION_CANON:
+            if frag in k:
+                if nombre not in partes:
+                    partes.append(nombre)
+                break
+    return "|".join(partes) if partes else s
+
+
+ERA_PERIODO = {ep: (era, per) for _, era, per, ep in ICS}
+ERA_PERIODO["Precámbrico"] = ("Precámbrico", "Precámbrico")

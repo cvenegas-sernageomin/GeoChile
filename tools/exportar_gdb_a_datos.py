@@ -303,12 +303,36 @@ def exportar(args):
     return tablas, cartas, ingesta
 
 
+CANON_CAMPOS = {"material": "canon", "tipo": "canon", "estado": "estado", "region": "region"}
+
+
+def normalizar_filas(tipo, filas):
+    """Une variantes de un mismo texto en los campos que se filtran (mayúsculas, tildes, letras perdidas, entidades HTML)."""
+    for campo, modo in CANON_CAMPOS.items():
+        if not any(campo in r for r in filas):
+            continue
+        if modo == "estado":
+            for r in filas:
+                if campo in r:
+                    r[campo] = L.normalizar_estado(r[campo])
+        elif modo == "region":
+            for r in filas:
+                if campo in r:
+                    r[campo] = L.normalizar_region(r[campo])
+        else:
+            m = L.canonicalizar([r.get(campo) for r in filas])
+            for r in filas:
+                if r.get(campo):
+                    r[campo] = m.get(r[campo], r[campo])
+
+
 def escribir(tablas, cartas, ingesta, out):
     out.mkdir(exist_ok=True)
     index = {"generado": ingesta["generado"], "cartas": cartas, "tipos": {}}
     for tipo, filas in tablas.items():
         if not filas:
             continue
+        normalizar_filas(tipo, filas)
         campos = sorted({k for r in filas for k in r if not k.startswith("_") and k not in ("lon", "lat")})
         data = {"n": len(filas), "esc": 100000,
                 "lon": [round(r["lon"] * 1e5) for r in filas], "lat": [round(r["lat"] * 1e5) for r in filas],
@@ -326,10 +350,15 @@ def escribir(tablas, cartas, ingesta, out):
             f = {"campo": campo, "control": control, "etiqueta": etiqueta}
             vals = L.decodificar(data[campo])
             if control == "multi":
+                if campo == "region":
+                    f["sep"] = "|"
+                    vals = [p for v in vals if v is not None for p in v.split("|")]
                 cnt = Counter(v for v in vals if v is not None)
                 orden = (lambda kv: (ORDEN_EPOCAS.index(kv[0]) if kv[0] in ORDEN_EPOCAS else 99, kv[0])) \
                     if campo == "epoca" else (lambda kv: (-kv[1], kv[0]))
                 f["valores"] = [[k, n] for k, n in sorted(cnt.items(), key=orden)]
+                if campo == "epoca":
+                    f["grupos"] = {k: " · ".join(dict.fromkeys(L.ERA_PERIODO[k])) for k, _ in f["valores"] if k in L.ERA_PERIODO}
             elif control == "rango":
                 nums = [v for v in vals if v is not None]
                 if not nums:

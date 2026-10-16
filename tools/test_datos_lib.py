@@ -100,6 +100,19 @@ class Columnar(unittest.TestCase):
         nums = [1.5, None, 3]
         self.assertEqual(L.decodificar(L.columna(nums)), nums)
 
+    def test_canonicalizar_une_variantes(self):
+        m = L.canonicalizar(['Biotita'] * 3 + ['biotita', 'Anfíbola', 'Anf bola', 'Zircón', 'circon', 'roca total', 'Roca Total'])
+        self.assertEqual(m['biotita'], 'Biotita')
+        self.assertEqual(m['Anf bola'], 'Anfíbola')
+        self.assertEqual(m['Zircón'], m['circon'])
+        self.assertEqual(m['roca total'], m['Roca Total'])
+
+    def test_estado_region(self):
+        self.assertEqual(L.normalizar_estado('Paralizada'), 'Paralizado')
+        self.assertIsNone(L.normalizar_estado('20% Mn'))
+        self.assertEqual(L.normalizar_region("Libertador General Bernardo O&#039;Higgins-Metropolitana"), "O'Higgins|Metropolitana")
+        self.assertEqual(L.normalizar_region('Area Fronteriza Chile-Argentina'), L.FRONTERA)
+
 
 if __name__ == "__main__":
     unittest.main()
