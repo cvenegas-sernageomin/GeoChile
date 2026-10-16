@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SERNAGEOMIN — Visor GeoChile</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:#333}
+  header{background:#1a5276;color:#fff;padding:18px 32px;display:flex;align-items:center;gap:20px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  header img{height:60px;width:60px;border-radius:50%;border:3px solid #aed6f1;object-fit:cover}
+  header h1{font-size:22px;font-weight:700}
+  header p{font-size:13px;color:#aed6f1;margin-top:2px}
+  .hero{background:linear-gradient(135deg,#1a5276 0%,#2e86c1 100%);color:#fff;padding:48px 32px 40px;text-align:center}
+  .hero h2{font-size:28px;margin-bottom:10px}
+  .hero p{font-size:15px;color:#d6eaf8;max-width:640px;margin:0 auto 28px;line-height:1.5}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn-primary,.btn-secondary{display:inline-block;padding:14px 26px;border-radius:6px;text-decoration:none;font-size:15px;font-weight:bold;transition:background .2s}
+  .btn-primary{background:#e74c3c;color:#fff;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .btn-primary:hover{background:#c0392b}
+  .btn-secondary{border:2px solid #aed6f1;color:#fff;font-weight:normal;font-size:14px;padding:12px 22px}
+  .btn-secondary:hover{background:rgba(255,255,255,.12)}
+  .section{padding:40px 32px;max-width:960px;margin:0 auto}
+  .section h3{font-size:20px;color:#1a5276;margin-bottom:20px;padding-bottom:8px;border-bottom:3px solid #2e86c1}
+  .section h3:not(:first-child){margin-top:36px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:8px}
+  .stat{background:#fff;border-radius:8px;padding:16px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+  .stat .num{font-size:32px;font-weight:700;color:#1a5276}
+  .stat .lbl{font-size:12px;color:#888;margin-top:4px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .card{background:#fff;border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,.08);border-top:4px solid #2e86c1}
+  .card .icon{font-size:28px;margin-bottom:10px}
+  .card h4{font-size:15px;color:#1a5276;margin-bottom:6px}
+  .card p{font-size:13px;color:#666;line-height:1.5}
+  .card a.dl{display:inline-block;margin-top:12px;font-size:13px;font-weight:bold;color:#fff;background:#1a5276;padding:8px 14px;border-radius:5px;text-decoration:none}
+  .card a.dl:hover{background:#2e86c1}
+  .card.rojo{border-top-color:#c0392b}
+  .steps{counter-reset:steps;list-style:none}
+  .steps li{counter-increment:steps;display:flex;gap:16px;margin-bottom:16px;background:#fff;border-radius:8px;padding:14px 18px;box-shadow:0 1px 4px rgba(0,0,0,.07);align-items:flex-start}
+  .steps li::before{content:counter(steps);background:#1a5276;color:#fff;font-weight:bold;font-size:13px;min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  .steps li div{font-size:13px;line-height:1.6}
+  .steps li strong{color:#1a5276}
+  .steps code{background:#f0f4f8;padding:1px 5px;border-radius:3px;font-size:12px}
+  .nota{font-size:13px;color:#555;line-height:1.6;background:#fff;border-left:4px solid #e74c3c;border-radius:4px;padding:12px 16px;margin-top:8px}
+  footer{background:#1a5276;color:#aed6f1;text-align:center;padding:20px;font-size:12px;margin-top:40px;line-height:1.6}
+  footer a{color:#d6eaf8}
+  @media (max-width:600px){header{padding:14px 16px}.hero{padding:32px 16px}.section{padding:28px 16px}header h1{font-size:18px}}
+</style>
+</head>
+<body>
+<header>
+  <img src="../assets/banner_sernageomin.jpg" alt="SERNAGEOMIN"/>
+  <div>
+    <h1>Visor GeoChile</h1>
+    <p>Servicio Nacional de Geología y Minería — Cartografía geológica de Chile</p>
+  </div>
+</header>
+
+<div class="hero">
+  <h2>Cartografía Geológica Interactiva</h2>
+  <p>Cartas geológicas georreferenciadas, mapas de peligros geológicos y geología económica sobre el satélite, con los datos puntuales de las geodatabases (dataciones, fósiles, yacimientos y estructuras). Se abre en el navegador y se puede instalar como app.</p>
+  <div class="btns">
+    <a class="btn-primary" href="../">🗺️ Abrir el visor web</a>
+    <a class="btn-secondary" href="../kmz/hojas_sin_carta.kmz">⬇ KMZ: hojas sin carta</a>
+    <a class="btn-secondary" href="../kmz/hojas_sin_gdb.kmz">⬇ KMZ: hojas sin GDB</a>
+  </div>
+</div>
+
+<div class="section">
+  <h3>📊 Cobertura</h3>
+  <div class="stats">
+    <div class="stat"><div class="num" id="n-geo">—</div><div class="lbl">Mapas de Geología Básica</div></div>
+    <div class="stat"><div class="num" id="n-pel">—</div><div class="lbl">Mapas de Peligros Geológicos</div></div>
+    <div class="stat"><div class="num" id="n-apl">—</div><div class="lbl">Mapas de Geología Aplicada</div></div>
+    <div class="stat"><div class="num" id="n-dat">—</div><div class="lbl">Puntos de datos de las GDB</div></div>
+    <div class="stat"><div class="num">455</div><div class="lbl">Hojas IGM 1:100.000 en la grilla</div></div>
+  </div>
+
+  <h3>🗂️ Qué contiene</h3>
+  <div class="cards">
+    <div class="card"><div class="icon">🗺️</div><h4>Geología Básica</h4>
+      <p>Cartas geológicas oficiales y mapas históricos, recortados al marco y ordenados por región. Cada carta trae su leyenda, el informe en PDF cuando existe y el enlace a su geodatabase.</p></div>
+    <div class="card"><div class="icon">⚠️</div><h4>Peligros Geológicos</h4>
+      <p>Mapas de peligros (remociones en masa, flujos, caída de rocas y otros) por región, dentro de Geología Aplicada.</p></div>
+    <div class="card"><div class="icon">⛏️</div><h4>Geología Económica</h4>
+      <p>Mapas de recursos minerales: yacimientos metalíferos de Atacama y Coquimbo, con su leyenda.</p></div>
+    <div class="card"><div class="icon">📍</div><h4>Datos de las GDB</h4>
+      <p>Dataciones, fósiles, yacimientos y mediciones estructurales con filtros (método, época, edad, texto), tabla y descarga en CSV.</p></div>
+    <div class="card rojo"><div class="icon">🟥</div><h4>KMZ: hojas sin carta</h4>
+      <p>Grilla de las 455 hojas IGM 1:100.000. En rojo las que todavía no tienen carta geológica en el visor; en verde las que sí.</p>
+      <a class="dl" href="../kmz/hojas_sin_carta.kmz">⬇ Descargar KMZ</a></div>
+    <div class="card rojo"><div class="icon">🟥</div><h4>KMZ: hojas sin GDB</h4>
+      <p>La misma grilla, con en rojo las hojas que no tienen geodatabase asociada en el Catálogo de Publicaciones de SERNAGEOMIN.</p>
+      <a class="dl" href="../kmz/hojas_sin_gdb.kmz">⬇ Descargar KMZ</a></div>
+  </div>
+
+  <h3>🚀 ¿Cómo usar los KMZ?</h3>
+  <ol class="steps">
+    <li><div><strong>Descarga el archivo KMZ</strong> con el botón de arriba (o de la tarjeta correspondiente).</div></li>
+    <li><div><strong>Abre Google Earth Pro</strong> (gratuito en <a href="https://www.google.com/earth/about/versions/" target="_blank" rel="noopener">google.com/earth</a>) o Google Earth Web.</div></li>
+    <li><div><strong>Arrastra el KMZ</strong> a la ventana de Google Earth o usa <code>Archivo → Abrir</code>.</div></li>
+    <li><div><strong>Haz clic en cualquier hoja</strong> para ver su código IGM, su nombre, las cartas del visor que la cubren y los enlaces a sus geodatabases.</div></li>
+  </ol>
+  <p class="nota"><b>Cómo se decide «sin carta» y «sin GDB».</b> Una hoja cuenta como «con carta» si algún mapa de geología básica del visor cubre al menos la mitad de la hoja (o cae casi entero dentro de ella). Una hoja cuenta como «con GDB» si el catálogo tiene enlace a una geodatabase para ella; no se verifica el contenido de la GDB.</p>
+</div>
+
+<footer>
+  Servicio Nacional de Geología y Minería — SERNAGEOMIN<br>
+  Cartas, mapas y geodatabases: <a href="https://www.sernageomin.cl" target="_blank" rel="noopener">sernageomin.cl</a>
+</footer>
+
+<script>
+(async()=>{
+  const fmt=n=>n.toLocaleString('es-CL');
+  try{
+    const caps=await (await fetch('../capas.json',{cache:'no-cache'})).json();
+    const c=k=>caps.filter(x=>x.categoria===k).length;
+    document.getElementById('n-geo').textContent=c('geologia');
+    document.getElementById('n-pel').textContent=c('peligros');
+    document.getElementById('n-apl').textContent=c('aplicada');
+  }catch(e){}
+  try{
+    const idx=await (await fetch('../datos/index.json',{cache:'no-cache'})).json();
+    document.getElementById('n-dat').textContent=fmt(Object.values(idx.tipos).reduce((a,t)=>a+t.n,0));
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
