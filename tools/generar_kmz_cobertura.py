@@ -31,7 +31,8 @@ def seguro(url):
     return url if re.match(r"^https://(www\.sernageomin\.cl|cvenegas-sernageomin\.github\.io)/", url or "") else None
 
 
-def kml(nombre, descr, hojas, tiene, color_ok, leyenda_ok):
+def kml_cuerpo(nombre, hojas, tiene, color_ok):
+    """Estilos + carpeta con las hojas -> (xml, n_con)."""
     estilos = (
         f'<Style id="ok"><LineStyle><color>ff{color_ok[1]}</color><width>2</width></LineStyle>'
         f'<PolyStyle><color>99{color_ok[0]}</color></PolyStyle></Style>'
@@ -46,13 +47,18 @@ def kml(nombre, descr, hojas, tiene, color_ok, leyenda_ok):
             f'<description><![CDATA[{h["_d"]}]]></description><styleUrl>#{"ok" if ok else "no"}</styleUrl>'
             f'<Polygon><outerBoundaryIs><LinearRing><coordinates>{pol}</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>')
     n_ok = sum(1 for h in hojas if tiene(h))
+    return estilos + f'<Folder><name>{escape(nombre)}</name>' + "".join(cuerpo) + '</Folder>', n_ok
+
+
+def kml(nombre, descr, hojas, tiene, color_ok, leyenda_ok):
+    cuerpo, n_ok = kml_cuerpo(nombre, hojas, tiene, color_ok)
     return ('<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2"><Document>'
             f'<name>{escape(nombre)}</name><description>{escape(descr)} {leyenda_ok}: {n_ok} de {len(hojas)} hojas. '
-            f'Las hojas sin color solo muestran la grilla IGM 1:100.000.</description>{estilos}<Folder><name>{escape(nombre)}</name>'
-            + "".join(cuerpo) + '</Folder></Document></kml>'), n_ok
+            f'Las hojas sin color solo muestran la grilla IGM 1:100.000.</description>' + cuerpo + '</Document></kml>'), n_ok
 
 
-def main():
+def preparar():
+    """Hojas con sus cartas (_cartas), GDB (_gdb) y el texto del globo (_d)."""
     hojas = json.loads((RAIZ / "grilla_igm100k.json").read_text(encoding="utf-8"))
     capas = json.loads((RAIZ / "capas.json").read_text(encoding="utf-8"))
     geo = [c for c in capas if c["categoria"] == "geologia" and c.get("bounds")]
@@ -73,6 +79,11 @@ def main():
         pie = f'<br><a href="{VISOR}">Ver en el Visor GeoChile</a>'
         h["_d"] = cab + ("<b>Cartas en el visor:</b><br>" + cartas if cartas else "") + ("<b>Geodatabase (GDB):</b><br>" + gd if gd else "") \
             + ("" if (cartas or gd) else "Todavía sin carta ni GDB.<br>") + pie
+    return hojas
+
+
+def main():
+    hojas = preparar()
     SALIDA.mkdir(exist_ok=True)
     for viejo in ("hojas_sin_carta.kmz", "hojas_sin_gdb.kmz"):      # nombres anteriores (marcaban lo que falta)
         (SALIDA / viejo).unlink(missing_ok=True)

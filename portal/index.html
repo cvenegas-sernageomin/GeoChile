@@ -34,6 +34,11 @@
   .card p{font-size:13px;color:#666;line-height:1.5}
   .card a.dl{display:inline-block;margin-top:12px;font-size:13px;font-weight:bold;color:#fff;background:#1a5276;padding:8px 14px;border-radius:5px;text-decoration:none}
   .card a.dl:hover{background:#2e86c1}
+  .reg{margin-top:12px;font-size:13px}
+  .reg summary{cursor:pointer;color:#1a5276;font-weight:600}
+  .reglista{display:grid;grid-template-columns:1fr 1fr;gap:4px 12px;margin-top:8px}
+  .reglista a{color:#1a5276;text-decoration:none;padding:3px 0;border-bottom:1px solid #eef2f6}
+  .reglista small{color:#777}
   .steps{counter-reset:steps;list-style:none}
   .steps li{counter-increment:steps;display:flex;gap:16px;margin-bottom:16px;background:#fff;border-radius:8px;padding:14px 18px;box-shadow:0 1px 4px rgba(0,0,0,.07);align-items:flex-start}
   .steps li::before{content:counter(steps);background:#1a5276;color:#fff;font-weight:bold;font-size:13px;min-width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
@@ -89,8 +94,9 @@
       〰️ <b>Líneas</b>: fallas (tipo, trazo observado o inferido, nombre).<br>
       ⬛ <b>Polígonos</b>: unidades geológicas de 93 cartas (época o rango en Ma, litología inferida del texto, ambiente, texto). Se ven al acercar el mapa.</p></div>
     <div class="card"><div class="icon">🗺️</div><h4>KMZ: distribución de las cartas en raster</h4>
-      <p>Grilla de las 455 hojas IGM 1:100.000 con las hojas cubiertas por una carta geológica del visor en verde. Al hacer clic en una hoja salen sus cartas.</p>
-      <a class="dl" href="../kmz/cartas_geologicas_raster.kmz">⬇ Descargar KMZ</a></div>
+      <p>Grilla de las 455 hojas IGM 1:100.000 (en verde las que tienen carta) y las <b>cartas geológicas en raster</b> para ver sobre Google Earth. En el KMZ principal marcas la región y se cargan sus cartas (necesita conexión).</p>
+      <a class="dl" href="../kmz/cartas_geologicas_raster.kmz">⬇ KMZ principal (grilla + regiones)</a>
+      <details class="reg"><summary>Descargar las cartas por región (sin conexión)</summary><div class="reglista"><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Arica_y_Parinacota.kmz">Arica y Parinacota <small>(9 · 9.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Tarapaca.kmz">Tarapacá <small>(15 · 14.3 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Antofagasta.kmz">Antofagasta <small>(34 · 37.8 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Atacama.kmz">Atacama <small>(28 · 32.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Coquimbo.kmz">Coquimbo <small>(13 · 15.6 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Valparaiso.kmz">Valparaíso <small>(1 · 0.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Metropolitana.kmz">Metropolitana <small>(3 · 2.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_O_Higgins.kmz">O'Higgins <small>(2 · 3 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Maule.kmz">Maule <small>(9 · 3.9 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Nuble.kmz">Ñuble <small>(1 · 0.9 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Biobio.kmz">Biobío <small>(1 · 0.3 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Araucania.kmz">La Araucanía <small>(9 · 8.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Los_Rios.kmz">Los Ríos <small>(6 · 7.2 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Los_Lagos.kmz">Los Lagos <small>(6 · 6.4 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Aysen.kmz">Aysén <small>(9 · 9.1 MB)</small></a><a href="https://github.com/cvenegas-sernageomin/GeoChile/releases/download/kmz/Cartas_Magallanes.kmz">Magallanes <small>(1 · 0.3 MB)</small></a></div></details></div>
     <div class="card"><div class="icon">🗄️</div><h4>KMZ: ubicación de las geodatabases (GDB)</h4>
       <p>La misma grilla con las hojas que tienen geodatabase en azul. Cada hoja trae el enlace para descargar su GDB desde el Catálogo de Publicaciones de SERNAGEOMIN.</p>
       <a class="dl" href="../kmz/hojas_con_gdb.kmz">⬇ Descargar KMZ</a></div>
@@ -101,7 +107,7 @@
     <li><div><strong>Descarga el archivo KMZ</strong> con el botón de arriba (o de la tarjeta correspondiente).</div></li>
     <li><div><strong>Abre Google Earth Pro</strong> (gratuito en <a href="https://www.google.com/earth/about/versions/" target="_blank" rel="noopener">google.com/earth</a>) o Google Earth Web.</div></li>
     <li><div><strong>Arrastra el KMZ</strong> a la ventana de Google Earth o usa <code>Archivo → Abrir</code>.</div></li>
-    <li><div><strong>Haz clic en una hoja de color</strong> para ver su código IGM, su nombre, las cartas del visor que la cubren y el enlace para descargar su geodatabase. Las hojas sin color solo muestran la grilla.</div></li>
+    <li><div><strong>Marca una región</strong> en el panel de Google Earth para ver sus cartas sobre el mapa, y <strong>haz clic en una hoja de color</strong> para ver su código IGM, su nombre, las cartas del visor que la cubren y el enlace para descargar su geodatabase. Las hojas sin color solo muestran la grilla.</div></li>
   </ol>
   <p class="nota"><b>Qué se muestra.</b> Una hoja aparece en verde si algún mapa de geología básica del visor cubre al menos la mitad de la hoja (o cae casi entero dentro de ella), y en azul si el catálogo tiene un enlace a una geodatabase para ella; el contenido de la GDB no se verifica. El visor y los KMZ se actualizan a medida que se incorporan más cartas.</p>
 </div>
