@@ -4616,6 +4616,28 @@
     "region": "Antofagasta"
   },
   {
+    "id": "IR_21_89_TextoyMapa",
+    "categoria": "geologia",
+    "titulo": "Geología del área San Fernando-Curicó",
+    "fuente": "SERNAGEOMIN — Informe Registrado IR-21-89",
+    "anio": "2021",
+    "escala": "1:100.000",
+    "autor": "Juan Pablo Contreras F., Manuel Schilling D.",
+    "informe": "IR-21-89",
+    "bounds": {
+      "n": -34.500194,
+      "s": -34.999187,
+      "e": -70.750725,
+      "w": -71.24973
+    },
+    "overlay": "overlays/IR_21_89_TextoyMapa.webp",
+    "leyenda": "leyendas/IR_21_89_TextoyMapa_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "O'Higgins"
+  },
+  {
     "id": "pel_cruz_de_cana_contexto",
     "categoria": "peligros",
     "titulo": "Plano de Evacuación ante Amenaza de Remoción en Masa — Cruz de Caña (contexto)",
