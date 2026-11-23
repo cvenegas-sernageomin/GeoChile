@@ -4985,6 +4985,30 @@
     "tema": "Remociones en masa"
   },
   {
+    "id": "pel_los_rios_costa_valdivia",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Área costera de Valdivia",
+    "fuente": "SERNAGEOMIN–Xterrae, Gobierno Regional de Los Ríos (FNDR): Zonificación de áreas expuestas a peligros de remoción en masa en la Región de Los Ríos, Mapa 8 de 8",
+    "anio": "2023",
+    "escala": "1:100.000",
+    "autor": "SERNAGEOMIN, Xterrae Geología",
+    "informe": "FNDR Los Ríos",
+    "bounds": {
+      "n": -39.499943,
+      "s": -39.999116,
+      "e": -73.000643,
+      "w": -73.699575
+    },
+    "overlay": "overlays/pel_los_rios_costa_valdivia.webp",
+    "leyenda": "leyendas/pel_los_rios_costa_valdivia.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Los Ríos",
+    "tema": "Remociones en masa",
+    "nota": "Registrada con el marco vectorial del PDF y la GDB del portal; el mapa regional 1:250.000 (Mapa 4) no se pudo registrar de forma verificable."
+  },
+  {
     "id": "pel_valpo_concon",
     "categoria": "peligros",
     "titulo": "Peligro de Remociones en Masa e Inundaciones — Concón (Hoja 1 de 3)",
