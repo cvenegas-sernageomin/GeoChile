@@ -28,16 +28,16 @@
     "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica N°220",
     "anio": "2024",
     "escala": "1:100.000",
-    "autor": "Contreras J.P., Escribano J., Sepúlveda F., De la Cruz R.",
+    "autor": "Juan Pablo Contreras F., José Escribano A., Fernando Sepúlveda V., Rita de la Cruz S.",
     "informe": "GB-220",
     "bounds": {
-      "n": -35.498926,
-      "s": -36.002181,
-      "e": -70.998263,
-      "w": -71.502985
+      "n": -35.50049,
+      "s": -35.999189,
+      "e": -71.000664,
+      "w": -71.499398
     },
-    "overlay": "overlays/geo_F21_raster.webp",
-    "leyenda": "leyendas/geo_F21_raster_leyenda.jpg",
+    "overlay": "overlays/geo_F21_GB220.webp",
+    "leyenda": "leyendas/geo_F21_GB220_leyenda.jpg",
     "opacidad": 1.0,
     "recortado": true,
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/geologia/docs/GB220_san_clemente_texto.pdf",
@@ -457,6 +457,30 @@
     "pdf": "https://cvenegas-sernageomin.github.io/sernageomin-maule/capas/aplicada/docs/GAMB39_descabezado_quizapu_texto.pdf",
     "region": "Maule",
     "tema": "Peligros volcánicos"
+  },
+  {
+    "id": "vol_peligros_hudson_GAMB20",
+    "categoria": "peligros",
+    "titulo": "Peligros volcánicos — Volcán Hudson",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Ambiental N°20",
+    "anio": "2014",
+    "escala": "1:75.000",
+    "autor": "Álvaro Amigo R., Daniel Bertin U.",
+    "informe": "GAMB-20",
+    "bounds": {
+      "n": -45.716667,
+      "s": -46.067588,
+      "e": -72.66665,
+      "w": -73.583333
+    },
+    "overlay": "overlays/vol_peligros_hudson_GAMB20.webp",
+    "leyenda": "leyendas/vol_peligros_hudson_GAMB20.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Aysén",
+    "tema": "Peligros volcánicos",
+    "nota": "Zonas de peligro dibujadas desde la GDB oficial (M385); no es la lámina escaneada."
   },
   {
     "id": "escobar_1977_chile",
