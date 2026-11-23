@@ -4130,6 +4130,28 @@
     "region": "Maule"
   },
   {
+    "id": "CGCH_GB_143_TextoyMapa",
+    "categoria": "geologia",
+    "titulo": "Carta Cerro Químal",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Básica",
+    "anio": "2012",
+    "escala": "1:100.000",
+    "autor": "Matilde Basso A., Constantino Mpodozis M.",
+    "informe": "GB-143",
+    "bounds": {
+      "n": -23.00028,
+      "s": -23.49972,
+      "e": -68.500303,
+      "w": -68.999697
+    },
+    "overlay": "overlays/CGCH_GB_143_TextoyMapa.webp",
+    "leyenda": "leyendas/CGCH_GB_143_TextoyMapa_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Antofagasta"
+  },
+  {
     "id": "pel_cruz_de_cana_contexto",
     "categoria": "peligros",
     "titulo": "Plano de Evacuación ante Amenaza de Remoción en Masa — Cruz de Caña (contexto)",
