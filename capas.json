@@ -483,6 +483,76 @@
     "nota": "Zonas de peligro dibujadas desde la GDB oficial (M385); no es la lámina escaneada."
   },
   {
+    "id": "vol_peligros_apagado_GAMB26",
+    "categoria": "peligros",
+    "titulo": "Peligros volcánicos — Volcán Apagado",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Ambiental N°26",
+    "anio": "2016",
+    "escala": "1:50.000",
+    "autor": "Mauricio Mella B.",
+    "informe": "GAMB-26",
+    "bounds": {
+      "n": -41.720247,
+      "s": -42.032977,
+      "e": -72.35039,
+      "w": -72.782994
+    },
+    "overlay": "overlays/vol_peligros_apagado_GAMB26.webp",
+    "leyenda": "leyendas/vol_peligros_apagado_GAMB26.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Los Lagos",
+    "tema": "Peligros volcánicos"
+  },
+  {
+    "id": "vol_peligros_lascar_GAMB22",
+    "categoria": "peligros",
+    "titulo": "Peligros volcánicos — Volcán Láscar",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Ambiental N°22",
+    "anio": "2015",
+    "escala": "1:50.000",
+    "autor": "Moyra Gardeweg P., Álvaro Amigo R.",
+    "informe": "GAMB-22",
+    "bounds": {
+      "n": -23.250227,
+      "s": -23.516292,
+      "e": -67.616994,
+      "w": -67.99967
+    },
+    "overlay": "overlays/vol_peligros_lascar_GAMB22.webp",
+    "leyenda": "leyendas/vol_peligros_lascar_GAMB22.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Antofagasta",
+    "tema": "Peligros volcánicos",
+    "nota": "Lámina del Repositorio digital (el paquete del portal viene sin PDF); registrada con la GDB M376."
+  },
+  {
+    "id": "vol_peligros_villarrica_norte_GAMB43",
+    "categoria": "peligros",
+    "titulo": "Peligros volcánicos — Sector norte del Volcán Villarrica",
+    "fuente": "SERNAGEOMIN — Carta Geológica de Chile, Serie Geología Ambiental N°43",
+    "anio": "2025",
+    "escala": "1:25.000",
+    "autor": "Franco Vera R., Felipe Flores L., Laura Bono T.",
+    "informe": "GAMB-43",
+    "bounds": {
+      "n": -39.232085,
+      "s": -39.421007,
+      "e": -71.848401,
+      "w": -72.096968
+    },
+    "overlay": "overlays/vol_peligros_villarrica_norte_GAMB43.webp",
+    "leyenda": "leyendas/vol_peligros_villarrica_norte_GAMB43.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Araucanía",
+    "tema": "Peligros volcánicos"
+  },
+  {
     "id": "escobar_1977_chile",
     "categoria": "geologia",
     "titulo": "Mapa geológico de Chile (Escobar, 1977)",
@@ -4888,6 +4958,29 @@
     "opacidad": 0.75,
     "recortado": false,
     "pdf": null,
+    "region": "Coquimbo",
+    "tema": "Remociones en masa"
+  },
+  {
+    "id": "pel_paso_agua_negra_susceptibilidad",
+    "categoria": "peligros",
+    "titulo": "Susceptibilidad de Remociones en Masa — Paso del Agua Negra",
+    "fuente": "SERNAGEOMIN — Informe Registrado IR-25-121 (Mapa 2)",
+    "anio": "2025",
+    "escala": "1:50.000",
+    "autor": "Alejandro Alfaro S., Cristina Brantt H., Jorge Parra R.",
+    "informe": "IR-25-121",
+    "bounds": {
+      "n": -29.957563,
+      "s": -30.308927,
+      "e": -69.78744,
+      "w": -70.157313
+    },
+    "overlay": "overlays/pel_paso_agua_negra_susceptibilidad.webp",
+    "leyenda": "leyendas/pel_paso_agua_negra_susceptibilidad.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
     "region": "Coquimbo",
     "tema": "Remociones en masa"
   },
