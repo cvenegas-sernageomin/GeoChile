@@ -5636,5 +5636,27 @@
     "pdf": null,
     "region": "Coquimbo",
     "tema": "Mapas de Geología Económica"
+  },
+  {
+    "id": "CGCH_40_TextoyMapa",
+    "categoria": "geologia",
+    "titulo": "Hoja Ollagüe",
+    "fuente": "Instituto de Investigaciones Geológicas (hoy SERNAGEOMIN) — Carta Geológica de Chile",
+    "anio": "1980",
+    "escala": "1:250.000",
+    "autor": "Carlos F. Ramírez R. y Carlos Huete L.",
+    "informe": "CGCH-40",
+    "bounds": {
+      "n": -20.999265,
+      "s": -22.001342,
+      "e": -68.000964,
+      "w": -69.0
+    },
+    "overlay": "overlays/CGCH_40_TextoyMapa.webp",
+    "leyenda": "leyendas/CGCH_40_TextoyMapa_leyenda.jpg",
+    "opacidad": 1.0,
+    "recortado": true,
+    "pdf": "",
+    "region": "Antofagasta"
   }
 ]
